@@ -64,7 +64,8 @@ GitHub: jonashuberts/Atem
 - Farbe für material theme builder: #dc092f
 - Figma: https://www.figma.com/file/7m8jFzmlcxW7UoGpX0mbmM/Projekt?type=design&node-id=0-1&t=o25OEU6ix0RNDzPv-0
 ### 9. Systemarchitektur entwerfen (Klassen, Subsysteme, Ablaufdiagramm)
-
+- Enthält keine algorithmen nur UI
+- In Xmind
 ## Entwicklung
 
 ### 10. Minimales funktionsfähiges Produkt erstellen (Minimal Viable Product, MVP)

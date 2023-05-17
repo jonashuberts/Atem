@@ -30,6 +30,7 @@ https://pixabay.com/vectors/search/tree/
 
 ## Plan
 https://www.drawio.com/
+https://xmind.works/local/lssx4FAM?auth=false
 
 ## PWA
 https://learn.microsoft.com/en-us/windows/apps/publish/publish-your-app/turn-your-website-pwa
@@ -59,3 +60,12 @@ https://tailwindui.com/components/application-ui/application-shells/stacked
 https://tailwindcomponents.com/
 https://www.tailwindtoolbox.com/
 https://getbootstrap.com/docs/5.0/examples/
+
+# Helpful Erro fixing Documentation
+https://github.com/desktop/desktop/issues/9293
+
+Code Formatieren:
+ctrl + shift + p -> code format
+
+Code Auskommentieren:
+shift + alt + a
