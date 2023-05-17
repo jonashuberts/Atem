@@ -1,10 +1,5 @@
 #Projektbericht 
 ## Templates
-https://tailblocks.cc/
-https://tailwindui.com/components/application-ui/application-shells/stacked
-https://tailwindcomponents.com/
-https://www.tailwindtoolbox.com/
-https://getbootstrap.com/docs/5.0/examples/
 https://www.view-page-source.com/
 https://flatuicolors.com/palette/defo
 https://supercharge.design/blog/the-must-know-ui-design-elements
@@ -21,6 +16,7 @@ https://grapesjs.com/
 https://fffuel.co/ffflux/
 https://realtimecolors.com/?colors=212529-f8f9fa-343a40-e9ecef-adb5bd
 https://codepen.io/blackhawkpy/pen/xxyaPYE
+https://m3.material.io/theme-builder#/custom
 
 ## Vektor
 https://www.vecteezy.com/free-vector/tree?license-free=true
@@ -49,3 +45,14 @@ https://github.com/oneminch/breathe
 https://github.com/mirhamasala/breathe
 https://www.figma.com/community/file/1096716861926624697/Meditation-App
 https://www.youtube.com/watch?v=wfDTp2GogaQ&ab_channel=EveryMindMatters
+
+## Design CSS
+https://github.com/picocss/pico
+https://material-components.github.io/material-components-web-catalog/#/
+https://github.com/material-components/material-components-web
+https://uicolors.app/create
+https://tailblocks.cc/
+https://tailwindui.com/components/application-ui/application-shells/stacked
+https://tailwindcomponents.com/
+https://www.tailwindtoolbox.com/
+https://getbootstrap.com/docs/5.0/examples/

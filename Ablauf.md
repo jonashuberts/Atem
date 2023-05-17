@@ -5,16 +5,34 @@ Atemübungs-App 😤
 ### 2. Produkt definieren (Ziel)
 Die App präsentiert die Atemübungen auf visuell ansprechende und animierte Weise, begleitet von Soundeffekten. Benutzer können aus einer Liste von Übungen auswählen, und es wird eine kurze Beschreibung der Funktion und Wirkung jeder Übung angezeigt. 
 ### 3. Recherchieren zu ähnlichen Projekten und Designs
-4. Alle Funktionen und Bestandteile festlegen
-5. Programmiersprache, Framework und Tools auswählen
-
+#### Atmung
+- Kreis mit Zahn in der Mitte
+- Dünner Kreis als Fortschritt
+- Striche um den Kreis als dynamische Animation
+- Kleinere Kreise um den Kreis als Partikel, die sich dem Kreis nähern und von ihm entfernt werden.
+- Kreis mit mehreren sich drehenden unförmigen Kreisen
+- Kreis, der sich in zwei Schritten ausdehnt und zusammenzieht
+- Tippen für Pause
+- Timer
+- Zurückbutton
+#### Startseite
+- Einstellungen-Symbol
+- Favoriten-Symbol
+- Titel
+- Liste der Übungen und Beschreibungen
+- Kleinerer unterer Bereich mit benutzerdefiniertem Atemtest
+### 2. Programmiersprache, Framework und Tools auswählen
+HTML: Vanilla Own Code, https://grapesjs.com/, https://www.vvveb.com/vvvebjs/editor.html, https://www.vvveb.com/vvvebjs/editor.html
+CSS: Vanilla Own Code, https://codyhouse.co/, https://csslayout.io/, https://uiverse.io/
+JavaScript: Vanilla Own Code, https://extendsclass.com/python-to-javascript.html, http://reeborg.ca/docs/js_py_en/conversion.html
 ## Projektorganisation und Zeitplanung
 6. Erstellung eines Zeitplans
 7. Entwicklungsumgebungen einrichten
 
 ## Design und Architektur
 8. UI-Design entwerfen
-9. Systemarchitektur entwerfen (Klassen, Subsysteme, Ablaufdiagramm)
+- Farbe: #dc092f
+9.  Systemarchitektur entwerfen (Klassen, Subsysteme, Ablaufdiagramm)
 
 ## Entwicklung
 10. Minimales funktionsfähiges Produkt erstellen (Minimal Viable Product, MVP)
@@ -43,4 +61,5 @@ Archiv
 Benutzerdefinierter Timer
 Werbung
 blog
+Vibrations Feedback
 Krankheiten am Atemmuster erkennen
