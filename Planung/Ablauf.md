@@ -61,13 +61,15 @@ GitHub: jonashuberts/Atem
 ## Design und Architektur
 
 ### 8. UI-Design entwerfen
-- Farbe: #dc092f
+- Farbe für material theme builder: #dc092f
+- Figma: https://www.figma.com/file/7m8jFzmlcxW7UoGpX0mbmM/Projekt?type=design&node-id=0-1&t=o25OEU6ix0RNDzPv-0
 ### 9. Systemarchitektur entwerfen (Klassen, Subsysteme, Ablaufdiagramm)
 
 ## Entwicklung
 
 ### 10. Minimales funktionsfähiges Produkt erstellen (Minimal Viable Product, MVP)
 ### 11. Produkt weiterentwickeln und erweitern
+### 11.5 Ton Hinzufügen
 
 ## Testing und Qualitätssicherung
 
