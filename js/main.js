@@ -1,11 +1,33 @@
-/* const circle = document.getElementById('circle');
+const circle = document.getElementById("circle");
 
-function breatheAnimation() {
-  circle.classList.add('breathe-animation');
-  setTimeout(() => {
-    circle.classList.remove('breathe-animation');
-  }, 16000); // 16s
+const inhaleDuration = 4;
+const inhaleHoldDuration = 2;
+const exhaleDuration = 4;
+const exhaleHoldDuration = 2;
+
+// Funktion, um die Animationen wieder neu zu starten
+function playAnimations() {
+  circle.style.animation = "none"; // Animationen zurücksetzen
+  void circle.offsetWidth; // Repaint erzwingen
+  circle.style.animation =
+    "inhaleAnimation " +
+    inhaleDuration +
+    "s, inhaleHoldAnimation " +
+    inhaleHoldDuration +
+    "s " +
+    inhaleDuration +
+    "s, exhaleAnimation " +
+    exhaleDuration +
+    "s " +
+    (inhaleDuration + inhaleHoldDuration) +
+    "s, exhaleHoldAnimation " +
+    exhaleHoldDuration +
+    "s " +
+    (inhaleDuration + inhaleHoldDuration + exhaleDuration) +
+    "s";
+
+    setTimeout(restartAnimations, animationDuration);
 }
 
-breatheAnimation();
-setInterval(breatheAnimation, 16000); // Repeat every 16s */
+// Animationen beim Laden der Seite starten
+playAnimations();
