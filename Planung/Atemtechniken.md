@@ -138,3 +138,51 @@ Sonstiges:
 https://www.fitbook.de/mind-body/einfacher-atem-trick-reduziert-stress-besser-als-meditation
 https://home-and-relax.de/atemuebungen/
 https://www.zeitblueten.com/news/atemuebungen/
+
+
+Mache, das sich die Animationenen nacheinander abspielen, und dann wieder von vorne anfangen, aber so dass ich auf die sekunde genach individuell die animationsdauer der 4 animationen bestimmen kann.
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+  }
+
+  #circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #FFDAD8;
+
+    animation: inhaleAnimation 4s, hold1Animation 4s, exhaleAnimation 2s, hold2Animation 2s infinite;
+
+  }
+  
+  @keyframes inhaleAnimation {
+    from { transform: scale(1);}
+         to { transform: scale(1.5);}
+  }
+
+  @keyframes hold1Animation {
+    from { transform: scale(1.5);}
+         to { transform: scale(1.5);}
+  }
+
+  @keyframes exhaleAnimation {
+    from { transform: scale(1.5);}
+         to { transform: scale(1);}
+  }
+
+  @keyframes hold2Animation {
+    from { transform: scale(1);}
+         to { transform: scale(1);}
+  }

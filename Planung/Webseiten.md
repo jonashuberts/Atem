@@ -61,8 +61,11 @@ https://tailwindcomponents.com/
 https://www.tailwindtoolbox.com/
 https://getbootstrap.com/docs/5.0/examples/
 
-# Helpful Erro fixing Documentation
+## Helpful Erro fixing Documentation
 https://github.com/desktop/desktop/issues/9293
+
+## Starting point
+https://github.com/promermedia/promer-default/tree/main
 
 Code Formatieren:
 ctrl + shift + p -> code format
