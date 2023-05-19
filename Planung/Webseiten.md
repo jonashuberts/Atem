@@ -60,6 +60,7 @@ https://tailwindui.com/components/application-ui/application-shells/stacked
 https://tailwindcomponents.com/
 https://www.tailwindtoolbox.com/
 https://getbootstrap.com/docs/5.0/examples/
+https://www.cssportal.com/css-cubic-bezier-generator/
 
 ## Helpful Erro fixing Documentation
 https://github.com/desktop/desktop/issues/9293

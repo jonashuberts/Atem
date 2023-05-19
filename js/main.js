@@ -1,4 +1,5 @@
 const circle = document.getElementById("circle");
+const circularProgress = document.querySelector("#circular-progress");
 
 const inhaleDuration = 4;
 const inhaleHoldDuration = 7;
@@ -6,7 +7,15 @@ const exhaleDuration = 8;
 const exhaleHoldDuration = 0;
 const animationDuration = (inhaleDuration + inhaleHoldDuration + exhaleDuration + exhaleHoldDuration) * 1000;
 
-// Funktion, um die Animationen wieder neu zu starten
+// Funktion, um die progressbar zu aktualliesieren
+function updateCircularProgress(progressValue) {
+  circularProgress.style.background = `conic-gradient(#000000 ${progressValue * 3.6}deg, #ffffff 0deg)`;
+}
+
+updateCircularProgress(75); // Aktualisiert den Fortschritt auf 75
+
+
+// Funktion, um die Animation zu starten
 function playAnimations() {
   circle.style.animation = "none"; // Animationen zurücksetzen
   void circle.offsetWidth; // Repaint erzwingen
@@ -30,6 +39,8 @@ function playAnimations() {
   setTimeout(playAnimations, animationDuration);
 }
 
+// Aktualisiert den Fortschritt auf 75
+updateCircularProgress(75); 
 
 // Animationen beim Laden der Seite starten
 playAnimations();
