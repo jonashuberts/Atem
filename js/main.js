@@ -1,9 +1,9 @@
 const circle = document.getElementById("circle");
 
 const inhaleDuration = 4;
-const inhaleHoldDuration = 2;
-const exhaleDuration = 4;
-const exhaleHoldDuration = 2;
+const inhaleHoldDuration = 7;
+const exhaleDuration = 8;
+const exhaleHoldDuration = 0;
 const animationDuration = (inhaleDuration + inhaleHoldDuration + exhaleDuration + exhaleHoldDuration) * 1000;
 
 // Funktion, um die Animationen wieder neu zu starten
@@ -13,22 +13,23 @@ function playAnimations() {
   circle.style.animation =
     "inhaleAnimation " +
     inhaleDuration +
-    "s, inhaleHoldAnimation " +
+    "s cubic-bezier(0.3, 0.00, 0.7, 1), inhaleHoldAnimation " +
     inhaleHoldDuration +
     "s " +
     inhaleDuration +
-    "s, exhaleAnimation " +
+    "s cubic-bezier(0.3, 0.00, 0.7, 1), exhaleAnimation " +
     exhaleDuration +
     "s " +
     (inhaleDuration + inhaleHoldDuration) +
-    "s, exhaleHoldAnimation " +
+    "s cubic-bezier(0.3, 0.00, 0.7, 1), exhaleHoldAnimation " +
     exhaleHoldDuration +
     "s " +
     (inhaleDuration + inhaleHoldDuration + exhaleDuration) +
-    "s";
+    "s cubic-bezier(0.3, 0.00, 0.7, 1)";
 
-    setTimeout(playAnimations, animationDuration);
+  setTimeout(playAnimations, animationDuration);
 }
+
 
 // Animationen beim Laden der Seite starten
 playAnimations();

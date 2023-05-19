@@ -67,8 +67,18 @@ https://github.com/desktop/desktop/issues/9293
 ## Starting point
 https://github.com/promermedia/promer-default/tree/main
 
+## Html Help
+https://www.w3schools.com/TAGs/ref_byfunc.asp
+
+## CSS Help
+https://www.freecodecamp.org/news/css-unit-guide/
+https://www.w3schools.com/cssref/css3_pr_animation.php
+
 Code Formatieren:
 ctrl + shift + p -> code format
 
 Code Auskommentieren:
 shift + alt + a
+
+Live server unten rechts in VS Code starten und webseite aktualisieren mit:
+alt + shilft + r

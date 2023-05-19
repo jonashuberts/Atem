@@ -14,28 +14,44 @@ body {
 }
 
 #circle {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  background-color: #FFDAD8;
+  background-color: #ffdad8;
 }
 
 @keyframes inhaleAnimation {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.5); }
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.333);
+  }
 }
 
 @keyframes inhaleHoldAnimation {
-  0% { transform: scale(1.5); }
-  100% { transform: scale(1.5); }
+  0% {
+    transform: scale(1.333);
+  }
+  100% {
+    transform: scale(1.333);
+  }
 }
 
 @keyframes exhaleAnimation {
-  0% { transform: scale(1.5); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1.333);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes exhaleHoldAnimation {
-  0% { transform: scale(1); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
