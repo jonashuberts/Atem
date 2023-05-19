@@ -4,6 +4,7 @@ const inhaleDuration = 4;
 const inhaleHoldDuration = 2;
 const exhaleDuration = 4;
 const exhaleHoldDuration = 2;
+const animationDuration = (inhaleDuration + inhaleHoldDuration + exhaleDuration + exhaleHoldDuration) * 1000;
 
 // Funktion, um die Animationen wieder neu zu starten
 function playAnimations() {
@@ -26,7 +27,7 @@ function playAnimations() {
     (inhaleDuration + inhaleHoldDuration + exhaleDuration) +
     "s";
 
-    setTimeout(restartAnimations, animationDuration);
+    setTimeout(playAnimations, animationDuration);
 }
 
 // Animationen beim Laden der Seite starten
