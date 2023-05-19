@@ -5,18 +5,49 @@ const inhaleDuration = 4;
 const inhaleHoldDuration = 7;
 const exhaleDuration = 8;
 const exhaleHoldDuration = 0;
-const animationDuration = (inhaleDuration + inhaleHoldDuration + exhaleDuration + exhaleHoldDuration) * 1000;
+const repetitions = 2;
+
+let repetitionCount = 0;
+const animationDuration =
+  (inhaleDuration + inhaleHoldDuration + exhaleDuration + exhaleHoldDuration) *
+  1000; // in Millisekuden
+const totalDuration =
+  (inhaleDuration + inhaleHoldDuration + exhaleDuration + exhaleHoldDuration) *
+  repetitions *
+  1000; // in Millisekunden
 
 // Funktion, um die progressbar zu aktualliesieren
 function updateCircularProgress(progressValue) {
-  circularProgress.style.background = `conic-gradient(#000000 ${progressValue * 3.6}deg, #ffffff 0deg)`;
+  circularProgress.style.background = `conic-gradient(#201a1a ${
+    progressValue * 3.6
+  }deg, #fffbff 0deg)`;
 }
 
-updateCircularProgress(75); // Aktualisiert den Fortschritt auf 75
+// Funktion, um die progressbar zu animieren
+function animateProgressBar(duration) {
+  const intervalTime = 10; // Aktualisierung alle 10 Millisekunden
+  const totalSteps = duration / intervalTime;
+  let progressValue = 0;
+  let currentStep = 0;
 
+  const interval = setInterval(() => {
+    progressValue = (currentStep / totalSteps) * 100;
+    updateCircularProgress(progressValue);
+
+    currentStep++;
+
+    if (currentStep > totalSteps) {
+      clearInterval(interval);
+    }
+  }, intervalTime);
+}
 
 // Funktion, um die Animation zu starten
 function playAnimations() {
+  if (repetitionCount >= repetitions) {
+    return; // Stoppe die Animation nach der zehnten Wiederholung
+  }
+
   circle.style.animation = "none"; // Animationen zurücksetzen
   void circle.offsetWidth; // Repaint erzwingen
   circle.style.animation =
@@ -36,11 +67,12 @@ function playAnimations() {
     (inhaleDuration + inhaleHoldDuration + exhaleDuration) +
     "s cubic-bezier(0.3, 0.00, 0.7, 1)";
 
+  repetitionCount++;
   setTimeout(playAnimations, animationDuration);
 }
 
-// Aktualisiert den Fortschritt auf 75
-updateCircularProgress(75); 
+// Animierte Progressbar beim Laden der Seite starten
+animateProgressBar(totalDuration);
 
 // Animationen beim Laden der Seite starten
 playAnimations();
