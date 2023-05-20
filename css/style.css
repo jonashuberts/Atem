@@ -75,14 +75,14 @@ body {
 }
 
 #outer-marker {
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   background-color: var(--background-light);
   outline: 2px solid var(--on-background-light);
   z-index: -1;
   position: absolute;
-  transition: width 0.2s ease-in-out, height 0.1s ease-in-out;
+  /*   transition: width 0.2s ease-in-out, height 0.1s ease-in-out; */
 }
 
 #circular-progress {
