@@ -1,10 +1,13 @@
-#Projektbericht 
+#Projektbericht
+
 ## Templates
+
 https://www.view-page-source.com/
 https://flatuicolors.com/palette/defo
 https://supercharge.design/blog/the-must-know-ui-design-elements
 
 ## Editors
+
 https://www.figma.com/
 https://play.tailwindcss.com/
 https://squoosh.app/
@@ -19,6 +22,7 @@ https://codepen.io/blackhawkpy/pen/xxyaPYE
 https://m3.material.io/theme-builder#/custom
 
 ## Vektor
+
 https://www.vecteezy.com/free-vector/tree?license-free=true
 https://www.freepik.com/search?format=search&query=tree&selection=1&type=vector
 https://www.vectorstock.com/royalty-free-vectors/tree-vectors
@@ -29,17 +33,19 @@ https://www.streamlinehq.com/icons?search=music%2Bplayer
 https://pixabay.com/vectors/search/tree/
 
 ## Plan
+
 https://www.drawio.com/
 https://xmind.works/local/lssx4FAM?auth=false
 
 ## PWA
+
 https://learn.microsoft.com/en-us/windows/apps/publish/publish-your-app/turn-your-website-pwa
 https://brucelawson.github.io/manifest/
 https://appinventiv.com/blog/migrating-your-website-to-progressive-web-app/
 https://dev.to/developertharun/convert-any-website-into-a-pwa-in-just-3-simple-steps-35pp
 
-
 ## Beispiele
+
 https://github.com/mmazzarolo/breathly-app
 https://github.com/reffan/breathe-2023-react
 https://github.com/oneminch/breathe
@@ -51,6 +57,7 @@ https://codepen.io/ferrouslights/pen/zdBaEa
 https://codepen.io/pnowell/pen/xZpdqR
 
 ## Design CSS
+
 https://github.com/picocss/pico
 https://material-components.github.io/material-components-web-catalog/#/
 https://github.com/material-components/material-components-web
@@ -63,17 +70,25 @@ https://getbootstrap.com/docs/5.0/examples/
 https://www.cssportal.com/css-cubic-bezier-generator/
 
 ## Helpful Erro fixing Documentation
+
 https://github.com/desktop/desktop/issues/9293
 
 ## Starting point
+
 https://github.com/promermedia/promer-default/tree/main
 
 ## Html Help
+
 https://www.w3schools.com/TAGs/ref_byfunc.asp
 
 ## CSS Help
+
 https://www.freecodecamp.org/news/css-unit-guide/
 https://www.w3schools.com/cssref/css3_pr_animation.php
+
+## Icons
+
+https://fonts.google.com/icons?selected=Material+Symbols+Rounded:arrow_back_ios:FILL@0;wght@400;GRAD@0;opsz@48&icon.query=back&icon.platform=web&icon.style=Rounded&icon.set=Material+Symbols
 
 Code Formatieren:
 ctrl + shift + p -> code format

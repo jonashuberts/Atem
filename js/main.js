@@ -76,3 +76,22 @@ animateProgressBar(totalDuration);
 
 // Animationen beim Laden der Seite starten
 playAnimations();
+
+// Animire den outer marker beim laden der webseite
+window.addEventListener("load", function () {
+  var outerMarker = document.getElementById("outer-marker");
+  outerMarker.style.width = "400px";
+  outerMarker.style.height = "400px";
+});
+
+// JavaScript für den Übergang
+const transitionLink = document.getElementById("transition-link");
+transitionLink.addEventListener("click", function (event) {
+  event.preventDefault(); // Verhindert das Standardverhalten des Links
+
+  document.body.classList.add("transition-fade", "fade-out");
+
+  setTimeout(function () {
+    window.location.href = transitionLink.href;
+  }, 500); // Warte 500 Millisekunden, bevor die Weiterleitung stattfindet
+});

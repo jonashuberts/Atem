@@ -1,9 +1,9 @@
 :root {
-  --primary-light:#bf0026;
-  --background-light:#fffbff;
-  --primary-containers-light:#ffdad8;
-  --on-background-light:#201a1a;
-  --transparent:#00000000;
+  --primary-light: #bf0026;
+  --background-light: #fffbff;
+  --primary-containers-light: #ffdad8;
+  --on-background-light: #201a1a;
+  --transparent: #00000000;
 }
 
 * {
@@ -75,13 +75,14 @@ body {
 }
 
 #outer-marker {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   background-color: var(--background-light);
   outline: 2px solid var(--on-background-light);
   z-index: -1;
   position: absolute;
+  transition: width 0.2s ease-in-out, height 0.1s ease-in-out;
 }
 
 #circular-progress {
@@ -89,7 +90,31 @@ body {
   height: 408px;
   width: 408px;
   border-radius: 50%;
-  background: conic-gradient(var(--on-background-light) 3.6deg, var(--background-light) 0deg);
+  background: conic-gradient(
+    var(--on-background-light) 3.6deg,
+    var(--background-light) 0deg
+  );
   display: flex;
   z-index: -2;
+}
+
+#back {
+  height: 30px;
+  position: absolute;
+  top: 48px;
+  left: 48px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#back:hover {
+  transform: scale(1.1);
+}
+
+/* CSS für den Übergang */
+.transition-fade {
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+.transition-fade.fade-out {
+  opacity: 0;
 }
