@@ -5,12 +5,13 @@ const inhaleDuration = 4;
 const inhaleHoldDuration = 7;
 const exhaleDuration = 8;
 const exhaleHoldDuration = 0;
-const repetitions = 2;
+const repetitions = 10;
 
 let repetitionCount = 0;
 const animationDuration =
   (inhaleDuration + inhaleHoldDuration + exhaleDuration + exhaleHoldDuration) *
   1000; // in Millisekuden
+
 const totalDuration =
   (inhaleDuration + inhaleHoldDuration + exhaleDuration + exhaleHoldDuration) *
   repetitions *
@@ -23,7 +24,7 @@ function updateCircularProgress(progressValue) {
   }deg, #fffbff 0deg)`;
 }
 
-// Funktion, um die progressbar zu animieren
+// Funktion, um die runde Progressbar zu animieren
 function animateProgressBar(duration) {
   const intervalTime = 10; // Aktualisierung alle 10 Millisekunden
   const totalSteps = duration / intervalTime;
@@ -42,7 +43,7 @@ function animateProgressBar(duration) {
   }, intervalTime);
 }
 
-// Funktion, um die Animation zu starten
+// Funktion, um die Atem Animation zu starten
 function playAnimations() {
   if (repetitionCount >= repetitions) {
     return; // Stoppe die Animation nach der zehnten Wiederholung
@@ -71,20 +72,7 @@ function playAnimations() {
   setTimeout(playAnimations, animationDuration);
 }
 
-// Animierte Progressbar beim Laden der Seite starten
-animateProgressBar(totalDuration);
-
-// Animationen beim Laden der Seite starten
-playAnimations();
-
-/* // Animire den outer marker beim laden der webseite
-window.addEventListener("load", function () {
-  var outerMarker = document.getElementById("outer-marker");
-  outerMarker.style.width = "400px";
-  outerMarker.style.height = "400px";
-}); */
-
-// JavaScript für den Übergang
+// Funkktion für die Page Transition
 const transitionLink = document.getElementById("transition-link");
 transitionLink.addEventListener("click", function (event) {
   event.preventDefault(); // Verhindert das Standardverhalten des Links
@@ -95,3 +83,42 @@ transitionLink.addEventListener("click", function (event) {
     window.location.href = transitionLink.href;
   }, 500); // Warte 500 Millisekunden, bevor die Weiterleitung stattfindet
 });
+
+// Funktion für den Timer
+function startTimer(duration) {
+  var timer = duration,
+    minutes,
+    seconds;
+  var interval = setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    document.querySelector("#timer").textContent = minutes + ":" + seconds;
+
+    if (--timer < 0) {
+      clearInterval(interval);
+      timer = 0; // Timer bleibt bei 0 Sekunden stehen
+    }
+  }, 1000);
+}
+
+window.onload = function () {
+  // Timer beim Laden der Seite starten
+  startTimer(totalDuration / 1000);
+
+  // Animierte Progressbar beim Laden der Seite starten
+  animateProgressBar(totalDuration);
+
+  // Animationen beim Laden der Seite starten
+  playAnimations();
+
+  /*   // Outer marker beim Laden der Seite annimieren
+  window.addEventListener("load", function () {
+    var outerMarker = document.getElementById("outer-marker");
+    outerMarker.style.width = "400px";
+    outerMarker.style.height = "400px";
+  }); */
+};

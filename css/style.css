@@ -118,3 +118,18 @@ body {
 .transition-fade.fade-out {
   opacity: 0;
 }
+
+/* CSS für den Timer */
+#timer {
+  position: absolute;
+  height: 30px;
+  top: 48px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+
+  color: var(--on-background-light);
+}
