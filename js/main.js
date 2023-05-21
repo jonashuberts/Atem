@@ -109,7 +109,7 @@ function startTimer(duration) {
 document.addEventListener("DOMContentLoaded", function () {
   // Starten, wenn html geladen ist
   var infoBox = document.getElementById("info-box");
-  var closeBtn = document.getElementById("close-btn");
+  var closeBtn = document.getElementById("start-btn");
 
   infoBox.style.display = "block";
 
