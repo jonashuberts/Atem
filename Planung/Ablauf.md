@@ -59,9 +59,10 @@ Siehe Goodnotes
 ### 7. Entwicklungsumgebungen einrichten
 
 Programm: VisualStudi Code und Codepen
-Extensions: Inline fold, Auto Commit Message, German Language Pack, Live Server, Markdoen All in One, Prittier, Tabnine AI
+Extensions: Inline fold, Auto Commit Message, German Language Pack, Live Server, Markdoen All in One, Prittier, Tabnine AI, Xmind viwer
 Sound: Signal
 GitHub: jonashuberts/Atem
+Netify: https://atemuebungen.netlify.app/
 
 ## Design und Architektur
 
