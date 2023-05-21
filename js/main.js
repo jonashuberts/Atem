@@ -105,20 +105,31 @@ function startTimer(duration) {
   }, 1000);
 }
 
-window.onload = function () {
-  // Timer beim Laden der Seite starten
-  startTimer(totalDuration / 1000);
+// window.onload = function () { // Starten, wenn ales inklusive css und bilder geladen sind
+document.addEventListener("DOMContentLoaded", function () {
+  // Starten, wenn html geladen ist
+  var infoBox = document.getElementById("info-box");
+  var closeBtn = document.getElementById("close-btn");
 
-  // Animierte Progressbar beim Laden der Seite starten
-  animateProgressBar(totalDuration);
+  infoBox.style.display = "block";
 
-  // Animationen beim Laden der Seite starten
-  playAnimations();
+  closeBtn.addEventListener("click", function () {
+    infoBox.style.display = "none";
 
-  /*   // Outer marker beim Laden der Seite annimieren
+    // Timer beim Laden der Seite starten
+    startTimer(totalDuration / 1000);
+
+    // Animierte Progressbar beim Laden der Seite starten
+    animateProgressBar(totalDuration);
+
+    // Animationen beim Laden der Seite starten
+    playAnimations();
+
+    /*   // Outer marker beim Laden der Seite annimieren
   window.addEventListener("load", function () {
     var outerMarker = document.getElementById("outer-marker");
     outerMarker.style.width = "400px";
     outerMarker.style.height = "400px";
   }); */
-};
+  });
+});

@@ -1,8 +1,9 @@
 :root {
   --primary-light: #bf0026;
   --background-light: #fffbff;
-  --primary-containers-light: #ffdad8;
   --on-background-light: #201a1a;
+  --primary-container-light: #ffdad8;
+  --tertiary-container-light: #ffdeaa;
   --transparent: #00000000;
 }
 
@@ -12,6 +13,7 @@
   box-sizing: border-box;
 }
 
+/* CSS für die Seite */
 body {
   display: flex;
   justify-content: center;
@@ -21,11 +23,12 @@ body {
   background-color: var(--background-light);
 }
 
+/* CSS für den Animierten atem Kreis */
 #circle {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background-color: var(--primary-containers-light);
+  background-color: var(--primary-container-light);
 }
 
 @keyframes inhaleAnimation {
@@ -64,6 +67,7 @@ body {
   }
 }
 
+/* CSS für den inneren Marker */
 #inner-marker {
   width: 300px;
   height: 300px;
@@ -74,6 +78,7 @@ body {
   position: absolute;
 }
 
+/* CSS für den äußeren Marker */
 #outer-marker {
   width: 400px;
   height: 400px;
@@ -85,19 +90,21 @@ body {
   /*   transition: width 0.2s ease-in-out, height 0.1s ease-in-out; */
 }
 
+/* CSS für die runde Progress bar */
 #circular-progress {
   position: absolute;
   height: 408px;
   width: 408px;
   border-radius: 50%;
   background: conic-gradient(
-    var(--on-background-light) 3.6deg,
-    var(--background-light) 0deg
+    var(--on-background-light) 0deg,
+    /* 3.6deg */ var(--background-light) 0deg
   );
   display: flex;
   z-index: -2;
 }
 
+/* CSS für den Zurück zum Home Pfeil */
 #back {
   height: 30px;
   position: absolute;
@@ -110,7 +117,7 @@ body {
   transform: scale(1.1);
 }
 
-/* CSS für den Übergang */
+/* CSS für den Page Übergang */
 .transition-fade {
   opacity: 1;
   transition: opacity 0.5s ease-out;
@@ -132,4 +139,46 @@ body {
   text-align: center;
 
   color: var(--on-background-light);
+}
+
+#info-box {
+  position: absolute;
+  width: 1200px;
+  height: 600px;
+  background: var(--tertiary-container-light);
+  border-radius: 20px;
+  display: none;
+  z-index: 2;
+}
+
+#info-text {
+  position: absolute;
+  width: 940px;
+  height: 250px;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  color: #271900;
+}
+
+#close-btn {
+  position: absolute;
+  width: 1200px;
+  height: 100px;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 116px;
+  text-align: center;
+
+  color: #271900;
 }
