@@ -184,4 +184,9 @@ body {
   line-height: 116px;
   text-align: center;
   color: var(--on-tertiary-container-light);
+  transition: font-size 0.3s ease;
+}
+
+#start-btn:hover {
+  font-size: 98px;
 }
