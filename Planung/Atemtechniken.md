@@ -148,6 +148,16 @@
 - Wirkung: Die rhythmische Atmung kann dazu beitragen, den Atem zu vertiefen, den Geist zu fokussieren und eine innere Harmonie zu schaffen.
 - Quelle: [Runner's World - Rhythmic Breathing](https://www.runnersworld.com/training/a28413381/rhythmic-breathing/)
 
+**16.Benutzerdefinierte Atemübung:**
+
+- Einatmen: X Sekunden (vom Benutzer festgelegt)
+- Halten: Y Sekunden (vom Benutzer festgelegt)
+- Ausatmen: Z Sekunden (vom Benutzer festgelegt)
+- Halten: W Sekunden (vom Benutzer festgelegt)
+- Beschreibung: Atme durch die Nase ein und zähle dabei bis X. (Halte den Atem für Y Sekunden an) und atme dann langsam durch den Mund aus, bis du bis Z gezählt hast. (Halte den Atem für W Sekunden an.) Wiederhole diese Atemsequenz mehrere Male nach Bedarf.
+- Wirkung: Die benutzerdefinierte Atemübung ermöglicht eine individuelle Anpassung der Atemzeiten, um Entspannung, Stressabbau und Achtsamkeit im gegenwärtigen Moment zu fördern.
+- Quelle: Eigenes Wissen.
+
 Sonstiges:
 https://www.fitbook.de/mind-body/einfacher-atem-trick-reduziert-stress-besser-als-meditation
 https://home-and-relax.de/atemuebungen/

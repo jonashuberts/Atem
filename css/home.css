@@ -5,6 +5,7 @@
   --primary-container-light: #ffdad8;
   --on-primary-container-light: #410006;
   --tertiary-container-light: #ffdeaa;
+  --on-tertiary-container-light: #271900;
   --on-background-dark: #ede0de;
   --transparent: #00000000;
 }
@@ -125,8 +126,6 @@ body {
   top: 795px;
   background: var(--tertiary-container-light);
   border-radius: 20px;
-  text-align: center;
-  justify-content: center;
 }
 
 .exercise-icon {
@@ -167,4 +166,44 @@ body {
   font-size: 20px;
   line-height: 24px;
   color: var(--on-primary-container-light);
+}
+
+#custom-exercise-icon {
+  position: relative;
+  height: 75px;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  filter: invert(11%) sepia(16%) saturate(4643%) hue-rotate(20deg)
+    brightness(97%) contrast(104%);
+}
+
+#custom-exercise-title {
+  position: relative;
+  left: 115px;
+  top: -10%;
+  transform: translateY(-50%);
+  width: 900px;
+  height: 53px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: var(--on-tertiary-container-light);
+}
+
+#custom-exercise-description {
+  position: relative;
+  left: 115px;
+  top: -10%;
+  transform: translateY(-50%);
+  width: 900px;
+  height: 54px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--on-tertiary-container-light);
 }

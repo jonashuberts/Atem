@@ -4,6 +4,7 @@
   --on-background-light: #201a1a;
   --primary-container-light: #ffdad8;
   --tertiary-container-light: #ffdeaa;
+  --on-tertiary-container-light: #271900;
   --transparent: #00000000;
 }
 
@@ -165,7 +166,7 @@ body {
   font-weight: 400;
   font-size: 48px;
   line-height: 58px;
-  color: #271900;
+  color: var(--on-tertiary-container-light);
 }
 
 /* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
@@ -182,5 +183,5 @@ body {
   font-size: 96px;
   line-height: 116px;
   text-align: center;
-  color: #271900;
+  color: var(--on-tertiary-container-light);
 }
