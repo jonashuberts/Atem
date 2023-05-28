@@ -1,0 +1,170 @@
+:root {
+  --primary-light: #bf0026;
+  --background-light: #fffbff;
+  --on-background-light: #201a1a;
+  --primary-container-light: #ffdad8;
+  --on-primary-container-light: #410006;
+  --tertiary-container-light: #ffdeaa;
+  --on-background-dark: #ede0de;
+  --transparent: #00000000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* CSS für die Seite */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--background-light);
+}
+
+/* Navbar */
+.nav-item {
+  position: absolute;
+  height: 24px;
+  top: 30px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--on-background-light);
+}
+
+/* Einstellungen */
+#settings {
+  width: 126px;
+  left: 30px;
+}
+
+/* Favoriten */
+#favorite {
+  width: 88px;
+  left: 226px;
+}
+
+/* Profil */
+#profile {
+  width: 49px;
+  left: 385px;
+}
+
+#title {
+  position: absolute;
+  width: 390px;
+  height: 100px;
+  top: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 120px;
+  line-height: 145px;
+  text-align: center;
+  color: var(--on-background-light);
+}
+
+.grid-container {
+  position: absolute;
+  width: 1180px;
+  height: 580px;
+  top: 195px;
+  overflow: auto; /* Hinzugefügtes CSS-Overflow-Attribut */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Anzahl der Spalten auf 2 ändern */
+  grid-gap: 20px;
+}
+
+.grid-item {
+  background-color: var(--primary-container-light);
+  /* padding: 20px; */
+  width: 570px;
+  height: 160px;
+  border-radius: 20px;
+}
+
+.grid-container:hover {
+  overflow: auto; /* Scroll-Leiste anzeigen, wenn der Container gehovert wird */
+}
+
+.grid-container::-webkit-scrollbar {
+  width: 8px; /* Breite der Scroll-Leiste */
+}
+
+.grid-container::-webkit-scrollbar-thumb {
+  background-color: var(
+    --primary-container-light
+  ); /* Hintergrundfarbe des Scroll-Leisten-Griffs */
+  border-radius: 4px; /* Radius des Scroll-Leisten-Griffs */
+}
+
+.grid-container::-webkit-scrollbar-track {
+  background-color: var(
+    --on-background-dark
+  ); /* Hintergrundfarbe der Scroll-Leiste */
+  border-radius: 4px; /* Radius der Scroll-Leiste */
+}
+
+.grid-container::-webkit-scrollbar-thumb:hover {
+  background-color: var(
+    --primary-light
+  ); /* Hintergrundfarbe des Scroll-Leisten-Griffs beim Hover */
+}
+
+#custom-exercise {
+  position: absolute;
+  width: 1160px;
+  height: 160px;
+  left: 375px;
+  top: 795px;
+  background: var(--tertiary-container-light);
+  border-radius: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+.exercise-icon {
+  position: relative;
+  height: 75px;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  filter: invert(4%) sepia(51%) saturate(7483%) hue-rotate(347deg)
+    brightness(96%) contrast(104%);
+}
+
+.exercise-title {
+  position: relative;
+  left: 115px;
+  top: -10%;
+  transform: translateY(-50%);
+  width: 383px;
+  height: 53px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: var(--on-primary-container-light);
+}
+
+.exercise-description {
+  position: relative;
+  left: 115px;
+  top: -10%;
+  transform: translateY(-50%);
+  width: 454px;
+  height: 54px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--on-primary-container-light);
+}

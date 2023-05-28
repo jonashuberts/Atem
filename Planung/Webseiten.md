@@ -71,6 +71,8 @@ https://www.cssportal.com/css-cubic-bezier-generator/
 
 ## Helpful Erro fixing Documentation
 
+### svg Farbe anpassen: https://codepen.io/sosuke/pen/Pjoqqp
+
 https://github.com/desktop/desktop/issues/9293
 
 ## Starting point
