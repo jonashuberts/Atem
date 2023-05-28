@@ -107,6 +107,13 @@ function startTimer(duration) {
 
 // window.onload = function () { // Starten, wenn ales inklusive css und bilder geladen sind
 document.addEventListener("DOMContentLoaded", function () {
+  // Timer initialisieren
+  minutes = parseInt(totalDuration / 1000 / 60, 10);
+  seconds = parseInt((totalDuration / 1000) % 60, 10);
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+  document.querySelector("#timer").textContent = minutes + ":" + seconds;
+
   // Starten, wenn html geladen ist
   var infoBox = document.getElementById("info-box");
   var closeBtn = document.getElementById("start-btn");
