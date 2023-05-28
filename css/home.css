@@ -84,10 +84,13 @@ body {
 
 .grid-item {
   background-color: var(--primary-container-light);
-  /* padding: 20px; */
   width: 570px;
   height: 160px;
   border-radius: 20px;
+}
+
+.grid-item:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Definiert den Schatten für den Hover-Zustand */
 }
 
 .grid-container:hover {
@@ -116,16 +119,6 @@ body {
   background-color: var(
     --primary-light
   ); /* Hintergrundfarbe des Scroll-Leisten-Griffs beim Hover */
-}
-
-#custom-exercise {
-  position: absolute;
-  width: 1160px;
-  height: 160px;
-  left: 375px;
-  top: 795px;
-  background: var(--tertiary-container-light);
-  border-radius: 20px;
 }
 
 .exercise-icon {
@@ -166,6 +159,20 @@ body {
   font-size: 20px;
   line-height: 24px;
   color: var(--on-primary-container-light);
+}
+
+#custom-exercise {
+  position: absolute;
+  width: 1180px;
+  height: 160px;
+  left: 375px;
+  top: 795px;
+  background: var(--tertiary-container-light);
+  border-radius: 20px;
+}
+
+#custom-exercise:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Definiert den Schatten für den Hover-Zustand */
 }
 
 #custom-exercise-icon {
