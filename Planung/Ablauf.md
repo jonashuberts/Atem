@@ -115,23 +115,32 @@ Site: https://atemuebungen.netlify.app/
 
 ## Weitere Ideen
 
-Jetzt (Projekt):
-homepage
-darkmode
-responsiv
-ton bei den übungen
-alle restlichen übungen hinzufügen
-pwa
+## Jetzt (Projekt):
 
-Später:
-benutzerdfinierte übungen, mit url bestimmen atem/custom/3-4-5-6 -> erst später mit backend
-dynamische seiten generierung, um weniger html und javascript datein zu haben -> erst später mit backend
+### Zuhause:
 
-Zukunft:
-Konto mit Favoriten
-Fortschritte von Konto verfolgen und teilen
-Archiv
-Werbung um Geld zu verdienen
-Blog mit in depth informationen zur atmung
-Vibrations Feedback bei den Übungen
-Krankheiten am Atemmuster erkennen
+- homepage
+- darkmode
+- responsiv
+- ton bei den übungen
+
+### Corpuls:
+
+- alle restlichen übungen hinzufügen
+- pwa
+- code commentare hinzufügen / verbessern, code aufräumen / strukturieren
+
+## Später:
+
+- benutzerdfinierte übungen, mit url bestimmen atem/custom/3-4-5-6 -> erst später mit backend
+- dynamische seiten generierung, um weniger html und javascript datein zu haben -> erst später mit backend
+
+## Zukunft:
+
+- Konto mit Favoriten
+- Fortschritte von Konto verfolgen und teilen
+- Archiv
+- Werbung um Geld zu verdienen
+- Blog mit in depth informationen zur atmung
+- Vibrations Feedback bei den Übungen
+- Krankheiten am Atemmuster erkennen

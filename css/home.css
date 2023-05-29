@@ -134,14 +134,14 @@ body {
 .exercise-title {
   position: relative;
   left: 115px;
-  top: -10%;
+  top: -25%;
   transform: translateY(-50%);
-  width: 383px;
+  width: 430px;
   height: 53px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 28px;
   line-height: 48px;
   color: var(--on-primary-container-light);
 }
@@ -149,14 +149,14 @@ body {
 .exercise-description {
   position: relative;
   left: 115px;
-  top: -10%;
+  top: -25%;
   transform: translateY(-50%);
   width: 454px;
   height: 54px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
   color: var(--on-primary-container-light);
 }
@@ -188,14 +188,14 @@ body {
 #custom-exercise-title {
   position: relative;
   left: 115px;
-  top: -10%;
+  top: -25%;
   transform: translateY(-50%);
   width: 900px;
   height: 53px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 28px;
   line-height: 48px;
   color: var(--on-tertiary-container-light);
 }
@@ -203,14 +203,14 @@ body {
 #custom-exercise-description {
   position: relative;
   left: 115px;
-  top: -10%;
+  top: -25%;
   transform: translateY(-50%);
   width: 900px;
   height: 54px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
   color: var(--on-tertiary-container-light);
 }
