@@ -1,13 +1,17 @@
 :root {
-  --primary-light: #bf0026;
-  --background-light: #fffbff;
-  --on-background-light: #201a1a;
-  --primary-container-light: #ffdad8;
-  --on-primary-container-light: #410006;
-  --tertiary-container-light: #ffdeaa;
-  --on-tertiary-container-light: #271900;
+  --primary-dark: #ffb3b0;
+  --background-dark: #201a1a;
   --on-background-dark: #ede0de;
-  --transparent: #00000000;
+  --primary-container-dark: #93001b;
+  --on-primary-container-dark: #ffdad8;
+  --tertiary-container-dark: #5a4319;
+  --on-tertiary-container-dark: #ffdeaa;
+  --scrollbar-dark: #534342;
+
+  --exercise-icon-filter-dark: invert(83%) sepia(16%) saturate(345%)
+    hue-rotate(314deg) brightness(103%) contrast(101%);
+  --custom-exercise-icon-filter-dark: invert(93%) sepia(14%) saturate(1223%)
+    hue-rotate(322deg) brightness(101%) contrast(102%);
 }
 
 * {
@@ -18,12 +22,87 @@
 
 /* CSS für die Seite */
 body {
+  /* Light Theme */
+  --primary-light: #bf0026;
+  --background-light: #fffbff;
+  --on-background-light: #201a1a;
+  --primary-container-light: #ffdad8;
+  --on-primary-container-light: #410006;
+  --tertiary-container-light: #ffdeaa;
+  --on-tertiary-container-light: #271900;
+  --on-background-dark: #ede0de;
+  --scrollbar-light: #ede0de;
+  --transparent: #00000000;
+
+  --exercise-icon-filter-light: invert(4%) sepia(51%) saturate(7483%)
+    hue-rotate(347deg) brightness(96%) contrast(104%);
+  --custom-exercise-icon-filter-light: invert(11%) sepia(16%) saturate(4643%)
+    hue-rotate(20deg) brightness(97%) contrast(104%);
+
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
   background-color: var(--background-light);
+}
+
+body.theme-dark {
+  --primary-light: var(--primary-dark);
+  --background-light: var(--background-dark);
+  --on-background-light: var(--on-background-dark);
+  --primary-container-light: var(--primary-container-dark);
+  --on-primary-container-light: var(--on-primary-container-dark);
+  --tertiary-container-light: var(--tertiary-container-dark);
+  --on-tertiary-container-light: var(--on-tertiary-container-dark);
+  --scrollbar-light: var(--scrollbar-dark);
+
+  --exercise-icon-filter-light: var(--exercise-icon-filter-dark);
+  --custom-exercise-icon-filter-light: var(--custom-exercise-icon-filter-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  body.theme-auto {
+    --primary-light: var(--primary-dark);
+    --background-light: var(--background-dark);
+    --on-background-light: var(--on-background-dark);
+    --primary-container-light: var(--primary-container-dark);
+    --on-primary-container-light: var(--on-primary-container-dark);
+    --tertiary-container-light: var(--tertiary-container-dark);
+    --on-tertiary-container-light: var(--on-tertiary-container-dark);
+    --scrollbar-light: var(--scrollbar-dark);
+
+    --exercise-icon-filter-light: var(--exercise-icon-filter-dark);
+    --custom-exercise-icon-filter-light: var(
+      --custom-exercise-icon-filter-dark
+    );
+  }
+}
+
+.select {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 8px;
+  border-radius: 10px;
+}
+
+.select__input {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--on-background-light);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.select__input option {
+  color: #201a1a;
 }
 
 /* Navbar */
@@ -110,7 +189,7 @@ body {
 
 .grid-container::-webkit-scrollbar-track {
   background-color: var(
-    --on-background-dark
+    --scrollbar-light
   ); /* Hintergrundfarbe der Scroll-Leiste */
   border-radius: 4px; /* Radius der Scroll-Leiste */
 }
@@ -127,8 +206,7 @@ body {
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  filter: invert(4%) sepia(51%) saturate(7483%) hue-rotate(347deg)
-    brightness(96%) contrast(104%);
+  filter: var(--exercise-icon-filter-light);
 }
 
 .exercise-title {
@@ -181,8 +259,7 @@ body {
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  filter: invert(11%) sepia(16%) saturate(4643%) hue-rotate(20deg)
-    brightness(97%) contrast(104%);
+  filter: var(--custom-exercise-icon-filter-light);
 }
 
 #custom-exercise-title {

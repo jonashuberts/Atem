@@ -119,7 +119,6 @@ Site: https://atemuebungen.netlify.app/
 
 ### Zuhause:
 
-- homepage
 - darkmode
 - responsiv
 - ton bei den übungen

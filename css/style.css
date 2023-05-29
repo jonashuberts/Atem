@@ -1,11 +1,15 @@
 :root {
-  --primary-light: #bf0026;
-  --background-light: #fffbff;
-  --on-background-light: #201a1a;
-  --primary-container-light: #ffdad8;
-  --tertiary-container-light: #ffdeaa;
-  --on-tertiary-container-light: #271900;
-  --transparent: #00000000;
+  --primary-dark: #ffb3b0;
+  --background-dark: #201a1a;
+  --on-background-dark: #ede0de;
+  --primary-container-dark: #93001b;
+  --on-primary-container-dark: #ffdad8;
+  --tertiary-container-dark: #5a4319;
+  --on-tertiary-container-dark: #ffdeaa;
+  --scrollbar-dark: #534342;
+
+  --on-background-filter-dark: invert(90%) sepia(2%) saturate(1265%)
+    hue-rotate(317deg) brightness(106%) contrast(86%);
 }
 
 * {
@@ -16,12 +20,55 @@
 
 /* CSS für die Seite */
 body {
+  /* Light Theme */
+  --primary-light: #bf0026;
+  --background-light: #fffbff;
+  --on-background-light: #201a1a;
+  --primary-container-light: #ffdad8;
+  --on-primary-container-light: #410006;
+  --tertiary-container-light: #ffdeaa;
+  --on-tertiary-container-light: #271900;
+  --on-background-dark: #ede0de;
+  --scrollbar-light: #ede0de;
+  --transparent: #00000000;
+
+  --on-background-filter-light: invert(5%) sepia(7%) saturate(2162%)
+    hue-rotate(314deg) brightness(104%) contrast(87%);
+
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
   background-color: var(--background-light);
+}
+
+body.theme-dark {
+  --primary-light: var(--primary-dark);
+  --background-light: var(--background-dark);
+  --on-background-light: var(--on-background-dark);
+  --primary-container-light: var(--primary-container-dark);
+  --on-primary-container-light: var(--on-primary-container-dark);
+  --tertiary-container-light: var(--tertiary-container-dark);
+  --on-tertiary-container-light: var(--on-tertiary-container-dark);
+  --scrollbar-light: var(--scrollbar-dark);
+
+  --on-background-filter-light: var(--on-background-filter-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  body.theme-auto {
+    --primary-light: var(--primary-dark);
+    --background-light: var(--background-dark);
+    --on-background-light: var(--on-background-dark);
+    --primary-container-light: var(--primary-container-dark);
+    --on-primary-container-light: var(--on-primary-container-dark);
+    --tertiary-container-light: var(--tertiary-container-dark);
+    --on-tertiary-container-light: var(--on-tertiary-container-dark);
+    --scrollbar-light: var(--scrollbar-dark);
+
+    --on-background-filter-light: var(--on-background-filter-dark);
+  }
 }
 
 /* CSS für den Animierten atem Kreis */
@@ -112,6 +159,7 @@ body {
   top: 48px;
   left: 48px;
   transition: transform 0.3s ease-in-out;
+  filter: var(--on-background-filter-light);
 }
 
 #back:hover {
