@@ -99,6 +99,11 @@ body.theme-dark {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
+  transition: font-size 0.3s ease;
+}
+
+.select__input:hover {
+  font-size: 20.4px;
 }
 
 .select__input option {
@@ -116,6 +121,11 @@ body.theme-dark {
   font-size: 20px;
   line-height: 24px;
   color: var(--on-background-light);
+  transition: font-size 0.3s ease;
+}
+
+.nav-item:hover {
+  font-size: 20.4px;
 }
 
 /* Einstellungen */

@@ -46,7 +46,7 @@ Die App präsentiert die Atemübungen auf visuell ansprechende und animierte Wei
 
 ### 4. Programmiersprache, Framework und Tools auswählen
 
-HTML: Vanilla Own Code, https://grapesjs.com/, https://www.vvveb.com/vvvebjs/editor.html, https://www.vvveb.com/vvvebjs/editor.html
+HTML: Vanilla Own Code, https://grapesjs.com/, https://www.vvveb.com/vvvebjs/editor.html, https://github.com/silexlabs/Silex
 CSS: Vanilla Own Code, https://codyhouse.co/, https://csslayout.io/, https://uiverse.io/
 JavaScript: Vanilla Own Code, https://extendsclass.com/python-to-javascript.html, http://reeborg.ca/docs/js_py_en/conversion.html
 
@@ -119,9 +119,9 @@ Site: https://atemuebungen.netlify.app/
 
 ### Zuhause:
 
-- darkmode
-- responsiv
+- responsiv, iphone, ipad und macbook + responsiv nav bar
 - ton bei den übungen
+- page transitions
 
 ### Corpuls:
 
