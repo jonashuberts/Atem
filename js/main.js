@@ -19,9 +19,16 @@ const totalDuration =
 
 // Funktion, um die progressbar zu aktualliesieren
 function updateCircularProgress(progressValue) {
-  circularProgress.style.background = `conic-gradient(#201a1a ${
+  const lightMode = document.body.classList.contains("theme-light");
+  const startColor = lightMode
+    ? "#201a1a"
+    : "#ede0de"; /* Progress indicator, darkmode : light */
+  const endColor = lightMode
+    ? "#fffbff"
+    : "#201a1a"; /* Background color, darkmode : light */
+  circularProgress.style.background = `conic-gradient(${startColor} ${
     progressValue * 3.6
-  }deg, #fffbff 0deg)`;
+  }deg, ${endColor} 0deg)`;
 }
 
 // Funktion, um die runde Progressbar zu animieren
@@ -104,6 +111,13 @@ function startTimer(duration) {
     }
   }, 1000);
 }
+// Funktion zum Anwenden des Themas
+function applyTheme(theme) {
+  // Entferne vorhandene Themenklassen vom body-Element
+  document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
+  // Füge die entsprechende Klasse für das ausgewählte Thema hinzu
+  document.body.classList.add(`theme-${theme}`);
+}
 
 // window.onload = function () { // Starten, wenn ales inklusive css und bilder geladen sind
 document.addEventListener("DOMContentLoaded", function () {
@@ -139,18 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
     outerMarker.style.height = "400px";
   }); */
   });
-});
 
-// Funktion zum Anwenden des Themas
-function applyTheme(theme) {
-  // Entferne vorhandene Themenklassen vom body-Element
-  document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
-  // Füge die entsprechende Klasse für das ausgewählte Thema hinzu
-  document.body.classList.add(`theme-${theme}`);
-}
-
-// Warte, bis das DOM geladen ist
-document.addEventListener("DOMContentLoaded", () => {
   // Das gespeicherte Thema aus dem lokalen Speicher abrufen oder "auto" als Standard verwenden
   const savedTheme = localStorage.getItem("theme") || "auto";
 
