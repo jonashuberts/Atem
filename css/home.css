@@ -179,6 +179,8 @@ body.theme-dark {
 }
 
 .grid-item {
+  position: relative;
+  border-radius: 20px;
   background-color: var(--primary-container-light);
   width: 29.5vw;
   height: 16vh;
@@ -219,7 +221,7 @@ body.theme-dark {
 }
 
 .exercise-icon {
-  position: relative;
+  position: absolute;
   height: 8vh;
   left: 2vh;
   top: 50%;
@@ -230,7 +232,7 @@ body.theme-dark {
 .exercise-title {
   position: relative;
   left: 6vw;
-  top: -25%;
+  top: 25%;
   transform: translateY(-50%);
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -243,7 +245,7 @@ body.theme-dark {
 .exercise-description {
   position: relative;
   left: 6vw;
-  top: -25%;
+  top: 25%;
   height: 2vw;
   width: 23vw;
   transform: translateY(-50%);
@@ -282,7 +284,7 @@ body.theme-dark {
 #custom-exercise-title {
   position: relative;
   left: 6vw;
-  top: -25%;
+  top: 25%;
   transform: translateY(-50%);
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -295,7 +297,7 @@ body.theme-dark {
 #custom-exercise-description {
   position: relative;
   left: 6vw;
-  top: -25%;
+  top: 25%;
   height: 2vw;
   width: 42vw;
   transform: translateY(-50%);
@@ -356,14 +358,14 @@ body.theme-dark {
 
   .exercise-title {
     left: 18vw;
-    top: -40%;
+    top: 25%;
     font-size: 4.2vw;
     line-height: 2.4vw;
   }
 
   .exercise-description {
     left: 18vw;
-    top: -30%;
+    top: 35%;
     width: 70vw;
     font-size: 2.8vw;
     line-height: 3.2vw;
@@ -382,14 +384,14 @@ body.theme-dark {
 
   #custom-exercise-title {
     left: 18vw;
-    top: -40%;
+    top: 25%;
     font-size: 4.2vw;
     line-height: 2.4vw;
   }
 
   #custom-exercise-description {
     left: 18vw;
-    top: -30%;
+    top: 35%;
     height: 2vw;
     width: 60vw;
     font-size: 2.8vw;
@@ -446,14 +448,14 @@ body.theme-dark {
 
   .exercise-title {
     left: 16vw;
-    top: -35%;
+    top: 25%;
     font-size: 3.8vw;
     line-height: 2.4vw;
   }
 
   .exercise-description {
     left: 16vw;
-    top: -25%;
+    top: 35%;
     width: 72vw;
     font-size: 2.2vw;
     line-height: 3.2vw;
@@ -472,14 +474,14 @@ body.theme-dark {
 
   #custom-exercise-title {
     left: 16vw;
-    top: -35%;
+    top: 25%;
     font-size: 3.8vw;
     line-height: 2.4vw;
   }
 
   #custom-exercise-description {
     left: 16vw;
-    top: -25%;
+    top: 35%;
     height: 2vw;
     width: 75vw;
     font-size: 2.2vw;
