@@ -271,7 +271,7 @@ body.theme-dark {
 }
 
 #custom-exercise-icon {
-  position: relative;
+  position: absolute;
   height: 8vh;
   left: 2vh;
   top: 50%;
