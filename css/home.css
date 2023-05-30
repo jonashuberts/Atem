@@ -14,6 +14,11 @@
     hue-rotate(322deg) brightness(101%) contrast(102%);
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("assets/font/Inter-VariableFont_slnt,wght.ttf");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -361,6 +366,9 @@ body.theme-dark {
     width: 90vw;
     height: 10vh;
     top: 86vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   #custom-exercise-icon {
@@ -455,6 +463,9 @@ body.theme-dark {
     width: 90vw;
     height: 10vh;
     top: 86vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   #custom-exercise-icon {
