@@ -488,16 +488,3 @@ body.theme-dark {
     line-height: 3.2vw;
   }
 }
-
-@media screen and (orientation: landscape) {
-  body {
-    display: none; /* Verstecke den Inhalt der Webseite im Landscape-Modus */
-  }
-
-  html {
-    display: none; /* Verstecke den Inhalt der Webseite im Landscape-Modus */
-  }
-
-  /* Oder, wenn du eine spezifische Meldung anzeigen möchtest: */
-  /* .landscape-message { display: block; } */
-}
