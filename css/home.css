@@ -16,7 +16,16 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("assets/font/Inter-VariableFont_slnt,wght.ttf");
+  src: url(assets/font/Inter-Medium.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(assets/font/Inter-ExtraLight.ttf);
+  font-weight: 200;
+  font-style: normal;
 }
 
 * {
@@ -100,7 +109,7 @@ body.theme-dark {
   outline: none;
   cursor: pointer;
   color: var(--on-background-light);
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1vw;
@@ -119,7 +128,7 @@ body.theme-dark {
 .nav-item {
   position: absolute;
   top: 3vh;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1vw;
@@ -149,7 +158,7 @@ body.theme-dark {
 #title {
   position: absolute;
   top: 3vh;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 200;
   font-size: 6vw;
@@ -223,7 +232,7 @@ body.theme-dark {
   left: 6vw;
   top: -25%;
   transform: translateY(-50%);
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.4vw;
@@ -238,7 +247,7 @@ body.theme-dark {
   height: 2vw;
   width: 23vw;
   transform: translateY(-50%);
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9vw;
@@ -275,7 +284,7 @@ body.theme-dark {
   left: 6vw;
   top: -25%;
   transform: translateY(-50%);
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.4vw;
@@ -290,7 +299,7 @@ body.theme-dark {
   height: 2vw;
   width: 42vw;
   transform: translateY(-50%);
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9vw;
@@ -366,9 +375,6 @@ body.theme-dark {
     width: 90vw;
     height: 10vh;
     top: 86vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   #custom-exercise-icon {
@@ -463,9 +469,6 @@ body.theme-dark {
     width: 90vw;
     height: 10vh;
     top: 86vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   #custom-exercise-icon {
