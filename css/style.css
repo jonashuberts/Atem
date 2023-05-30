@@ -12,6 +12,13 @@
     hue-rotate(317deg) brightness(106%) contrast(86%);
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url(assets/font/Inter-Medium.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -181,7 +188,7 @@ body.theme-dark {
   height: 30px;
   top: 48px;
 
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -209,7 +216,7 @@ body.theme-dark {
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
@@ -225,7 +232,7 @@ body.theme-dark {
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 96px;
