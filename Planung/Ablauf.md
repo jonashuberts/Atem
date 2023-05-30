@@ -119,7 +119,6 @@ Site: https://atemuebungen.netlify.app/
 
 ### Zuhause:
 
-- responsiv, iphone, ipad und macbook
 - ton bei den übungen
 - page transitions
 
