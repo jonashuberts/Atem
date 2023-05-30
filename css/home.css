@@ -81,8 +81,8 @@ body.theme-dark {
 
 .select {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 3vh;
+  right: 2vw;
   display: inline-flex;
   align-items: center;
   padding: 5px 8px;
@@ -98,12 +98,12 @@ body.theme-dark {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1vw;
   transition: font-size 0.3s ease;
 }
 
 .select__input:hover {
-  font-size: 20.4px;
+  font-size: 1.02vw;
 }
 
 .select__input option {
@@ -113,68 +113,61 @@ body.theme-dark {
 /* Navbar */
 .nav-item {
   position: absolute;
-  height: 24px;
-  top: 30px;
+  top: 3vh;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1vw;
   color: var(--on-background-light);
   transition: font-size 0.3s ease;
 }
 
 .nav-item:hover {
-  font-size: 20.4px;
+  font-size: 1.02vw;
 }
 
 /* Einstellungen */
 #settings {
-  width: 126px;
-  left: 30px;
+  left: 2vw;
 }
 
 /* Favoriten */
 #favorite {
-  width: 88px;
-  left: 226px;
+  left: 12vw;
 }
 
 /* Profil */
 #profile {
-  width: 49px;
-  left: 385px;
+  left: 20vw;
 }
 
 #title {
   position: absolute;
-  width: 390px;
-  height: 100px;
-  top: 20px;
+  top: 3vh;
   font-family: "Inter";
   font-style: normal;
   font-weight: 200;
-  font-size: 120px;
-  line-height: 145px;
+  font-size: 6vw;
   text-align: center;
   color: var(--on-background-light);
 }
 
 .grid-container {
   position: absolute;
-  width: 1180px;
-  height: 580px;
-  top: 195px;
+  width: 62vw;
+  height: 57vh;
+  top: 20vh;
   overflow: auto; /* Hinzugefügtes CSS-Overflow-Attribut */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Anzahl der Spalten auf 2 ändern */
-  grid-gap: 20px;
+  grid-gap: 1vw;
 }
 
 .grid-item {
   background-color: var(--primary-container-light);
-  width: 570px;
-  height: 160px;
+  width: 29.5vw;
+  height: 16vh;
   border-radius: 20px;
 }
 
@@ -184,6 +177,7 @@ body.theme-dark {
 
 .grid-container:hover {
   overflow: auto; /* Scroll-Leiste anzeigen, wenn der Container gehovert wird */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 .grid-container::-webkit-scrollbar {
@@ -212,8 +206,8 @@ body.theme-dark {
 
 .exercise-icon {
   position: relative;
-  height: 75px;
-  left: 20px;
+  height: 8vh;
+  left: 2vh;
   top: 50%;
   transform: translateY(-50%);
   filter: var(--exercise-icon-filter-light);
@@ -221,40 +215,39 @@ body.theme-dark {
 
 .exercise-title {
   position: relative;
-  left: 115px;
+  left: 6vw;
   top: -25%;
   transform: translateY(-50%);
-  width: 430px;
-  height: 53px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 28px;
-  line-height: 48px;
+  font-size: 1.4vw;
+  line-height: 2.4vw;
   color: var(--on-primary-container-light);
 }
 
 .exercise-description {
   position: relative;
-  left: 115px;
+  left: 6vw;
   top: -25%;
+  height: 2vw;
+  width: 23vw;
   transform: translateY(-50%);
-  width: 454px;
-  height: 54px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 0.9vw;
+  line-height: 1.2vw;
   color: var(--on-primary-container-light);
 }
 
 #custom-exercise {
   position: absolute;
-  width: 1180px;
-  height: 160px;
-  left: 375px;
-  top: 795px;
+  width: 62vw;
+  height: 16vh;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 79vh;
   background: var(--tertiary-container-light);
   border-radius: 20px;
 }
@@ -265,8 +258,8 @@ body.theme-dark {
 
 #custom-exercise-icon {
   position: relative;
-  height: 75px;
-  left: 20px;
+  height: 8vh;
+  left: 2vh;
   top: 50%;
   transform: translateY(-50%);
   filter: var(--custom-exercise-icon-filter-light);
@@ -274,30 +267,208 @@ body.theme-dark {
 
 #custom-exercise-title {
   position: relative;
-  left: 115px;
+  left: 6vw;
   top: -25%;
   transform: translateY(-50%);
-  width: 900px;
-  height: 53px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 28px;
-  line-height: 48px;
+  font-size: 1.4vw;
+  line-height: 2.4vw;
   color: var(--on-tertiary-container-light);
 }
 
 #custom-exercise-description {
   position: relative;
-  left: 115px;
+  left: 6vw;
   top: -25%;
+  height: 2vw;
+  width: 42vw;
   transform: translateY(-50%);
-  width: 900px;
-  height: 54px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 0.9vw;
+  line-height: 1.2vw;
   color: var(--on-tertiary-container-light);
+}
+
+@media screen and (max-width: 600px) {
+  .select {
+    top: 1vh;
+    right: 2vw;
+  }
+
+  .select__input {
+    font-size: 4vw;
+  }
+
+  .select__input:hover {
+    font-size: 4.08vw;
+  }
+
+  /* Navbar */
+  .nav-item {
+    display: none;
+  }
+
+  #title {
+    top: 3vh;
+    font-size: 12vw;
+  }
+
+  .grid-container {
+    width: 90vw;
+    height: 73vh;
+    top: 12vh;
+    grid-template-columns: repeat(1, 1fr); /* Anzahl der Spalten auf 2 ändern */
+    grid-gap: 2vw;
+  }
+
+  .grid-item {
+    width: 90vw;
+    height: 10vh;
+    overflow: hidden;
+  }
+
+  .grid-container::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .exercise-icon {
+    height: 6vh;
+    left: 1vh;
+  }
+
+  .exercise-title {
+    left: 18vw;
+    top: -40%;
+    font-size: 4.2vw;
+    line-height: 2.4vw;
+  }
+
+  .exercise-description {
+    left: 18vw;
+    top: -30%;
+    width: 70vw;
+    font-size: 2.8vw;
+    line-height: 3.2vw;
+  }
+
+  #custom-exercise {
+    width: 90vw;
+    height: 10vh;
+    top: 86vh;
+  }
+
+  #custom-exercise-icon {
+    height: 6vh;
+    left: 1vh;
+  }
+
+  #custom-exercise-title {
+    left: 18vw;
+    top: -40%;
+    font-size: 4.2vw;
+    line-height: 2.4vw;
+  }
+
+  #custom-exercise-description {
+    left: 18vw;
+    top: -30%;
+    height: 2vw;
+    width: 60vw;
+    font-size: 2.8vw;
+    line-height: 3.2vw;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .select {
+    top: 1vh;
+    right: 4vw;
+  }
+
+  .select__input {
+    font-size: 3vw;
+  }
+
+  .select__input:hover {
+    font-size: 3.06vw;
+  }
+
+  /* Navbar */
+  .nav-item {
+    display: none;
+  }
+
+  #title {
+    top: 2vh;
+    font-size: 12vw;
+  }
+
+  .grid-container {
+    width: 90vw;
+    height: 72.5vh;
+    top: 12vh;
+    grid-template-columns: repeat(1, 1fr); /* Anzahl der Spalten auf 2 ändern */
+    grid-gap: 2vw;
+  }
+
+  .grid-item {
+    width: 90vw;
+    height: 10vh;
+    overflow: hidden;
+  }
+
+  .grid-container::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .exercise-icon {
+    height: 6vh;
+    left: 2.5vh;
+  }
+
+  .exercise-title {
+    left: 16vw;
+    top: -35%;
+    font-size: 3.8vw;
+    line-height: 2.4vw;
+  }
+
+  .exercise-description {
+    left: 16vw;
+    top: -25%;
+    width: 72vw;
+    font-size: 2.2vw;
+    line-height: 3.2vw;
+  }
+
+  #custom-exercise {
+    width: 90vw;
+    height: 10vh;
+    top: 86vh;
+  }
+
+  #custom-exercise-icon {
+    height: 6vh;
+    left: 2.5vh;
+  }
+
+  #custom-exercise-title {
+    left: 16vw;
+    top: -35%;
+    font-size: 3.8vw;
+    line-height: 2.4vw;
+  }
+
+  #custom-exercise-description {
+    left: 16vw;
+    top: -25%;
+    height: 2vw;
+    width: 75vw;
+    font-size: 2.2vw;
+    line-height: 3.2vw;
+  }
 }
