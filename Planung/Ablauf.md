@@ -119,7 +119,7 @@ Site: https://atemuebungen.netlify.app/
 
 ### Zuhause:
 
-- responsiv, iphone, ipad und macbook + responsiv nav bar
+- responsiv, iphone, ipad und macbook
 - ton bei den übungen
 - page transitions
 
@@ -128,6 +128,7 @@ Site: https://atemuebungen.netlify.app/
 - alle restlichen übungen hinzufügen
 - pwa
 - code commentare hinzufügen / verbessern, code aufräumen / strukturieren
+- responsiv nav bar
 
 ## Später:
 

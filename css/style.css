@@ -78,10 +78,53 @@ body.theme-dark {
   }
 }
 
+/* CSS für die Infobox */
+#info-box {
+  position: absolute;
+  width: 60vw;
+  height: 60vh;
+  background: var(--tertiary-container-light);
+  border-radius: 20px;
+  display: none;
+  z-index: 2;
+}
+
+/* CSS für die Beschreibung in der Infobox */
+#info-text {
+  position: absolute;
+  width: 50vw;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4vw;
+  line-height: 2.8vw;
+  color: var(--on-tertiary-container-light);
+}
+
+/* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
+#start-btn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4.8vw;
+  color: var(--on-tertiary-container-light);
+  transition: font-size 0.3s ease;
+}
+
+#start-btn:hover {
+  font-size: 4.9vw;
+}
 /* CSS für den Animierten atem Kreis */
 #circle {
-  width: 300px;
-  height: 300px;
+  width: 30vh;
+  height: 30vh;
   border-radius: 50%;
   background-color: var(--primary-container-light);
 }
@@ -124,8 +167,8 @@ body.theme-dark {
 
 /* CSS für den inneren Marker */
 #inner-marker {
-  width: 300px;
-  height: 300px;
+  width: 30vh;
+  height: 30vh;
   border-radius: 50%;
   background-color: var(--transparent);
   border: 2px solid var(--on-background-light);
@@ -135,8 +178,8 @@ body.theme-dark {
 
 /* CSS für den äußeren Marker */
 #outer-marker {
-  width: 400px;
-  height: 400px;
+  width: 40vh;
+  height: 40vh;
   border-radius: 50%;
   background-color: var(--background-light);
   outline: 2px solid var(--on-background-light);
@@ -148,8 +191,8 @@ body.theme-dark {
 /* CSS für die runde Progress bar */
 #circular-progress {
   position: absolute;
-  height: 408px;
-  width: 408px;
+  height: 40.8vh;
+  width: 40.8vh;
   border-radius: 50%;
   background: conic-gradient(
     var(--on-background-light) 0deg,
@@ -161,10 +204,10 @@ body.theme-dark {
 
 /* CSS für den Zurück zum Home Pfeil */
 #back {
-  height: 30px;
+  height: 3vh;
   position: absolute;
-  top: 48px;
-  left: 48px;
+  top: 4.8vh;
+  left: 4.8vh;
   transition: transform 0.3s ease-in-out;
   filter: var(--on-background-filter-light);
 }
@@ -185,63 +228,58 @@ body.theme-dark {
 /* CSS für den Timer */
 #timer {
   position: absolute;
-  height: 30px;
-  top: 48px;
+  height: 3vh;
+  top: 4.8vh;
 
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 3vh;
   text-align: center;
 
   color: var(--on-background-light);
 }
 
-/* CSS für die Infobox */
-#info-box {
-  position: absolute;
-  width: 1200px;
-  height: 600px;
-  background: var(--tertiary-container-light);
-  border-radius: 20px;
-  display: none;
-  z-index: 2;
+@media screen and (max-width: 600px) {
+  /* CSS für die Infobox */
+  #info-box {
+    width: 95vw;
+    height: 60vh;
+  }
+
+  /* CSS für die Beschreibung in der Infobox */
+  #info-text {
+    width: 80vw;
+    top: 38%;
+    font-size: 7.2vw;
+    line-height: 8.4vw;
+  }
+
+  /* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
+  #start-btn {
+    top: 85%;
+    font-size: 14.2vw;
+  }
 }
 
-/* CSS für die Beschreibung in der Infobox */
-#info-text {
-  position: absolute;
-  width: 940px;
-  height: 250px;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 58px;
-  color: var(--on-tertiary-container-light);
-}
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  /* CSS für die Infobox */
+  #info-box {
+    width: 95vw;
+    height: 50vh;
+  }
 
-/* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
-#start-btn {
-  position: absolute;
-  width: 1200px;
-  height: 100px;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 96px;
-  line-height: 116px;
-  text-align: center;
-  color: var(--on-tertiary-container-light);
-  transition: font-size 0.3s ease;
-}
+  /* CSS für die Beschreibung in der Infobox */
+  #info-text {
+    width: 80vw;
+    top: 38%;
+    font-size: 3.6vw;
+    line-height: 6.4vw;
+  }
 
-#start-btn:hover {
-  font-size: 98px;
+  /* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
+  #start-btn {
+    top: 80%;
+    font-size: 7.2vw;
+  }
 }

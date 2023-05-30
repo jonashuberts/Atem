@@ -222,7 +222,7 @@ body.theme-dark {
 
 .exercise-icon {
   position: absolute;
-  height: 8vh;
+  height: 4vw;
   left: 2vh;
   top: 50%;
   transform: translateY(-50%);
@@ -274,7 +274,7 @@ body.theme-dark {
 
 #custom-exercise-icon {
   position: absolute;
-  height: 8vh;
+  height: 4vw;
   left: 2vh;
   top: 50%;
   transform: translateY(-50%);
@@ -487,4 +487,17 @@ body.theme-dark {
     font-size: 2.2vw;
     line-height: 3.2vw;
   }
+}
+
+@media screen and (orientation: landscape) {
+  body {
+    display: none; /* Verstecke den Inhalt der Webseite im Landscape-Modus */
+  }
+
+  html {
+    display: none; /* Verstecke den Inhalt der Webseite im Landscape-Modus */
+  }
+
+  /* Oder, wenn du eine spezifische Meldung anzeigen möchtest: */
+  /* .landscape-message { display: block; } */
 }
