@@ -336,6 +336,8 @@ body.theme-dark {
   }
 
   .exercise-icon {
+    top: 50%;
+    transform: translateY(-50%);
     height: 6vh;
     left: 1vh;
   }
@@ -362,6 +364,8 @@ body.theme-dark {
   }
 
   #custom-exercise-icon {
+    top: 50%;
+    transform: translateY(-50%);
     height: 6vh;
     left: 1vh;
   }
@@ -426,6 +430,8 @@ body.theme-dark {
   }
 
   .exercise-icon {
+    top: 50%;
+    transform: translateY(-50%);
     height: 6vh;
     left: 2.5vh;
   }
@@ -452,6 +458,8 @@ body.theme-dark {
   }
 
   #custom-exercise-icon {
+    top: 50%;
+    transform: translateY(-50%);
     height: 6vh;
     left: 2.5vh;
   }
