@@ -283,3 +283,60 @@ body.theme-dark {
     font-size: 7.2vw;
   }
 }
+
+@media screen and (max-height: 600px) {
+  /* CSS für die Infobox */
+  #info-box {
+    width: 80vw;
+    height: 70vh;
+  }
+
+  /* CSS für die Beschreibung in der Infobox */
+  #info-text {
+    width: 70vw;
+    top: 30%;
+    font-size: 2.4vw;
+    line-height: 2.8vw;
+  }
+
+  /* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
+  #start-btn {
+    top: 75%;
+    font-size: 4.8vw;
+  }
+
+  /* CSS für den Animierten atem Kreis */
+  #circle {
+    width: 45vh;
+    height: 45vh;
+  }
+
+  /* CSS für den inneren Marker */
+  #inner-marker {
+    width: 45vh;
+    height: 45vh;
+  }
+
+  /* CSS für den äußeren Marker */
+  #outer-marker {
+    width: 60vh;
+    height: 60vh;
+  }
+
+  /* CSS für die runde Progress bar */
+  #circular-progress {
+    height: 62.2vh;
+    width: 62.2vh;
+  }
+
+  /* CSS für den Zurück zum Home Pfeil */
+  #back {
+    height: 6vh;
+  }
+
+  /* CSS für den Timer */
+  #timer {
+    height: 6vh;
+    font-size: 6vh;
+  }
+}

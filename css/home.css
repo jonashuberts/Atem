@@ -488,3 +488,93 @@ body.theme-dark {
     line-height: 3.2vw;
   }
 }
+
+@media screen and (max-height: 600px) {
+  .select {
+    top: 1vh;
+    right: 1vw;
+  }
+
+  .select__input {
+    font-size: 2vw;
+  }
+
+  .select__input:hover {
+    font-size: 2.04vw;
+  }
+
+  /* Navbar */
+  .nav-item {
+    display: none;
+  }
+
+  #title {
+    top: 3vh;
+    font-size: 6vw;
+  }
+
+  .grid-container {
+    width: 90vw;
+    height: 60vh;
+    top: 20vh;
+    grid-template-columns: repeat(1, 1fr); /* Anzahl der Spalten auf 2 ändern */
+    grid-gap: 2vw;
+  }
+
+  .grid-item {
+    width: 90vw;
+    height: 40vh;
+    overflow: hidden;
+  }
+
+  .grid-container::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .exercise-icon {
+    height: 20vh;
+    left: 9vh;
+  }
+
+  .exercise-title {
+    left: 18vw;
+    top: 25%;
+    font-size: 4.2vw;
+    line-height: 2.4vw;
+  }
+
+  .exercise-description {
+    left: 18vw;
+    top: 35%;
+    width: 70vw;
+    font-size: 2.8vw;
+    line-height: 3.2vw;
+  }
+
+  #custom-exercise {
+    width: 90vw;
+    height: 40vh;
+    top: 85vh;
+  }
+
+  #custom-exercise-icon {
+    height: 20vh;
+    left: 9vh;
+  }
+
+  #custom-exercise-title {
+    left: 18vw;
+    top: 25%;
+    font-size: 4.2vw;
+    line-height: 2.4vw;
+  }
+
+  #custom-exercise-description {
+    left: 18vw;
+    top: 35%;
+    height: 2vw;
+    width: 60vw;
+    font-size: 2.8vw;
+    line-height: 3.2vw;
+  }
+}
