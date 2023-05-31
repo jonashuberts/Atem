@@ -17,12 +17,11 @@ const totalDuration =
   repetitions *
   1000; // in Millisekunden
 
-function playSound(url) {
-  var audio = new Audio();
-  audio.src = url;
-  audio.addEventListener("canplaythrough", function () {
-    audio.play();
-  });
+// Funktion, um den Sound abzuspielen
+function playSound(audioElementId) {
+  const audioElement = document.getElementById(audioElementId);
+  audioElement.currentTime = 0; // Zurücksetzen der Wiedergabezeit auf den Anfang
+  audioElement.play();
 }
 
 // Funktion, um die progressbar zu aktualliesieren
@@ -64,21 +63,21 @@ function playAnimations() {
     return; // Stoppe die Animation nach der zehnten Wiederholung
   }
 
-  playSound("assets/sound/inhale.wav"); // Sound beim Einatmen abspielen
+  playSound("inhaleSound"); // Sound beim Einatmen abspielen
 
   if (inhaleHoldDuration > 0) {
     setTimeout(() => {
-      playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Einatmen abspielen
+      playSound("holdSound"); // Sound beim Halten nach dem Einatmen abspielen
     }, inhaleDuration * 1000);
   }
 
   setTimeout(() => {
-    playSound("assets/sound/exhale.wav"); // Sound beim Ausatmen abspielen
+    playSound("exhaleSound"); // Sound beim Ausatmen abspielen
   }, (inhaleDuration + inhaleHoldDuration) * 1000);
 
   if (exhaleHoldDuration > 0) {
     setTimeout(() => {
-      playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Ausatmen abspielen
+      playSound("holdSound"); // Sound beim Halten nach dem Ausatmen abspielen
     }, (inhaleDuration + inhaleHoldDuration + exhaleDuration) * 1000);
   }
 
