@@ -98,17 +98,24 @@ self.addEventListener("fetch", (event) => {
   }
 });
 
-self.addEventListener("install", (event) => {
+self.addEventListener("install", function (event) {
   event.waitUntil(
-    caches.open("your-app-name").then((cache) => {
+    caches.open("my-cache").then(function (cache) {
       return cache.addAll([
         "/",
-        "/index.html",
         "/home.html",
-        "/css",
-        "/js",
-        "/assets",
-        // Fügen Sie hier alle anderen Ressourcen hinzu, die offline verfügbar sein sollen
+        "/index.html",
+        "/css/home.css",
+        "/css/style.css",
+        "/js/home.js",
+        "/js/main.js",
+        "assets/font/Inter-ExtraLight.ttf",
+        "assets/font/Inter-Medium.ttf",
+        "assets/ico/favicon.ico",
+        "assets/svg/arrow_back_ios_FILL0_wght400_GRAD0_opsz48.svg",
+        "assets/svg/spa_FILL0_wght300_GRAD0_opsz48.svg",
+        "assets/svg/tune_FILL0_wght300_GRAD0_opsz48.svg",
+        // Fügen Sie hier alle Ihre anderen Ressourcen hinzu
       ]);
     })
   );
