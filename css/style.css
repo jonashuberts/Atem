@@ -260,6 +260,10 @@ body.theme-dark {
     top: 85%;
     font-size: 14.2vw;
   }
+
+  #start-btn:hover {
+    font-size: 14.2vw;
+  }
 }
 
 @media screen and (max-width: 900px) and (min-width: 600px) {
@@ -282,6 +286,10 @@ body.theme-dark {
     top: 80%;
     font-size: 7.2vw;
   }
+
+  #start-btn:hover {
+    font-size: 7.2vw;
+  }
 }
 
 @media screen and (max-height: 600px) {
@@ -302,6 +310,10 @@ body.theme-dark {
   /* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
   #start-btn {
     top: 75%;
+    font-size: 4.8vw;
+  }
+
+  #start-btn:hover {
     font-size: 4.8vw;
   }
 
