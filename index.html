@@ -11,10 +11,22 @@
       href="assets\ico\favicon.ico"
     />
     <script src="js/main.js" defer></script>
-    <script>
-      navigator.serviceWorker.register("service-worker.js");
-    </script>
     <title>ATEM</title>
+    <link rel="manifest" href="manifest.json" />
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("service-worker.js")
+            .then((registration) => {
+              console.log("Service Worker registered:", registration);
+            })
+            .catch((error) => {
+              console.log("Service Worker registration failed:", error);
+            });
+        });
+      }
+    </script>
   </head>
   <body>
     <!-- Zurück-Button -->
