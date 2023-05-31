@@ -18,6 +18,25 @@ const totalDuration =
   1000; // in Millisekunden
 
 // Funktion, um den Sound abzuspielen
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioContext = new AudioContext();
+
+function createInhaleSound() {
+  const oscillator = audioContext.createOscillator();
+  oscillator.type = "sine"; // Experimentiere mit verschiedenen Oszillator-Typen (sine, square, triangle, sawtooth)
+  oscillator.frequency.setValueAtTime(440, audioContext.currentTime); // Experimentiere mit verschiedenen Frequenzen
+  oscillator.connect(audioContext.destination);
+  return oscillator;
+}
+
+function createHoldSound() {
+  const oscillator = audioContext.createOscillator();
+  oscillator.type = "triangle"; // Experimentiere mit verschiedenen Oszillator-Typen (sine, square, triangle, sawtooth)
+  oscillator.frequency.setValueAtTime(440, audioContext.currentTime); // Experimentiere mit verschiedenen Frequenzen
+  oscillator.connect(audioContext.destination);
+  return oscillator;
+}
+
 function playSound(audioElementId) {
   const audioElement = document.getElementById(audioElementId);
   audioElement.currentTime = 0; // Zurücksetzen der Wiedergabezeit auf den Anfang
@@ -63,11 +82,16 @@ function playAnimations() {
     return; // Stoppe die Animation nach der zehnten Wiederholung
   }
 
-  playSound("inhaleSound"); // Sound beim Einatmen abspielen
+  const inhaleSound = createInhaleSound();
+  const holdSound = createHoldSound();
+
+  // Spiele den Einatme-Sound ab
+  inhaleSound.start();
 
   if (inhaleHoldDuration > 0) {
     setTimeout(() => {
-      playSound("holdSound"); // Sound beim Halten nach dem Einatmen abspielen
+      inhaleSound.stop();
+      holdSound.start();
     }, inhaleDuration * 1000);
   }
 
