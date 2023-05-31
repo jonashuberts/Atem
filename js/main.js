@@ -17,30 +17,10 @@ const totalDuration =
   repetitions *
   1000; // in Millisekunden
 
-// Funktion, um den Sound abzuspielen
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-const audioContext = new AudioContext();
-
-function createInhaleSound() {
-  const oscillator = audioContext.createOscillator();
-  oscillator.type = "sine"; // Experimentiere mit verschiedenen Oszillator-Typen (sine, square, triangle, sawtooth)
-  oscillator.frequency.setValueAtTime(440, audioContext.currentTime); // Experimentiere mit verschiedenen Frequenzen
-  oscillator.connect(audioContext.destination);
-  return oscillator;
-}
-
-function createHoldSound() {
-  const oscillator = audioContext.createOscillator();
-  oscillator.type = "triangle"; // Experimentiere mit verschiedenen Oszillator-Typen (sine, square, triangle, sawtooth)
-  oscillator.frequency.setValueAtTime(440, audioContext.currentTime); // Experimentiere mit verschiedenen Frequenzen
-  oscillator.connect(audioContext.destination);
-  return oscillator;
-}
-
-function playSound(audioElementId) {
-  const audioElement = document.getElementById(audioElementId);
-  audioElement.currentTime = 0; // Zurücksetzen der Wiedergabezeit auf den Anfang
-  audioElement.play();
+function playSound(url) {
+  var audio = new Audio(url);
+  audio.load();
+  audio.play();
 }
 
 // Funktion, um die progressbar zu aktualliesieren
@@ -82,26 +62,21 @@ function playAnimations() {
     return; // Stoppe die Animation nach der zehnten Wiederholung
   }
 
-  const inhaleSound = createInhaleSound();
-  const holdSound = createHoldSound();
-
-  // Spiele den Einatme-Sound ab
-  inhaleSound.start();
+  playSound("assets/sound/inhale.wav"); // Sound beim Einatmen abspielen
 
   if (inhaleHoldDuration > 0) {
     setTimeout(() => {
-      inhaleSound.stop();
-      holdSound.start();
+      playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Einatmen abspielen
     }, inhaleDuration * 1000);
   }
 
   setTimeout(() => {
-    playSound("exhaleSound"); // Sound beim Ausatmen abspielen
+    playSound("assets/sound/exhale.wav"); // Sound beim Ausatmen abspielen
   }, (inhaleDuration + inhaleHoldDuration) * 1000);
 
   if (exhaleHoldDuration > 0) {
     setTimeout(() => {
-      playSound("holdSound"); // Sound beim Halten nach dem Ausatmen abspielen
+      playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Ausatmen abspielen
     }, (inhaleDuration + inhaleHoldDuration + exhaleDuration) * 1000);
   }
 
