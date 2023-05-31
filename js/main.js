@@ -23,6 +23,24 @@ function playSound(url) {
   audio.play();
 }
 
+function playInhaleSound() {
+  var inhaleAudio = new Audio("assets/sound/inhale.wav");
+  inhaleAudio.load();
+  inhaleAudio.play();
+}
+
+function playHoldSound() {
+  var holdAudio = new Audio("assets/sound/hold.wav");
+  holdAudio.load();
+  holdAudio.play();
+}
+
+function playExhaleSound() {
+  var exhaleAudio = new Audio("assets/sound/exhale.wav");
+  exhaleAudio.load();
+  exhaleAudio.play();
+}
+
 // Funktion, um die progressbar zu aktualliesieren
 function updateCircularProgress(progressValue) {
   const lightMode = document.body.classList.contains("theme-light");
@@ -62,21 +80,25 @@ function playAnimations() {
     return; // Stoppe die Animation nach der zehnten Wiederholung
   }
 
-  playSound("assets/sound/inhale.wav"); // Sound beim Einatmen abspielen
+  /* playSound("assets/sound/inhale.wav"); // Sound beim Einatmen abspielen */
+  playInhaleSound();
 
   if (inhaleHoldDuration > 0) {
     setTimeout(() => {
-      playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Einatmen abspielen
+      /* playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Einatmen abspielen */
+      playHoldSound();
     }, inhaleDuration * 1000);
   }
 
   setTimeout(() => {
-    playSound("assets/sound/exhale.wav"); // Sound beim Ausatmen abspielen
+    /* playSound("assets/sound/exhale.wav"); // Sound beim Ausatmen abspielen */
+    playExhaleSound();
   }, (inhaleDuration + inhaleHoldDuration) * 1000);
 
   if (exhaleHoldDuration > 0) {
     setTimeout(() => {
-      playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Ausatmen abspielen
+      /* playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Ausatmen abspielen */
+      playHoldSound();
     }, (inhaleDuration + inhaleHoldDuration + exhaleDuration) * 1000);
   }
 
