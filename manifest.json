@@ -1,7 +1,7 @@
 {
   "name": "ATEM",
   "short_name": "ATEM",
-  "start_url": "/",
+  "start_url": "home.html",
   "display": "standalone",
   "description": "Eine App zur Verbesserung der Atmung.",
   "lang": " DE",
