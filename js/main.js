@@ -19,6 +19,7 @@ const totalDuration =
 
 function playSound(url) {
   const audio = new Audio(url);
+  audio.load();
   audio.play();
 }
 
@@ -61,16 +62,23 @@ function playAnimations() {
     return; // Stoppe die Animation nach der zehnten Wiederholung
   }
 
-  playSound("assets/sound/song.wav"); // Sound beim Einatmen abspielen
+  playSound("assets/sound/inhale.wav"); // Sound beim Einatmen abspielen
+
+  if (inhaleHoldDuration > 0) {
+    setTimeout(() => {
+      playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Einatmen abspielen
+    }, inhaleDuration * 1000);
+  }
+
   setTimeout(() => {
-    playSound("assets/sound/song.wav"); // Sound beim Halten nach dem Einatmen abspielen
-  }, inhaleDuration * 1000);
-  setTimeout(() => {
-    playSound("assets/sound/song.wav"); // Sound beim Ausatmen abspielen
-  }, (inhaleDuration + inhaleHoldDuration + exhaleHoldDuration) * 1000);
-  setTimeout(() => {
-    playSound("assets/sound/song.wav"); // Sound beim Halten nach dem Ausatmen abspielen
-  }, (inhaleDuration + inhaleHoldDuration + exhaleDuration) * 1000);
+    playSound("assets/sound/exhale.wav"); // Sound beim Ausatmen abspielen
+  }, (inhaleDuration + inhaleHoldDuration) * 1000);
+
+  if (exhaleHoldDuration > 0) {
+    setTimeout(() => {
+      playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Ausatmen abspielen
+    }, (inhaleDuration + inhaleHoldDuration + exhaleDuration) * 1000);
+  }
 
   circle.style.animation = "none"; // Animationen zurücksetzen
   void circle.offsetWidth; // Repaint erzwingen
