@@ -18,7 +18,7 @@ const totalDuration =
   1000; // in Millisekunden
 
 function playSound(url) {
-  const audio = new Audio(url);
+  var audio = new Audio(url);
   audio.load();
   audio.play();
 }
