@@ -119,7 +119,7 @@ Site: https://atemuebungen.netlify.app/
 
 ### Zuhause:
 
-- ton bei den übungen
+- ton bei den übungen ausartmen, halten, einartmen, ...
 - page transitions
 
 ### Corpuls:

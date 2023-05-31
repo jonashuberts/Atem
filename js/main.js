@@ -17,6 +17,11 @@ const totalDuration =
   repetitions *
   1000; // in Millisekunden
 
+function playSound(url) {
+  const audio = new Audio(url);
+  audio.play();
+}
+
 // Funktion, um die progressbar zu aktualliesieren
 function updateCircularProgress(progressValue) {
   const lightMode = document.body.classList.contains("theme-light");
@@ -55,6 +60,17 @@ function playAnimations() {
   if (repetitionCount >= repetitions) {
     return; // Stoppe die Animation nach der zehnten Wiederholung
   }
+
+  playSound("assets/sound/song.wav"); // Sound beim Einatmen abspielen
+  setTimeout(() => {
+    playSound("assets/sound/song.wav"); // Sound beim Halten nach dem Einatmen abspielen
+  }, inhaleDuration * 1000);
+  setTimeout(() => {
+    playSound("assets/sound/song.wav"); // Sound beim Ausatmen abspielen
+  }, (inhaleDuration + inhaleHoldDuration + exhaleHoldDuration) * 1000);
+  setTimeout(() => {
+    playSound("assets/sound/song.wav"); // Sound beim Halten nach dem Ausatmen abspielen
+  }, (inhaleDuration + inhaleHoldDuration + exhaleDuration) * 1000);
 
   circle.style.animation = "none"; // Animationen zurücksetzen
   void circle.offsetWidth; // Repaint erzwingen
