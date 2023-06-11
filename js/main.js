@@ -62,21 +62,25 @@ function playAnimations() {
     return; // Stoppe die Animation nach der zehnten Wiederholung
   }
 
-  playSound("assets/sound/inhale.wav"); // Sound beim Einatmen abspielen
+  /* playSound("assets/sound/inhale.wav"); // Sound beim Einatmen abspielen */
+  playSound("assets/sound/beep-6-96243.mp3"); // Sound beim Ausatmen abspielen
 
   if (inhaleHoldDuration > 0) {
     setTimeout(() => {
-      playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Einatmen abspielen
+      /* playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Einatmen abspielen */
+      playSound("assets/sound/beep-6-96243.mp3"); // Sound beim Ausatmen abspielen
     }, inhaleDuration * 1000);
   }
 
   setTimeout(() => {
-    playSound("assets/sound/exhale.wav"); // Sound beim Ausatmen abspielen
+    /* playSound("assets/sound/exhale.wav"); // Sound beim Ausatmen abspielen */
+    playSound("assets/sound/beep-6-96243.mp3"); // Sound beim Ausatmen abspielen
   }, (inhaleDuration + inhaleHoldDuration) * 1000);
 
   if (exhaleHoldDuration > 0) {
     setTimeout(() => {
-      playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Ausatmen abspielen
+      /* playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Ausatmen abspielen */
+      playSound("assets/sound/beep-6-96243.mp3"); // Sound beim Ausatmen abspielen
     }, (inhaleDuration + inhaleHoldDuration + exhaleDuration) * 1000);
   }
 
