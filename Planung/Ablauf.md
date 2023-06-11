@@ -84,13 +84,17 @@ Netify: https://atemuebungen.netlify.app/
 
 ### 11.5 Ton Hinzufügen
 
+ton: https://www.epidemicsound.com/de/music/search/?genres=Ambient&length=298%2C928&moods=Relaxing&term=meditation&vocals=false
+
 ## Testing und Qualitätssicherung
 
 ### 12. Produkt testen und Fehler beheben
 
 ### 13. Benutzerfreundlichkeit überprüfen und gegebenenfalls verbessern
 
-### 14. Performance-Optimierung durchführen, um die Leistung des Produkts zu verbessern
+instruction anzeigen wann atmen, halten, ausatmen
+
+### 14. Performance-Optimierung durchführen, um die Leistung des Produkts zu verbessern (Code verbessern)
 
 ## Bereitstellung und Veröffentlichung
 
@@ -119,13 +123,11 @@ Site: https://atemuebungen.netlify.app/
 
 ### Zuhause:
 
-- ton bei den übungen ausartmen, halten, einartmen, ...
 - page transitions
 
 ### Corpuls:
 
 - alle restlichen übungen hinzufügen
-- pwa
 - code commentare hinzufügen / verbessern, code aufräumen / strukturieren
 - responsiv nav bar
 
