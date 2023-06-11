@@ -156,6 +156,7 @@ function playAnimations() {
   // Ton am Ende der Atemübung abspielen
   setTimeout(() => {
     if (!isEndSoundPlayed) {
+      document.querySelector("#instruction").textContent = "Fertig"; // Text aktualisieren
       playSound("assets/sound/ende.mp3");
       isEndSoundPlayed = true;
     }
