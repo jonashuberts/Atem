@@ -24,6 +24,52 @@ function playSound(url) {
   audio.play();
 }
 
+let ambientSound = null;
+
+// Funktion zum Abspielen des Ambient Sounds
+function playAmbientSound(url) {
+  ambientSound = new Audio(url);
+  ambientSound.loop = true;
+  ambientSound.play();
+}
+
+// Funktion zum Stoppen des Ambient Sounds
+function stopAmbientSound() {
+  if (ambientSound) {
+    ambientSound.pause();
+    ambientSound.currentTime = 0;
+    ambientSound = null;
+  }
+}
+
+// Array mit den Dateinamen der Ambient Sounds im Ambient-Ordner
+const ambientSounds = [
+  "assets/sound/ambient/ES_369 Seconds Of Bliss - 369.mp3",
+  "assets/sound/ambient/ES_A Spirit Level - Joseph Beg.mp3",
+  "assets/sound/ambient/ES_Android Dreamscape - Joseph Beg.mp3",
+  "assets/sound/ambient/ES_Crystalis - Joseph Beg.mp3",
+  "assets/sound/ambient/ES_Ethereal Earth - Joseph Beg.mp3",
+  "assets/sound/ambient/ES_Field of Horses - Joseph Beg.mp3",
+  "assets/sound/ambient/ES_Genetic Waves - Joseph Beg.mp3",
+  "assets/sound/ambient/ES_Golden Chant - Joseph Beg.mp3",
+  "assets/sound/ambient/ES_Imaginary Waterfalls - Joseph Beg.mp3",
+  "assets/sound/ambient/ES_Inside the Fog - Joseph Beg.mp3",
+  "assets/sound/ambient/ES_Leaving Moscow - Joseph Beg.mp3",
+  "assets/sound/ambient/ES_Meditation Aquatic - 369.mp3",
+  "assets/sound/ambient/ES_Opposite to Destruction - Hanna Lindgren.mp3",
+  "assets/sound/ambient/ES_Summoning of Orcas - Joseph Beg.mp3",
+  "assets/sound/ambient/ES_Teegarden C - By Lotus.mp3",
+  "assets/sound/ambient/ES_Tides and Drift - Joseph Beg.mp3",
+  "assets/sound/ambient/ES_Until You Don't Even Notice Anymore - Hanna Lindgren.mp3",
+];
+
+// Funktion zum Zufälligen Auswählen eines Ambient Sounds// Funktion zum Zufälligen Auswählen eines Ambient Sounds
+function getRandomAmbientSound() {
+  const randomIndex = Math.floor(Math.random() * ambientSounds.length);
+  const soundFile = ambientSounds[randomIndex];
+  return soundFile;
+}
+
 // Funktion, um die progressbar zu aktualisieren
 function updateCircularProgress(progressValue) {
   const lightMode = document.body.classList.contains("theme-light");
@@ -113,6 +159,7 @@ function playAnimations() {
       playSound("assets/sound/ende.mp3");
       isEndSoundPlayed = true;
     }
+    stopAmbientSound(); // Ambient Sound stoppen
   }, totalDuration);
 }
 
@@ -187,9 +234,9 @@ document.addEventListener("DOMContentLoaded", function () {
     playSound("assets/sound/start.mp3");
 
     // Ambient Sound beim Start der Übung abspielen
-    playSound(
-      "assets/sound/Garden - Calm Ambient Meditation - Soothing Fantasy Ambient Music for Relaxation and Sleep.mp3"
-    );
+    const randomAmbientSound = getRandomAmbientSound();
+    playAmbientSound(randomAmbientSound);
+
     /*   // Outer marker beim Laden der Seite annimieren
   window.addEventListener("load", function () {
     var outerMarker = document.getElementById("outer-marker");
