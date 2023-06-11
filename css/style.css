@@ -240,6 +240,20 @@ body.theme-dark {
   color: var(--on-background-light);
 }
 
+#instruction {
+  position: absolute;
+  height: 3vh;
+  bottom: 4.8vh;
+
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vh;
+  text-align: center;
+
+  color: var(--on-background-light);
+}
+
 @media screen and (max-width: 600px) {
   /* CSS für die Infobox */
   #info-box {
@@ -348,6 +362,12 @@ body.theme-dark {
 
   /* CSS für den Timer */
   #timer {
+    height: 6vh;
+    font-size: 6vh;
+  }
+
+  /* CSS für die Instruktion */
+  #instruction {
     height: 6vh;
     font-size: 6vh;
   }

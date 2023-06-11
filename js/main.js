@@ -5,12 +5,13 @@ const inhaleDuration = 4;
 const inhaleHoldDuration = 7;
 const exhaleDuration = 8;
 const exhaleHoldDuration = 0;
-const repetitions = 10;
+const repetitions = 5;
 
+let isEndSoundPlayed = false;
 let repetitionCount = 0;
 const animationDuration =
   (inhaleDuration + inhaleHoldDuration + exhaleDuration + exhaleHoldDuration) *
-  1000; // in Millisekuden
+  1000; // in Millisekunden
 
 const totalDuration =
   (inhaleDuration + inhaleHoldDuration + exhaleDuration + exhaleHoldDuration) *
@@ -23,7 +24,7 @@ function playSound(url) {
   audio.play();
 }
 
-// Funktion, um die progressbar zu aktualliesieren
+// Funktion, um die progressbar zu aktualisieren
 function updateCircularProgress(progressValue) {
   const lightMode = document.body.classList.contains("theme-light");
   const startColor = lightMode
@@ -63,24 +64,24 @@ function playAnimations() {
   }
 
   /* playSound("assets/sound/inhale.wav"); // Sound beim Einatmen abspielen */
-  playSound("assets/sound/beep-6-96243.mp3"); // Sound beim Ausatmen abspielen
+  document.querySelector("#instruction").textContent = "Einatmen"; // Text aktualisieren
 
   if (inhaleHoldDuration > 0) {
     setTimeout(() => {
       /* playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Einatmen abspielen */
-      playSound("assets/sound/beep-6-96243.mp3"); // Sound beim Ausatmen abspielen
+      document.querySelector("#instruction").textContent = "Halten"; // Text aktualisieren
     }, inhaleDuration * 1000);
   }
 
   setTimeout(() => {
     /* playSound("assets/sound/exhale.wav"); // Sound beim Ausatmen abspielen */
-    playSound("assets/sound/beep-6-96243.mp3"); // Sound beim Ausatmen abspielen
+    document.querySelector("#instruction").textContent = "Ausatmen"; // Text aktualisieren
   }, (inhaleDuration + inhaleHoldDuration) * 1000);
 
   if (exhaleHoldDuration > 0) {
     setTimeout(() => {
       /* playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Ausatmen abspielen */
-      playSound("assets/sound/beep-6-96243.mp3"); // Sound beim Ausatmen abspielen
+      document.querySelector("#instruction").textContent = "Halten"; // Text aktualisieren
     }, (inhaleDuration + inhaleHoldDuration + exhaleDuration) * 1000);
   }
 
@@ -105,6 +106,14 @@ function playAnimations() {
 
   repetitionCount++;
   setTimeout(playAnimations, animationDuration);
+
+  // Ton am Ende der Atemübung abspielen
+  setTimeout(() => {
+    if (!isEndSoundPlayed) {
+      playSound("assets/sound/ende.mp3");
+      isEndSoundPlayed = true;
+    }
+  }, totalDuration);
 }
 
 // Funkktion für die Page Transition
@@ -174,6 +183,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Animationen beim Laden der Seite starten
     playAnimations();
 
+    // Sound beim Start der Übung abspielen
+    playSound("assets/sound/start.mp3");
+
+    // Ambient Sound beim Start der Übung abspielen
+    playSound(
+      "assets/sound/Garden - Calm Ambient Meditation - Soothing Fantasy Ambient Music for Relaxation and Sleep.mp3"
+    );
     /*   // Outer marker beim Laden der Seite annimieren
   window.addEventListener("load", function () {
     var outerMarker = document.getElementById("outer-marker");
