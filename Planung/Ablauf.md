@@ -79,9 +79,13 @@ Netify: https://atemuebungen.netlify.app/
 ## Entwicklung
 
 ### 10. Minimales funktionsfähiges Produkt erstellen (Minimal Viable Product, MVP)
+
 ✅ Atem Übung
+
 ### 11. Produkt weiterentwickeln und erweitern
+
 ✅ Homepage
+
 ### 11.5 Ton Hinzufügen
 
 https://www.epidemicsound.com/de/music/search/?genres=Ambient&length=298%2C928&moods=Relaxing&term=meditation&vocals=false
@@ -90,7 +94,9 @@ https://pixabay.com/sound-effects/search/end/?duration=0-30
 ## Testing und Qualitätssicherung
 
 ### 12. Produkt testen und Fehler beheben
+
 ✅ Responsive design und Start button bug auf mobile behoben
+
 ### 13. Benutzerfreundlichkeit überprüfen und gegebenenfalls verbessern
 
 ✅ instruction anzeigen wann atmen, halten, ausatmen
@@ -116,6 +122,7 @@ Site: https://atemuebungen.netlify.app/
 ### 17. Projektbericht schreiben
 
 ### 18. Dokumentation in den Projektbericht einfügen
+
 Quellcode, Screenshots, Diagramme, Dokumente, Bildquellen, Textquellen
 
 ### 19. Projektbericht überarbeiten, kontrollieren und vervollständigen
