@@ -152,16 +152,6 @@ function playAnimations() {
 
   repetitionCount++;
   setTimeout(playAnimations, animationDuration);
-
-  // Ton am Ende der Atemübung abspielen
-  setTimeout(() => {
-    if (!isEndSoundPlayed) {
-      document.querySelector("#instruction").textContent = "Fertig"; // Text aktualisieren
-      playSound("assets/sound/ende.mp3");
-      isEndSoundPlayed = true;
-    }
-    stopAmbientSound(); // Ambient Sound stoppen
-  }, totalDuration);
 }
 
 // Funkktion für die Page Transition
@@ -237,6 +227,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ambient Sound beim Start der Übung abspielen
     const randomAmbientSound = getRandomAmbientSound();
     playAmbientSound(randomAmbientSound);
+
+    // Ton am Ende der Atemübung abspielen
+    setTimeout(() => {
+      if (!isEndSoundPlayed) {
+        document.querySelector("#instruction").textContent = "Fertig"; // Text aktualisieren
+        playSound("assets/sound/ende.mp3");
+        isEndSoundPlayed = true;
+      }
+      stopAmbientSound(); // Ambient Sound stoppen
+    }, totalDuration);
 
     /*   // Outer marker beim Laden der Seite annimieren
   window.addEventListener("load", function () {
