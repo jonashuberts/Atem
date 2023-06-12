@@ -6,7 +6,8 @@ function applyTheme(theme) {
   document.body.classList.add(`theme-${theme}`);
 }
 
-const transitionLinks = document.getElementsByClassName("transition-link");
+/* Page Transition */
+/* const transitionLinks = document.getElementsByClassName("transition-link");
 Array.from(transitionLinks).forEach(function (transitionLink) {
   transitionLink.addEventListener("click", function (event) {
     event.preventDefault(); // Verhindert das Standardverhalten des Links
@@ -17,7 +18,7 @@ Array.from(transitionLinks).forEach(function (transitionLink) {
       window.location.href = transitionLink.href;
     }, 500); // Warte 500 Millisekunden, bevor die Weiterleitung stattfindet
   });
-});
+}); */
 
 
 

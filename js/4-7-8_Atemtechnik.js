@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       if (!isEndSoundPlayed) {
         document.querySelector("#instruction").textContent = "Fertig"; // Text aktualisieren
-        playSound("assets/sound/ende.mp3");
+        playSound("assets/sound/ende1.mp3");
         isEndSoundPlayed = true;
       }
       stopAmbientSound(); // Ambient Sound stoppen
