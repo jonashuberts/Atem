@@ -124,6 +124,15 @@ body.theme-dark {
   color: #201a1a;
 }
 
+/* CSS für den Page Übergang */
+.transition-fade {
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+.transition-fade.fade-out {
+  opacity: 0;
+}
+
 /* Navbar */
 .nav-item {
   position: absolute;
