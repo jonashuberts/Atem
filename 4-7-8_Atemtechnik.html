@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/4-7-8_Atemtechnik.css" />
+    <link
+      rel="icon"
+      type="image/vnd.microsoft.icon"
+      href="assets\ico\favicon.ico"
+    />
+    <script src="js/4-7-8_Atemtechnik.js" defer></script>
+    <title>ATEM</title>
+    <link rel="manifest" href="manifest.json" />
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("service-worker.js")
+            .then((registration) => {
+              console.log("Service Worker registered:", registration);
+            })
+            .catch((error) => {
+              console.log("Service Worker registration failed:", error);
+            });
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Zurück-Button -->
+    <a href="index.html" id="transition-link">
+      <img
+        src="assets\svg\arrow_back_ios_FILL0_wght400_GRAD0_opsz48.svg"
+        alt="Zurück"
+        id="back"
+      />
+    </a>
+
+    <!-- Timer -->
+    <div id="timer">00:00</div>
+
+    <!-- Exercise Instruction -->
+    <div id="instruction"></div>
+
+    <!-- Infobox -->
+    <div id="info-box">
+      <p id="info-text">
+        Atme durch die Nase ein und zähle dabei bis vier. Halte den Atem für
+        sieben Sekunden an und atme dann langsam durch den Mund aus, bis du bis
+        acht gezählt hast.
+      </p>
+      <h2 id="start-btn">Start</h2>
+    </div>
+
+    <!-- Animierter Atemkreis -->
+    <div id="circle"></div>
+
+    <!-- Marker für Animation -->
+    <div id="inner-marker"></div>
+    <div id="outer-marker"></div>
+
+    <!-- Runde Progressbar -->
+    <div id="circular-progress"></div>
+  </body>
+</html>

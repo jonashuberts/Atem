@@ -103,12 +103,12 @@ self.addEventListener("install", function (event) {
     caches.open("my-cache").then(function (cache) {
       return cache.addAll([
         "/",
-        "/home.html",
         "/index.html",
-        "/css/home.css",
-        "/css/style.css",
-        "/js/home.js",
-        "/js/main.js",
+        "/4-7-8_Atemtechnik.html",
+        "/css/index.css",
+        "/css/4-7-8_Atemtechnik.css",
+        "/js/index.js",
+        "/js/4-7-8_Atemtechnik.js",
         "assets/font/Inter-ExtraLight.ttf",
         "assets/font/Inter-Medium.ttf",
         "assets/ico/favicon.ico",
