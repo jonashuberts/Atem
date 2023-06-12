@@ -6,17 +6,20 @@ function applyTheme(theme) {
   document.body.classList.add(`theme-${theme}`);
 }
 
-// Funkktion für die Page Transition
-const transitionLink = document.getElementsByClassName("transition-link");
-transitionLink.addEventListener("click", function (event) {
-  event.preventDefault(); // Verhindert das Standardverhalten des Links
+const transitionLinks = document.getElementsByClassName("transition-link");
+Array.from(transitionLinks).forEach(function (transitionLink) {
+  transitionLink.addEventListener("click", function (event) {
+    event.preventDefault(); // Verhindert das Standardverhalten des Links
 
-  document.body.classList.add("transition-fade", "fade-out");
+    document.body.classList.add("transition-fade", "fade-out");
 
-  setTimeout(function () {
-    window.location.href = transitionLink.href;
-  }, 500); // Warte 500 Millisekunden, bevor die Weiterleitung stattfindet
+    setTimeout(function () {
+      window.location.href = transitionLink.href;
+    }, 500); // Warte 500 Millisekunden, bevor die Weiterleitung stattfindet
+  });
 });
+
+
 
 // Warte, bis das DOM geladen ist
 document.addEventListener("DOMContentLoaded", () => {
