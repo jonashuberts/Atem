@@ -141,6 +141,7 @@ body.theme-dark {
   top: 70%
 }
 
+/* CSS für die Beschreibungen */
 .description {
   position: absolute;
   width: 80vw;
@@ -333,20 +334,34 @@ body.theme-dark {
   /* CSS für die Beschreibung in der Infobox */
   #info-text {
     width: 80vw;
-    top: 38%;
+    top: 14%;
     font-size: 7.2vw;
     line-height: 8.4vw;
   }
 
   /* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
   #start-btn {
-    top: 85%;
+    top: 90%;
     font-size: 14.2vw;
   }
 
   #start-btn:hover {
     font-size: 14.2vw;
   }
+
+.inputField {
+  left: 8.5%;
+  width: 5.5vw;
+  height: 5.5vw;
+  font-size: 3.2vw;
+}
+
+.description {
+  padding-top: 0.5vw;
+  left: 18%;
+  font-size: 3.2vw;
+  line-height: 4.8vw;
+}
 }
 
 @media screen and (max-width: 900px) and (min-width: 600px) {
@@ -359,19 +374,33 @@ body.theme-dark {
   /* CSS für die Beschreibung in der Infobox */
   #info-text {
     width: 80vw;
-    top: 38%;
+    top: 14%;
     font-size: 3.6vw;
     line-height: 6.4vw;
   }
 
   /* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
   #start-btn {
-    top: 80%;
+    top: 90%;
     font-size: 7.2vw;
   }
 
   #start-btn:hover {
     font-size: 7.2vw;
+  }
+
+  .inputField {
+    left: 8.5%;
+    width: 5.5vw;
+    height: 5.5vw;
+    font-size: 2.4vw;
+  }
+  
+  .description {
+    padding-top: 0.5vw;
+    left: 18%;
+    font-size: 2.4vw;
+    line-height: 4.8vw;
   }
 }
 
@@ -385,14 +414,14 @@ body.theme-dark {
   /* CSS für die Beschreibung in der Infobox */
   #info-text {
     width: 70vw;
-    top: 30%;
+    top: 16%;
     font-size: 2.4vw;
     line-height: 2.8vw;
   }
 
   /* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
   #start-btn {
-    top: 75%;
+    top: 90%;
     font-size: 4.8vw;
   }
 
@@ -439,5 +468,17 @@ body.theme-dark {
   #instruction {
     height: 6vh;
     font-size: 6vh;
+  }
+
+  .inputField {
+    left: 6.5%;
+    width: 2.4vw;
+    height: 2.4vw;
+    font-size: 1.6vw;
+  }
+  
+  .description {
+    left: 14%;
+    font-size: 1.6vw;
   }
 }
