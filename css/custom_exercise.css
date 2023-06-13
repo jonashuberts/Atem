@@ -1,0 +1,443 @@
+:root {
+  --primary-dark: #ffb3b0;
+  --background-dark: #201a1a;
+  --on-background-dark: #ede0de;
+  --primary-container-dark: #93001b;
+  --on-primary-container-dark: #ffdad8;
+  --tertiary-container-dark: #5a4319;
+  --on-tertiary-container-dark: #ffdeaa;
+  --scrollbar-dark: #534342;
+
+  --on-background-filter-dark: invert(90%) sepia(2%) saturate(1265%)
+    hue-rotate(317deg) brightness(106%) contrast(86%);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(assets/font/Inter-Medium.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* CSS für die Seite */
+body {
+  /* Light Theme */
+  --primary-light: #bf0026;
+  --background-light: #fffbff;
+  --on-background-light: #201a1a;
+  --primary-container-light: #ffdad8;
+  --on-primary-container-light: #410006;
+  --tertiary-container-light: #ffdeaa;
+  --on-tertiary-container-light: #271900;
+  --on-background-dark: #ede0de;
+  --scrollbar-light: #ede0de;
+  --transparent: #00000000;
+
+  --on-background-filter-light: invert(5%) sepia(7%) saturate(2162%)
+    hue-rotate(314deg) brightness(104%) contrast(87%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--background-light);
+}
+
+body.theme-dark {
+  --primary-light: var(--primary-dark);
+  --background-light: var(--background-dark);
+  --on-background-light: var(--on-background-dark);
+  --primary-container-light: var(--primary-container-dark);
+  --on-primary-container-light: var(--on-primary-container-dark);
+  --tertiary-container-light: var(--tertiary-container-dark);
+  --on-tertiary-container-light: var(--on-tertiary-container-dark);
+  --scrollbar-light: var(--scrollbar-dark);
+
+  --on-background-filter-light: var(--on-background-filter-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  body.theme-auto {
+    --primary-light: var(--primary-dark);
+    --background-light: var(--background-dark);
+    --on-background-light: var(--on-background-dark);
+    --primary-container-light: var(--primary-container-dark);
+    --on-primary-container-light: var(--on-primary-container-dark);
+    --tertiary-container-light: var(--tertiary-container-dark);
+    --on-tertiary-container-light: var(--on-tertiary-container-dark);
+    --scrollbar-light: var(--scrollbar-dark);
+
+    --on-background-filter-light: var(--on-background-filter-dark);
+  }
+}
+
+/* CSS für die Infobox */
+#info-box {
+  position: absolute;
+  width: 60vw;
+  height: 60vh;
+  background: var(--tertiary-container-light);
+  border-radius: 20px;
+  display: none;
+  z-index: 2;
+}
+
+/* CSS für die Beschreibung in der Infobox */
+#info-text {
+  position: absolute;
+  width: 50vw;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.4vw;
+  line-height: 2.8vw;
+  color: var(--on-tertiary-container-light);
+}
+
+/* CSS für Die Eingabefelder in der Infobox */
+.inputField {
+  position: absolute;
+  width: 3vw;
+  left: 8.5%;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8vw;
+  line-height: 2.8vw;
+  background-color: var(--on-tertiary-container-light);
+  color: var(--tertiary-container-light);
+  border: none;
+  border-radius: 10%;
+  text-align: center;
+}
+
+#inhaleDurationInput {
+  top: 30%;
+}
+
+#inhaleHoldDurationInput {
+  top: 40%;
+}
+
+#exhaleDurationInput {
+  top: 50%;
+}
+
+#exhaleHoldDurationInput {
+  top: 60%;
+}
+
+#repetitionInput {
+  top: 70%
+}
+
+.description {
+  position: absolute;
+  width: 80vw;
+  left: 16%;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8vw;
+  line-height: 2.8vw;
+  color: var(--on-tertiary-container-light);
+}
+
+#inhaleDurationDescription {
+  top: 30%;
+}
+
+#inhaleHoldDurationDescription {
+  top: 40%;
+}
+
+#exhaleDurationDescription {
+  top: 50%;
+}
+
+#exhaleHoldDurationDescription {
+  top: 60%;
+}
+
+#repitionsDescription {
+  top: 70%;
+}
+
+/* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
+#start-btn {
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4.8vw;
+  color: var(--on-tertiary-container-light);
+  transition: font-size 0.3s ease;
+}
+
+#start-btn:hover {
+  font-size: 4.9vw;
+}
+/* CSS für den Animierten atem Kreis */
+#circle {
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+  background-color: var(--primary-container-light);
+}
+
+@keyframes inhaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.333);
+  }
+}
+
+@keyframes inhaleHoldAnimation {
+  0% {
+    transform: scale(1.333);
+  }
+  100% {
+    transform: scale(1.333);
+  }
+}
+
+@keyframes exhaleAnimation {
+  0% {
+    transform: scale(1.333);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes exhaleHoldAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* CSS für den inneren Marker */
+#inner-marker {
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+  background-color: var(--transparent);
+  border: 2px solid var(--on-background-light);
+  z-index: 1;
+  position: absolute;
+}
+
+/* CSS für den äußeren Marker */
+#outer-marker {
+  width: 40vh;
+  height: 40vh;
+  border-radius: 50%;
+  background-color: var(--background-light);
+  outline: 2px solid var(--on-background-light);
+  z-index: -1;
+  position: absolute;
+  /*   transition: width 0.2s ease-in-out, height 0.1s ease-in-out; */
+}
+
+/* CSS für die runde Progress bar */
+#circular-progress {
+  position: absolute;
+  height: 40.8vh;
+  width: 40.8vh;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--on-background-light) 0deg,
+    /* 3.6deg */ var(--background-light) 0deg
+  );
+  display: flex;
+  z-index: -2;
+}
+
+/* CSS für den Zurück zum Home Pfeil */
+#back {
+  height: 3vh;
+  position: absolute;
+  top: 4.8vh;
+  left: 4.8vh;
+  transition: transform 0.3s ease-in-out;
+  filter: var(--on-background-filter-light);
+}
+
+#back:hover {
+  transform: scale(1.1);
+}
+
+/* CSS für den Page Übergang */
+.transition-fade {
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+.transition-fade.fade-out {
+  opacity: 0;
+}
+
+/* CSS für den Timer */
+#timer {
+  position: absolute;
+  height: 3vh;
+  top: 4.8vh;
+
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vh;
+  text-align: center;
+
+  color: var(--on-background-light);
+}
+
+#instruction {
+  position: absolute;
+  height: 3vh;
+  bottom: 4.8vh;
+
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vh;
+  text-align: center;
+
+  color: var(--on-background-light);
+}
+
+@media screen and (max-width: 600px) {
+  /* CSS für die Infobox */
+  #info-box {
+    width: 95vw;
+    height: 60vh;
+  }
+
+  /* CSS für die Beschreibung in der Infobox */
+  #info-text {
+    width: 80vw;
+    top: 38%;
+    font-size: 7.2vw;
+    line-height: 8.4vw;
+  }
+
+  /* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
+  #start-btn {
+    top: 85%;
+    font-size: 14.2vw;
+  }
+
+  #start-btn:hover {
+    font-size: 14.2vw;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  /* CSS für die Infobox */
+  #info-box {
+    width: 95vw;
+    height: 50vh;
+  }
+
+  /* CSS für die Beschreibung in der Infobox */
+  #info-text {
+    width: 80vw;
+    top: 38%;
+    font-size: 3.6vw;
+    line-height: 6.4vw;
+  }
+
+  /* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
+  #start-btn {
+    top: 80%;
+    font-size: 7.2vw;
+  }
+
+  #start-btn:hover {
+    font-size: 7.2vw;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  /* CSS für die Infobox */
+  #info-box {
+    width: 80vw;
+    height: 70vh;
+  }
+
+  /* CSS für die Beschreibung in der Infobox */
+  #info-text {
+    width: 70vw;
+    top: 30%;
+    font-size: 2.4vw;
+    line-height: 2.8vw;
+  }
+
+  /* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
+  #start-btn {
+    top: 75%;
+    font-size: 4.8vw;
+  }
+
+  #start-btn:hover {
+    font-size: 4.8vw;
+  }
+
+  /* CSS für den Animierten atem Kreis */
+  #circle {
+    width: 45vh;
+    height: 45vh;
+  }
+
+  /* CSS für den inneren Marker */
+  #inner-marker {
+    width: 45vh;
+    height: 45vh;
+  }
+
+  /* CSS für den äußeren Marker */
+  #outer-marker {
+    width: 60vh;
+    height: 60vh;
+  }
+
+  /* CSS für die runde Progress bar */
+  #circular-progress {
+    height: 61.6vh;
+    width: 61.6vh;
+  }
+
+  /* CSS für den Zurück zum Home Pfeil */
+  #back {
+    height: 6vh;
+  }
+
+  /* CSS für den Timer */
+  #timer {
+    height: 6vh;
+    font-size: 6vh;
+  }
+
+  /* CSS für die Instruktion */
+  #instruction {
+    height: 6vh;
+    font-size: 6vh;
+  }
+}

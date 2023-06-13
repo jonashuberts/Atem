@@ -1,22 +1,7 @@
 const circle = document.getElementById("circle");
 const circularProgress = document.querySelector("#circular-progress");
-
-const inhaleDuration = 4;
-const inhaleHoldDuration = 7;
-const exhaleDuration = 8;
-const exhaleHoldDuration = 0;
-const repetitions = 1;
-
 let isEndSoundPlayed = false;
 let repetitionCount = 0;
-const animationDuration =
-  (inhaleDuration + inhaleHoldDuration + exhaleDuration + exhaleHoldDuration) *
-  1000; // in Millisekunden
-
-const totalDuration =
-  (inhaleDuration + inhaleHoldDuration + exhaleDuration + exhaleHoldDuration) *
-  repetitions *
-  1000; // in Millisekunden
 
 function playSound(url) {
   var audio = new Audio(url);
@@ -150,29 +135,20 @@ function playAnimations() {
   if (repetitionCount >= repetitions) {
     return; // Stoppe die Animation nach der zehnten Wiederholung
   }
-
-  /* playSound("assets/sound/inhale.wav"); // Sound beim Einatmen abspielen */
-  /* document.querySelector("#instruction").textContent = "Einatmen"; // Text aktualisieren */
   startInstructionTimer(inhaleDuration, "Einatmen"); //
 
   if (inhaleHoldDuration > 0) {
     setTimeout(() => {
-      /* playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Einatmen abspielen */
-      /* document.querySelector("#instruction").textContent = "Halten"; // Text aktualisieren */
       startInstructionTimer(inhaleHoldDuration, "Halten"); //
     }, inhaleDuration * 1000);
   }
 
   setTimeout(() => {
-    /* playSound("assets/sound/exhale.wav"); // Sound beim Ausatmen abspielen */
-    /* document.querySelector("#instruction").textContent = "Ausatmen"; // Text aktualisieren */
     startInstructionTimer(exhaleDuration, "Ausatmen"); //
   }, (inhaleDuration + inhaleHoldDuration) * 1000);
 
   if (exhaleHoldDuration > 0) {
     setTimeout(() => {
-      /* playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Ausatmen abspielen */
-      /* document.querySelector("#instruction").textContent = "Halten"; // Text aktualisieren */
       startInstructionTimer(exhaleHoldDuration, "Halten"); //
     }, (inhaleDuration + inhaleHoldDuration + exhaleDuration) * 1000);
   }
@@ -220,32 +196,73 @@ function applyTheme(theme) {
   document.body.classList.add(`theme-${theme}`);
 }
 
-// window.onload = function () { // Starten, wenn ales inklusive css und bilder geladen sind
-document.addEventListener("DOMContentLoaded", function () {
+function getInputs() {
+  inhaleDuration = parseInt(
+    document.querySelector("#inhaleDurationInput").value
+  );
+  inhaleHoldDuration = parseInt(
+    document.querySelector("#inhaleHoldDurationInput").value
+  );
+  exhaleDuration = parseInt(
+    document.querySelector("#exhaleDurationInput").value
+  );
+  exhaleHoldDuration = parseInt(
+    document.querySelector("#exhaleHoldDurationInput").value
+  );
+  repetitions = parseInt(
+    document.querySelector("#repetitionInput").value
+  );
+
+  animationDuration =
+  (inhaleDuration +
+    inhaleHoldDuration +
+    exhaleDuration +
+    exhaleHoldDuration) *
+  1000; // in Millisekunden
+
+ totalDuration =
+  (inhaleDuration +
+    inhaleHoldDuration +
+    exhaleDuration +
+    exhaleHoldDuration) *
+  repetitions *
+  1000; // in Millisekunden
+
+  console.log("lokal total duration " + totalDuration);
+
   // Timer initialisieren
   minutes = parseInt(totalDuration / 1000 / 60, 10);
   seconds = parseInt((totalDuration / 1000) % 60, 10);
   minutes = minutes < 10 ? "0" + minutes : minutes;
   seconds = seconds < 10 ? "0" + seconds : seconds;
-  document.querySelector("#timer").textContent = minutes + ":" + seconds;
 
+  if (isNaN(totalDuration) === false) {
+  document.querySelector("#timer").textContent = minutes + ":" + seconds;
+  }
+}
+
+// window.onload = function () { // Starten, wenn ales inklusive css und bilder geladen sind
+document.addEventListener("DOMContentLoaded", function () {
   // Starten, wenn html geladen ist
   var infoBox = document.getElementById("info-box");
   var closeBtn = document.getElementById("start-btn");
 
   infoBox.style.display = "block";
 
+  document.querySelector("#timer").textContent = "00:00"
+
+  // Starten, wenn die Infobox geschlossen wird
   closeBtn.addEventListener("click", function () {
     infoBox.style.display = "none";
 
-    // Timer beim Laden der Seite starten
-    startTimer(totalDuration / 1000);
+    // Animationen beim Laden der Seite starten
+    playAnimations();
 
     // Animierte Progressbar beim Laden der Seite starten
     animateProgressBar(totalDuration);
 
-    // Animationen beim Laden der Seite starten
-    playAnimations();
+    // Timer beim Laden der Seite starten
+    startTimer(totalDuration / 1000);
 
     // Sound beim Start der Übung abspielen
     playSound("assets/sound/start.mp3");
@@ -256,8 +273,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Ton am Ende der Atemübung abspielen und Instruction auf fertig setzen
     setTimeout(() => {
+      startInstructionTimer(0, "Fertig"); // Instruction auf fertig setzen
       if (!isEndSoundPlayed) {
-        startInstructionTimer(0, "Fertig");
         playSound("assets/sound/ende1.mp3");
         isEndSoundPlayed = true;
       }
