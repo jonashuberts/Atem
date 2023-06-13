@@ -20,8 +20,6 @@ Array.from(transitionLinks).forEach(function (transitionLink) {
   });
 }); */
 
-
-
 // Warte, bis das DOM geladen ist
 document.addEventListener("DOMContentLoaded", () => {
   // Das gespeicherte Thema aus dem lokalen Speicher abrufen oder "auto" als Standard verwenden
