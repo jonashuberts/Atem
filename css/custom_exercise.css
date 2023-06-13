@@ -480,5 +480,6 @@ body.theme-dark {
   .description {
     left: 14%;
     font-size: 1.6vw;
+    line-height: 1.6vw;
   }
 }
