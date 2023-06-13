@@ -1,12 +1,19 @@
 #Projektbericht
 
 ## Planung und Vorbereitung
+
 ### 1. Thema festlegen (Idee)
+
 Atemübungs-App 😤
+
 ### 2. Produkt definieren (Ziel)
+
 Die App präsentiert die Atemübungen auf visuell ansprechende und animierte Weise, begleitet von Soundeffekten. Benutzer können aus einer Liste von Übungen auswählen, und es wird eine kurze Beschreibung der Funktion und Wirkung jeder Übung angezeigt.
+
 ### 3. Recherchieren zu ähnlichen Projekten und Designs
+
 #### Atmung
+
 - Kreis mit Zahn in der Mitte
 - Dünner Kreis als Fortschritt
 - Striche um den Kreis als dynamische Animation
@@ -16,21 +23,29 @@ Die App präsentiert die Atemübungen auf visuell ansprechende und animierte Wei
 - Tippen für Pause
 - Timer
 - Zurückbutton
+
 #### Startseite
+
 - Einstellungen-Symbol
 - Favoriten-Symbol
 - Titel
 - Liste der Übungen und Beschreibungen
 - Kleinerer unterer Bereich mit benutzerdefiniertem Atemtest
+
 ### 4. Programmiersprache, Framework und Tools auswählen
+
 HTML: Vanilla Own Code, https://grapesjs.com/, https://www.vvveb.com/vvvebjs/editor.html, https://github.com/silexlabs/Silex
 CSS: Vanilla Own Code, https://codyhouse.co/, https://csslayout.io/, https://uiverse.io/
 JavaScript: Vanilla Own Code, https://extendsclass.com/python-to-javascript.html, http://reeborg.ca/docs/js_py_en/conversion.html
 
 ## Projektorganisation und Zeitplanung
+
 ### 6. Erstellung eines Zeitplans
+
 Siehe Goodnotes
+
 ### 7. Entwicklungsumgebungen einrichten
+
 Programm: VisualStudi Code und Codepen
 Extensions: Inline fold, Auto Commit Message, German Language Pack, Live Server, Markdoen All in One, Prittier, Tabnine AI, Xmind viwer
 Sound: Signal
@@ -38,49 +53,76 @@ GitHub: jonashuberts/Atem
 Netify: https://atemuebungen.netlify.app/
 
 ## Design und Architektur
+
 ### 8. UI-Design entwerfen
+
 - Farbe für material theme builder: #dc092f
 - Figma: https://www.figma.com/file/7m8jFzmlcxW7UoGpX0mbmM/Projekt?type=design&node-id=0-1&t=o25OEU6ix0RNDzPv-0
+
 ### 9. Systemarchitektur entwerfen (Klassen, Subsysteme, Ablaufdiagramm)
+
 - Enthält keine algorithmen nur UI
 - In Xmind
 
 ## Entwicklung
+
 ### 10. Minimales funktionsfähiges Produkt erstellen (Minimal Viable Product, MVP)
+
 Atem Übung
+
 ### 11. Produkt weiterentwickeln und erweitern
+
 Homepage
+
 ### 11.5 Ton Hinzufügen
+
 https://www.epidemicsound.com/de/music/search/?genres=Ambient&length=298%2C928&moods=Relaxing&term=meditation&vocals=false
 https://pixabay.com/sound-effects/search/end/?duration=0-30
 
 ## Testing und Qualitätssicherung
+
 ### 12. Produkt testen und Fehler beheben
+
 Responsive design und Start button bug auf mobile behoben
+
 ### 13. Benutzerfreundlichkeit überprüfen und gegebenenfalls verbessern
+
 instruction anzeigen wann atmen, halten, ausatmen
+
 ### 14. Performance-Optimierung durchführen, um die Leistung des Produkts zu verbessern (Code verbessern)
 
-
 ## Bereitstellung und Veröffentlichung
+
 ### 15. Produkt deployen und veröffentlichen
+
 Netify: https://app.netlify.com/sites/atemuebungen/settings/general
 Site: https://atemuebungen.netlify.app/
 
 ## Dokumentation und Bericht
+
 ### 16. Produkt dokumentieren (Codekommentare, Benutzerhandbuch, Screenshots erstellen)
+
 ### 17. Projektbericht schreiben
-### 18. Dokumentation in den Projektbericht einfügen 
+
+### 18. Dokumentation in den Projektbericht einfügen
+
 Quellcode, Screenshots, Diagramme, Dokumente, Bildquellen, Textquellen
+
 ### 19. Projektbericht überarbeiten, kontrollieren und vervollständigen
+
 ### 20. Projektbericht zur Kontrolle einreichen
+
 ### 21. Projektbericht abgeben
 
 ## Weitere Ideen
+
 ### Corpuls:
+
 - code commentare hinzufügen / verbessern, code aufräumen / strukturieren
-- 
+- lotusblüte als app icon und hintergrund, übersichtliche homescreen, dickerer fortschrittsbalken
+
 ## Zukunft:
+
 - Konto mit Favoriten
 - Fortschritte von Konto verfolgen und teilen
 - Archiv
