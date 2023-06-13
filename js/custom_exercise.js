@@ -3,6 +3,14 @@ const circularProgress = document.querySelector("#circular-progress");
 let isEndSoundPlayed = false;
 let repetitionCount = 0;
 
+const urlParams = new URLSearchParams(window.location.search);
+document.querySelector("#inhaleDurationInput").value = urlParams.get("inhale");
+document.querySelector("#inhaleHoldDurationInput").value = urlParams.get("inhaleHold");
+document.querySelector("#exhaleDurationInput").value = urlParams.get("exhale");
+document.querySelector("#exhaleHoldDurationInput").value = urlParams.get("exhaleHold");
+document.querySelector("#repetitionInput").value = urlParams.get("repetitions");
+
+
 function playSound(url) {
   var audio = new Audio(url);
   audio.load();
@@ -249,7 +257,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   infoBox.style.display = "block";
 
-  document.querySelector("#timer").textContent = "00:00"
+  // Zeit beim laden der Seite aktualisiren
+  getInputs();
 
   // Starten, wenn die Infobox geschlossen wird
   closeBtn.addEventListener("click", function () {

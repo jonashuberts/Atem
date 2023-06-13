@@ -99,7 +99,7 @@ body.theme-dark {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 2.4vw;
+  font-size: 1.8vw;
   line-height: 2.8vw;
   color: var(--on-tertiary-container-light);
 }
@@ -265,7 +265,7 @@ body.theme-dark {
   #info-text {
     width: 80vw;
     top: 38%;
-    font-size: 7.2vw;
+    font-size: 3.6vw;
     line-height: 8.4vw;
   }
 
@@ -291,7 +291,7 @@ body.theme-dark {
   #info-text {
     width: 80vw;
     top: 38%;
-    font-size: 3.6vw;
+    font-size: 3vw;
     line-height: 6.4vw;
   }
 
