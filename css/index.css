@@ -35,18 +35,6 @@
   box-sizing: border-box;
 }
 
-html {  
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-}
-
-body {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-}
-
 /* CSS für die Seite */
 body {
   /* Light Theme */
@@ -349,7 +337,7 @@ body.theme-dark {
   color: var(--on-tertiary-container-light);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .select {
     top: 1vh;
     right: 2vw;
@@ -378,7 +366,7 @@ body.theme-dark {
     height: 73vh;
     top: 12vh;
     grid-template-columns: repeat(1, 1fr); /* Anzahl der Spalten auf 2 ändern */
-    grid-gap: 2vw;
+    grid-gap: 3vw;
   }
 
   .grid-item {
@@ -414,7 +402,7 @@ body.theme-dark {
   #custom-exercise {
     width: 90vw;
     height: 10vh;
-    top: 86vh;
+    top: 87vh;
   }
 
   #custom-exercise-icon {
