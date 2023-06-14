@@ -118,7 +118,15 @@ Quellcode, Screenshots, Diagramme, Dokumente, Bildquellen, Textquellen
 
 ### Corpuls:
 
+Heute:
+- Schritt 18 Fertig Machen: Textquellen, verwendete Resoucen
+
+Donnerstag:
+- Bericht auf richtige Länge bringen
+
+Später:
 - code commentare hinzufügen / verbessern, code aufräumen / strukturieren
+- serviceworcer und manifest überarbeiten + github readme erstellen
 
 ## Zukunft:
 
@@ -130,10 +138,3 @@ Quellcode, Screenshots, Diagramme, Dokumente, Bildquellen, Textquellen
 - Vibrations Feedback bei den Übungen
 - Krankheiten am Atemmuster erkennen
 - Tippen um Übung zu Pausieren
-
-
-Heute:
-Schritt 18 Fertig Machen: Textquellen, verwendete Resoucen
-
-Donnerstag:
-Bericht auf richtige Länge bringen
