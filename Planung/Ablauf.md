@@ -157,3 +157,5 @@ https://www.adalo.com/pricing
 https://flutterflow.io/pricing
 https://www.glideapps.com/pricing
 https://www.stackerhq.com/pricing
+
+https://www.blup.in/pricing
