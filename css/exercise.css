@@ -191,8 +191,8 @@ body.theme-dark {
 /* CSS für die runde Progress bar */
 #circular-progress {
   position: absolute;
-  height: 40.8vh;
-  width: 40.8vh;
+  height: 41vh;
+  width: 41vh;
   border-radius: 50%;
   background: conic-gradient(
     var(--on-background-light) 0deg,
@@ -255,7 +255,7 @@ body.theme-dark {
   color: var(--on-background-light);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   /* CSS für die Infobox */
   #info-box {
     width: 95vw;
@@ -279,6 +279,12 @@ body.theme-dark {
   #start-btn:hover {
     font-size: 14.2vw;
   }
+
+    /* CSS für die runde Progress bar */
+    #circular-progress {
+      height: 41.2vh;
+      width: 41.2vh;
+    }
 }
 
 @media screen and (max-width: 900px) and (min-width: 600px) {
@@ -305,6 +311,12 @@ body.theme-dark {
   #start-btn:hover {
     font-size: 7.2vw;
   }
+
+      /* CSS für die runde Progress bar */
+      #circular-progress {
+        height: 41vh;
+        width: 41vh;
+      }
 }
 
 @media screen and (max-height: 600px) {
@@ -352,8 +364,8 @@ body.theme-dark {
 
   /* CSS für die runde Progress bar */
   #circular-progress {
-    height: 61.6vh;
-    width: 61.6vh;
+    height: 62vh;
+    width: 62vh;
   }
 
   /* CSS für den Zurück zum Home Pfeil */

@@ -10,6 +10,7 @@
 
   --exercise-icon-filter-dark: invert(83%) sepia(16%) saturate(345%)
     hue-rotate(314deg) brightness(103%) contrast(101%);
+  --background-icon-filter-dark: invert(19%) sepia(5%) saturate(4716%) hue-rotate(314deg) brightness(93%) contrast(71%);
   --custom-exercise-icon-filter-dark: invert(93%) sepia(14%) saturate(1223%)
     hue-rotate(322deg) brightness(101%) contrast(102%);
 }
@@ -50,6 +51,7 @@ body {
 
   --exercise-icon-filter-light: invert(4%) sepia(51%) saturate(7483%)
     hue-rotate(347deg) brightness(96%) contrast(104%);
+  --background-icon-filter-light: invert(79%) sepia(15%) saturate(353%) hue-rotate(314deg) brightness(108%) contrast(103%);
   --custom-exercise-icon-filter-light: invert(11%) sepia(16%) saturate(4643%)
     hue-rotate(20deg) brightness(97%) contrast(104%);
 
@@ -72,6 +74,7 @@ body.theme-dark {
   --scrollbar-light: var(--scrollbar-dark);
 
   --exercise-icon-filter-light: var(--exercise-icon-filter-dark);
+  --background-icon-filter-light: var(--background-icon-filter-dark);
   --custom-exercise-icon-filter-light: var(--custom-exercise-icon-filter-dark);
 }
 
@@ -87,6 +90,7 @@ body.theme-dark {
     --scrollbar-light: var(--scrollbar-dark);
 
     --exercise-icon-filter-light: var(--exercise-icon-filter-dark);
+    --background-icon-filter-light: var(--background-icon-filter-dark);
     --custom-exercise-icon-filter-light: var(
       --custom-exercise-icon-filter-dark
     );
@@ -166,6 +170,7 @@ body.theme-dark {
   left: 20vw;
 }
 
+/* Die Atem Überschrift */
 #title {
   position: absolute;
   top: 3vh;
@@ -175,6 +180,18 @@ body.theme-dark {
   font-size: 6vw;
   text-align: center;
   color: var(--on-background-light);
+}
+
+#backgroundImage {
+  position: absolute;
+  z-index: -2;
+  height: 60vw;
+  top: 0%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+  filter: var(--background-icon-filter-light);
+
 }
 
 .grid-container {
@@ -320,7 +337,7 @@ body.theme-dark {
   color: var(--on-tertiary-container-light);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   .select {
     top: 1vh;
     right: 2vw;

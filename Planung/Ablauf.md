@@ -119,7 +119,6 @@ Quellcode, Screenshots, Diagramme, Dokumente, Bildquellen, Textquellen
 ### Corpuls:
 
 - code commentare hinzufügen / verbessern, code aufräumen / strukturieren
-- lotusblüte als app icon und hintergrund, übersichtliche homescreen, dickerer fortschrittsbalken
 
 ## Zukunft:
 
