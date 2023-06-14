@@ -41,3 +41,12 @@ document.addEventListener("DOMContentLoaded", () => {
     applyTheme(this.value);
   });
 });
+
+document.addEventListener("touchmove", function (e) {
+  e.preventDefault();
+}, { passive: false });
+
+window.addEventListener("scroll", (e) => {
+  e.preventDefault();
+  window.scrollTo(0, 0);
+});
