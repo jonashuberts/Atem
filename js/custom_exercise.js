@@ -4,12 +4,12 @@ let isEndSoundPlayed = false;
 let repetitionCount = 0;
 
 // dia Parameter der Atemzeiten aus der Url lesen und in dei Inputfelder eintragen
-const urlParams = new URLSearchParams(window.location.search);
-document.querySelector("#inhaleDurationInput").value = urlParams.get("inhale");
-document.querySelector("#inhaleHoldDurationInput").value = urlParams.get("inhaleHold");
-document.querySelector("#exhaleDurationInput").value = urlParams.get("exhale");
-document.querySelector("#exhaleHoldDurationInput").value = urlParams.get("exhaleHold");
-document.querySelector("#repetitionInput").value = urlParams.get("repetitions");
+const params = new URLSearchParams(window.location.search);
+document.querySelector("#inhaleDurationInput").value = params.get("inhale");
+document.querySelector("#inhaleHoldDurationInput").value = params.get("inhaleHold");
+document.querySelector("#exhaleDurationInput").value = params.get("exhale");
+document.querySelector("#exhaleHoldDurationInput").value = params.get("exhaleHold");
+document.querySelector("#repetitionInput").value = params.get("repetitions");
 
 
 function playSound(url) {
@@ -98,40 +98,31 @@ function animateProgressBar(duration) {
 }
 
 // Funktion für den Timer
+// Funktion für den Timer
 function startTimer(duration) {
-  var timer = duration,
-    minutes,
-    seconds;
-  var interval = setInterval(function () {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
+  let timer = duration;
 
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
+  let interval = setInterval(() => {
+    const minutes = Math.floor(timer / 60).toString().padStart(2, "0");
+    const seconds = (timer % 60).toString().padStart(2, "0");
 
-    document.querySelector("#timer").textContent = minutes + ":" + seconds;
+    document.querySelector("#timer").textContent = `${minutes}:${seconds}`;
 
     if (--timer < 0) {
       clearInterval(interval);
-      timer = 0; // Timer bleibt bei 0 Sekunden stehen
+      timer = 0;
     }
   }, 1000);
 }
 
 // Funktion für den Insrruction Timer
 function startInstructionTimer(duration, instruction) {
-  var timer = duration,
-    seconds;
-  var interval = setInterval(function () {
-    seconds = parseInt(timer, 10);
+  let timer = duration;
 
-    if (instruction === "Fertig") {
-      document.querySelector("#instruction").textContent = "Fertig";
-    } else {
-      document.querySelector("#instruction").textContent =
-        instruction + " " + seconds;
-    }
-
+  let interval = setInterval(() => {
+    const seconds = parseInt(timer, 10);
+    const instructionText = instruction === "Fertig" ? "Fertig" : `${instruction} ${seconds}`;
+    document.querySelector("#instruction").textContent = instructionText;
     if (--timer < 0) {
       clearInterval(interval);
       timer = 0; // Timer bleibt bei 0 Sekunden stehen
@@ -144,20 +135,24 @@ function playAnimations() {
   if (repetitionCount >= repetitions) {
     return; // Stoppe die Animation nach der zehnten Wiederholung
   }
+  /* document.querySelector("#instruction").textContent = "Einatmen"; // Text aktualisieren */
   startInstructionTimer(inhaleDuration, "Einatmen"); //
 
   if (inhaleHoldDuration > 0) {
     setTimeout(() => {
+      /* document.querySelector("#instruction").textContent = "Halten"; // Text aktualisieren */
       startInstructionTimer(inhaleHoldDuration, "Halten"); //
     }, inhaleDuration * 1000);
   }
 
   setTimeout(() => {
+    /* document.querySelector("#instruction").textContent = "Ausatmen"; // Text aktualisieren */
     startInstructionTimer(exhaleDuration, "Ausatmen"); //
   }, (inhaleDuration + inhaleHoldDuration) * 1000);
 
   if (exhaleHoldDuration > 0) {
     setTimeout(() => {
+      /* document.querySelector("#instruction").textContent = "Halten"; // Text aktualisieren */
       startInstructionTimer(exhaleHoldDuration, "Halten"); //
     }, (inhaleDuration + inhaleHoldDuration + exhaleDuration) * 1000);
   }
@@ -268,14 +263,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Animationen beim Laden der Seite starten
     playAnimations();
 
+    // Sound beim Start der Übung abspielen
+    playSound("assets/sound/start.mp3");
+
     // Animierte Progressbar beim Laden der Seite starten
     animateProgressBar(totalDuration);
 
     // Timer beim Laden der Seite starten
     startTimer(totalDuration / 1000);
-
-    // Sound beim Start der Übung abspielen
-    playSound("assets/sound/start.mp3");
 
     // Ambient Sound beim Start der Übung abspielen
     const randomAmbientSound = getRandomAmbientSound();

@@ -3,143 +3,79 @@ const circularProgress = document.querySelector("#circular-progress");
 let isEndSoundPlayed = false;
 let repetitionCount = 0;
 
-const urlParams = new URLSearchParams(window.location.search);
-const exercise = urlParams.get("practice");
-console.log("Die Uebung ist " + urlParams.get("practice"));
+const params = new URLSearchParams(window.location.search);
+const exercise = params.get("practice");
+console.log(`Die Uebung ist ${exercise}`);
+
+// Funktion um die Parameter leicht zu setzen
+function setExerciseParameters(inhale, inhaleHold, exhale, exhaleHold, rep) {
+  inhaleDuration = inhale;
+  inhaleHoldDuration = inhaleHold;
+  exhaleDuration = exhale;
+  exhaleHoldDuration = exhaleHold;
+  repetitions = rep;
+}
 
 if (exercise === "4-7-8_Atemtechnik") {
-  document.querySelector("#info-text").textContent = "Atme durch die Nase ein und zähle dabei bis vier. Halte den Atem für sieben Sekunden an und atme dann langsam durch den Mund aus, bis du bis acht gezählt hast. Wiederhole dies mehrere Male.";
-  inhaleDuration = 4;
-  inhaleHoldDuration = 7;
-  exhaleDuration = 8;
-  exhaleHoldDuration = 0;
-  repetitions = 5;
-}
-
-else if (exercise === "Wechselatmung") {
-  document.querySelector("#info-text").textContent = "Schließe das rechte Nasenloch mit dem Daumen und atme durch das linke Nasenloch ein. Halte den Atem kurz an und schließe dann das linke Nasenloch mit dem Ringfinger. Öffne das rechte Nasenloch und atme durch dieses aus. Atme dann durch das rechte Nasenloch ein, halte den Atem an, schließe das rechte Nasenloch und atme durch das linke Nasenloch aus. Wiederhole dies abwechselnd für mehrere Zyklen.";
-  inhaleDuration = 4;
-  inhaleHoldDuration = 2;
-  exhaleDuration = 6;
-  exhaleHoldDuration = 2;
-  repetitions = 20;
-}
-
-else if (exercise === "Bauchatmung") {
-  document.querySelector("#info-text").textContent = "Lege eine Hand auf deinen Bauch und atme tief durch die Nase ein, sodass sich dein Bauch ausdehnt. Halte den Atem kurz an und atme dann langsam durch den Mund aus, während sich dein Bauch wieder zusammenzieht. Konzentriere dich darauf, die Atmung tief in den Bauch zu lenken und entspanne dich dabei.";
-  inhaleDuration = 4;
-  inhaleHoldDuration = 2;
-  exhaleDuration = 6;
-  exhaleHoldDuration = 2;
-  repetitions = 10;
-}
-
-else if (exercise === "Progressive_Muskelentspannung") {
-  document.querySelector("#info-text").textContent = "Spanne während des Einatmens verschiedene Muskelgruppen deines Körpers an, halte die Spannung kurz und entspanne die Muskeln dann während des Ausatmens. Beginne beispielsweise mit den Füßen, arbeite dich hoch zu den Beinen, dem Bauch, den Armen und dem Gesicht. Konzentriere dich auf das Gefühl der Entspannung während des Ausatmens.";
-  inhaleDuration = 4;
-  inhaleHoldDuration = 4;
-  exhaleDuration = 6;
-  exhaleHoldDuration = 4;
-  repetitions = 28;
-}
-
-else if (exercise === "Zaehlende_Atemtechnik") {
-  document.querySelector("#info-text").textContent = "Zähle beim Einatmen bis vier, halte den Atem für vier Sekunden an, atme dann langsam aus und halte erneut für vier Sekunden an, bevor du erneut einatmest. Diese gleichmäßige Zählung kann dabei helfen, den Atem zu beruhigen und eine entspannte Atmosphäre zu schaffen.";
-  inhaleDuration = 4;
-  inhaleHoldDuration = 4;
-  exhaleDuration = 4;
-  exhaleHoldDuration = 4;
-  repetitions = 6;
-}
-
-else if (exercise === "Schnelle_Ausatmung") {
-  document.querySelector("#info-text").textContent = "Atme schnell und kraftvoll durch die Nase ein, halte den Atem kurz an und atme dann kräftig durch den Mund aus. Wiederhole dies für mehrere Zyklen. Diese Technik kann dazu beitragen, Spannungen abzubauen und den Geist zu klären.";
-  inhaleDuration = 2;
-  inhaleHoldDuration = 2;
-  exhaleDuration = 6;
-  exhaleHoldDuration = 2;
-  repetitions = 5;
-}
-
-else if (exercise === "Feueratem") {
-  document.querySelector("#info-text").textContent = "Atme schnell und rhythmisch durch die Nase ein und aus, ähnlich wie beim Hecheln. Konzentriere dich auf die schnellen Atemzüge und den Energiefluss im Körper. Diese Technik wird oft in der Yoga-Praxis verwendet und kann helfen, Energie zu mobilisieren und den Geist zu aktivieren.";
-  inhaleDuration = 1;
-  inhaleHoldDuration = 0;
-  exhaleDuration = 1;
-  exhaleHoldDuration = 0;
-  repetitions = 20;
-}
-
-else if (exercise === "Entspanntes_Seufzen") {
-  document.querySelector("#info-text").textContent = "Atme langsam und tief durch die Nase ein, halte den Atem kurz an und atme dann mit einem tiefen Seufzer durch den Mund aus. Stelle dir vor, dass du damit Anspannung und Belastungen loslässt. Wiederhole dies mehrere Male, um eine tiefe Entspannung zu erreichen.";
-  inhaleDuration = 4;
-  inhaleHoldDuration = 2;
-  exhaleDuration = 8;
-  exhaleHoldDuration = 2;
-  repetitions = 38;
-}
-
-else if (exercise === "Die_5er-Uebung") {
-  document.querySelector("#info-text").textContent = "Atme langsam und bewusst ein und zähle dabei bis fünf. Atme dann langsam aus und zähle erneut bis fünf. Wiederhole dies für mehrere Zyklen. Konzentriere dich auf den gleichmäßigen Atemrhythmus.";
-  inhaleDuration = 5;
-  inhaleHoldDuration = 0;
-  exhaleDuration = 5;
-  exhaleHoldDuration = 0;
-  repetitions = 30;
-}
-
-else if (exercise === "Laenger_Ausatmen") {
-  document.querySelector("#info-text").textContent = "Atme langsam und tief ein und verlängere dann bewusst die Ausatmung, indem du den Atemfluss länger kontrolliert ausströmen lässt. Fokussiere dich auf den ruhigen Atemrhythmus und entspanne dich während des Ausatmens.";
-  inhaleDuration = 5;
-  inhaleHoldDuration = 0;
-  exhaleDuration = 10;
-  exhaleHoldDuration = 0;
-  repetitions = 20;
-}
-
-else if (exercise === "4-7-11_Atemtechnik") {
-  document.querySelector("#info-text").textContent = "Atme langsam und tief ein und zähle dabei bis vier. Halte den Atem an und zähle bis sieben. Atme dann langsam aus und zähle bis elf. Diese Atemtechnik kann helfen, den Atem zu verlangsamen und eine tiefe Entspannung zu fördern.";
-  inhaleDuration = 4;
-  inhaleHoldDuration = 0;
-  exhaleDuration = 7;
-  exhaleHoldDuration = 0;
-  repetitions = 60;
-}
-
-else if (exercise === "4-4-4_Atemtechnik") {
-  document.querySelector("#info-text").textContent = "Atme langsam und bewusst ein und zähle dabei bis vier. Halte den Atem an und zähle bis vier. Atme dann langsam aus und zähle erneut bis vier. Diese gleichmäßige Zählung kann dazu beitragen, den Atemrhythmus zu harmonisieren und eine entspannte Atmosphäre zu schaffen.";
-  inhaleDuration = 4;
-  inhaleHoldDuration = 4;
-  exhaleDuration = 4;
-  exhaleHoldDuration = 0;
-  repetitions = 20;
-}
-
-else if (exercise === "Tiefe_Atmung") {
-  document.querySelector("#info-text").textContent = "Atme langsam und tief ein, indem du bewusst den Bauchraum mit Luft füllst. Halte den Atem kurz an und atme dann langsam aus. Konzentriere dich auf das Gefühl der tieferen Atmung und den ruhigen Atemrhythmus.";
-  inhaleDuration = 4;
-  inhaleHoldDuration = 4;
-  exhaleDuration = 6;
-  exhaleHoldDuration = 0;
-  repetitions = 43;
-}
-
-else if (exercise === "Gleichmaeßige_Atmung") {
-  document.querySelector("#info-text").textContent = "Atme langsam und gleichmäßig ein und aus, indem du den Atemfluss bewusst kontrollierst. Konzentriere dich auf den gleichmäßigen Atemrhythmus und versuche, ihn ruhig und entspannt zu gestalten.";
-  inhaleDuration = 4;
-  inhaleHoldDuration = 0;
-  exhaleDuration = 4;
-  exhaleHoldDuration = 0;
-  repetitions = 8;
-}
-
-else {
-  document.querySelector("#info-text").textContent = "Atme langsam und bewusst ein, zähle dabei bis sechs. Halte den Atem an und zähle bis drei. Atme dann langsam aus und zähle erneut bis sechs. Halte den Atem erneut an und zähle bis drei. Wiederhole dieses Muster für mehrere Zyklen. Konzentriere dich auf den rhythmischen Atemfluss und die gleichmäßigen Atemphasen.";
-  inhaleDuration = 6;
-  inhaleHoldDuration = 3;
-  exhaleDuration = 6;
-  exhaleHoldDuration = 3;
-  repetitions = 16;
+  document.querySelector("#info-text").textContent =
+    "Atme durch die Nase ein und zähle dabei bis vier. Halte den Atem für sieben Sekunden an und atme dann langsam durch den Mund aus, bis du bis acht gezählt hast. Wiederhole dies mehrere Male.";
+  setExerciseParameters(4, 7, 8, 0, 5);
+} else if (exercise === "Wechselatmung") {
+  document.querySelector("#info-text").textContent =
+    "Schließe das rechte Nasenloch mit dem Daumen und atme durch das linke Nasenloch ein. Halte den Atem kurz an und schließe dann das linke Nasenloch mit dem Ringfinger. Öffne das rechte Nasenloch und atme durch dieses aus. Atme dann durch das rechte Nasenloch ein, halte den Atem an, schließe das rechte Nasenloch und atme durch das linke Nasenloch aus. Wiederhole dies abwechselnd für mehrere Zyklen.";
+  setExerciseParameters(4, 2, 6, 2, 20);
+} else if (exercise === "Bauchatmung") {
+  document.querySelector("#info-text").textContent =
+    "Lege eine Hand auf deinen Bauch und atme tief durch die Nase ein, sodass sich dein Bauch ausdehnt. Halte den Atem kurz an und atme dann langsam durch den Mund aus, während sich dein Bauch wieder zusammenzieht. Konzentriere dich darauf, die Atmung tief in den Bauch zu lenken und entspanne dich dabei.";
+  setExerciseParameters(4, 2, 6, 2, 10);
+} else if (exercise === "Progressive_Muskelentspannung") {
+  document.querySelector("#info-text").textContent =
+    "Spanne während des Einatmens verschiedene Muskelgruppen deines Körpers an, halte die Spannung kurz und entspanne die Muskeln dann während des Ausatmens. Beginne beispielsweise mit den Füßen, arbeite dich hoch zu den Beinen, dem Bauch, den Armen und dem Gesicht. Konzentriere dich auf das Gefühl der Entspannung während des Ausatmens.";
+  setExerciseParameters(4, 4, 6, 4, 28);
+} else if (exercise === "Zaehlende_Atemtechnik") {
+  document.querySelector("#info-text").textContent =
+    "Zähle beim Einatmen bis vier, halte den Atem für vier Sekunden an, atme dann langsam aus und halte erneut für vier Sekunden an, bevor du erneut einatmest. Diese gleichmäßige Zählung kann dabei helfen, den Atem zu beruhigen und eine entspannte Atmosphäre zu schaffen.";
+  setExerciseParameters(4, 4, 4, 4, 6);
+} else if (exercise === "Schnelle_Ausatmung") {
+  document.querySelector("#info-text").textContent =
+    "Atme schnell und kraftvoll durch die Nase ein, halte den Atem kurz an und atme dann kräftig durch den Mund aus. Wiederhole dies für mehrere Zyklen. Diese Technik kann dazu beitragen, Spannungen abzubauen und den Geist zu klären.";
+  setExerciseParameters(2, 2, 6, 2, 5);
+} else if (exercise === "Feueratem") {
+  document.querySelector("#info-text").textContent =
+    "Atme schnell und rhythmisch durch die Nase ein und aus, ähnlich wie beim Hecheln. Konzentriere dich auf die schnellen Atemzüge und den Energiefluss im Körper. Diese Technik wird oft in der Yoga-Praxis verwendet und kann helfen, Energie zu mobilisieren und den Geist zu aktivieren.";
+  setExerciseParameters(1, 0, 1, 0, 20);
+} else if (exercise === "Entspanntes_Seufzen") {
+  document.querySelector("#info-text").textContent =
+    "Atme langsam und tief durch die Nase ein, halte den Atem kurz an und atme dann mit einem tiefen Seufzer durch den Mund aus. Stelle dir vor, dass du damit Anspannung und Belastungen loslässt. Wiederhole dies mehrere Male, um eine tiefe Entspannung zu erreichen.";
+  setExerciseParameters(4, 2, 8, 2, 38);
+} else if (exercise === "Die_5er-Uebung") {
+  document.querySelector("#info-text").textContent =
+    "Atme langsam und bewusst ein und zähle dabei bis fünf. Atme dann langsam aus und zähle erneut bis fünf. Wiederhole dies für mehrere Zyklen. Konzentriere dich auf den gleichmäßigen Atemrhythmus.";
+  setExerciseParameters(5, 0, 5, 0, 30);
+} else if (exercise === "Laenger_Ausatmen") {
+  document.querySelector("#info-text").textContent =
+    "Atme langsam und tief ein und verlängere dann bewusst die Ausatmung, indem du den Atemfluss länger kontrolliert ausströmen lässt. Fokussiere dich auf den ruhigen Atemrhythmus und entspanne dich während des Ausatmens.";
+  setExerciseParameters(5, 0, 10, 0, 20);
+} else if (exercise === "4-7-11_Atemtechnik") {
+  document.querySelector("#info-text").textContent =
+    "Atme langsam und tief ein und zähle dabei bis vier. Halte den Atem an und zähle bis sieben. Atme dann langsam aus und zähle bis elf. Diese Atemtechnik kann helfen, den Atem zu verlangsamen und eine tiefe Entspannung zu fördern.";
+  setExerciseParameters(4, 0, 7, 0, 60);
+} else if (exercise === "4-4-4_Atemtechnik") {
+  document.querySelector("#info-text").textContent =
+    "Atme langsam und bewusst ein und zähle dabei bis vier. Halte den Atem an und zähle bis vier. Atme dann langsam aus und zähle erneut bis vier. Diese gleichmäßige Zählung kann dazu beitragen, den Atemrhythmus zu harmonisieren und eine entspannte Atmosphäre zu schaffen.";
+  setExerciseParameters(4, 4, 4, 0, 20);
+} else if (exercise === "Tiefe_Atmung") {
+  document.querySelector("#info-text").textContent =
+    "Atme langsam und tief ein, indem du bewusst den Bauchraum mit Luft füllst. Halte den Atem kurz an und atme dann langsam aus. Konzentriere dich auf das Gefühl der tieferen Atmung und den ruhigen Atemrhythmus.";
+  setExerciseParameters(4, 4, 6, 0, 43);
+} else if (exercise === "Gleichmaeßige_Atmung") {
+  document.querySelector("#info-text").textContent =
+    "Atme langsam und gleichmäßig ein und aus, indem du den Atemfluss bewusst kontrollierst. Konzentriere dich auf den gleichmäßigen Atemrhythmus und versuche, ihn ruhig und entspannt zu gestalten.";
+  setExerciseParameters(4, 0, 4, 0, 8);
+} else {
+  document.querySelector("#info-text").textContent =
+    "Atme langsam und bewusst ein, zähle dabei bis sechs. Halte den Atem an und zähle bis drei. Atme dann langsam aus und zähle erneut bis sechs. Halte den Atem erneut an und zähle bis drei. Wiederhole dieses Muster für mehrere Zyklen. Konzentriere dich auf den rhythmischen Atemfluss und die gleichmäßigen Atemphasen.";
+  setExerciseParameters(6, 3, 6, 3, 16);
 }
 
 const animationDuration =
@@ -238,39 +174,30 @@ function animateProgressBar(duration) {
 
 // Funktion für den Timer
 function startTimer(duration) {
-  var timer = duration,
-    minutes,
-    seconds;
-  var interval = setInterval(function () {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
+  let timer = duration;
 
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
+  let interval = setInterval(() => {
+    const minutes = Math.floor(timer / 60).toString().padStart(2, "0");
+    const seconds = (timer % 60).toString().padStart(2, "0");
 
-    document.querySelector("#timer").textContent = minutes + ":" + seconds;
+    document.querySelector("#timer").textContent = `${minutes}:${seconds}`;
 
     if (--timer < 0) {
       clearInterval(interval);
-      timer = 0; // Timer bleibt bei 0 Sekunden stehen
+      timer = 0;
     }
   }, 1000);
 }
 
 // Funktion für den Insrruction Timer
 function startInstructionTimer(duration, instruction) {
-  var timer = duration,
-    seconds;
-  var interval = setInterval(function () {
-    seconds = parseInt(timer, 10);
+  let timer = duration;
 
-    if (instruction === "Fertig") {
-      document.querySelector("#instruction").textContent = "Fertig";
-    } else {
-      document.querySelector("#instruction").textContent =
-        instruction + " " + seconds;
-    }
-
+  let interval = setInterval(() => {
+    const seconds = parseInt(timer, 10);
+    const instructionText =
+      instruction === "Fertig" ? "Fertig" : `${instruction} ${seconds}`;
+    document.querySelector("#instruction").textContent = instructionText;
     if (--timer < 0) {
       clearInterval(interval);
       timer = 0; // Timer bleibt bei 0 Sekunden stehen
@@ -283,28 +210,23 @@ function playAnimations() {
   if (repetitionCount >= repetitions) {
     return; // Stoppe die Animation nach der zehnten Wiederholung
   }
-
-  /* playSound("assets/sound/inhale.wav"); // Sound beim Einatmen abspielen */
   /* document.querySelector("#instruction").textContent = "Einatmen"; // Text aktualisieren */
   startInstructionTimer(inhaleDuration, "Einatmen"); //
 
   if (inhaleHoldDuration > 0) {
     setTimeout(() => {
-      /* playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Einatmen abspielen */
       /* document.querySelector("#instruction").textContent = "Halten"; // Text aktualisieren */
       startInstructionTimer(inhaleHoldDuration, "Halten"); //
     }, inhaleDuration * 1000);
   }
 
   setTimeout(() => {
-    /* playSound("assets/sound/exhale.wav"); // Sound beim Ausatmen abspielen */
     /* document.querySelector("#instruction").textContent = "Ausatmen"; // Text aktualisieren */
     startInstructionTimer(exhaleDuration, "Ausatmen"); //
   }, (inhaleDuration + inhaleHoldDuration) * 1000);
 
   if (exhaleHoldDuration > 0) {
     setTimeout(() => {
-      /* playSound("assets/sound/hold.wav"); // Sound beim Halten nach dem Ausatmen abspielen */
       /* document.querySelector("#instruction").textContent = "Halten"; // Text aktualisieren */
       startInstructionTimer(exhaleHoldDuration, "Halten"); //
     }, (inhaleDuration + inhaleHoldDuration + exhaleDuration) * 1000);
@@ -368,20 +290,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   infoBox.style.display = "block";
 
+  // Starten, wenn die Infobox geschlossen wird
   closeBtn.addEventListener("click", function () {
     infoBox.style.display = "none";
-
-    // Timer beim Laden der Seite starten
-    startTimer(totalDuration / 1000);
-
-    // Animierte Progressbar beim Laden der Seite starten
-    animateProgressBar(totalDuration);
 
     // Animationen beim Laden der Seite starten
     playAnimations();
 
     // Sound beim Start der Übung abspielen
     playSound("assets/sound/start.mp3");
+
+    // Animierte Progressbar beim Laden der Seite starten
+    animateProgressBar(totalDuration);
+
+    // Timer beim Laden der Seite starten
+    startTimer(totalDuration / 1000);
 
     // Ambient Sound beim Start der Übung abspielen
     const randomAmbientSound = getRandomAmbientSound();
