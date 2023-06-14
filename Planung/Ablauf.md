@@ -133,7 +133,7 @@ Quellcode, Screenshots, Diagramme, Dokumente, Bildquellen, Textquellen
 
 
 Heute:
-Schritt 18 Fertig Machen: Quellcode, Screenshots, Diagramme, Dokumente, Bildquellen, Textquellen
+Schritt 18 Fertig Machen: Textquellen, verwendete Resoucen
 
 Donnerstag:
 Bericht auf richtige Länge bringen
