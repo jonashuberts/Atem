@@ -119,12 +119,15 @@ Quellcode, Screenshots, Diagramme, Dokumente, Bildquellen, Textquellen
 ### Corpuls:
 
 Heute:
+
 - Schritt 18 Fertig Machen: Textquellen, verwendete Resoucen
 
 Donnerstag:
+
 - Bericht auf richtige Länge bringen
 
 Später:
+
 - code commentare hinzufügen / verbessern, code aufräumen / strukturieren
 - serviceworcer und manifest überarbeiten + github readme erstellen
 
@@ -138,3 +141,19 @@ Später:
 - Vibrations Feedback bei den Übungen
 - Krankheiten am Atemmuster erkennen
 - Tippen um Übung zu Pausieren
+
+## App builder
+
+### Nova
+
+https://appsumo.com/products/nowa/?clickId=xtN3MlQjpxyNW41Taiy8ZRyaUkFx00UbB14myA0&irgwc=1&utm_medium=4352386&utm_campaign=Online%20Tracking%20Link&utm_source=IR#pricePlans
+https://www.nowa.dev/pricing
+https://www.nowa.dev/road-map
+
+### Andere
+
+https://www.fluxbuilder.com/pricing
+https://www.adalo.com/pricing
+https://flutterflow.io/pricing
+https://www.glideapps.com/pricing
+https://www.stackerhq.com/pricing
