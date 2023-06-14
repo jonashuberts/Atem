@@ -4,6 +4,7 @@
   --on-background-dark: #ede0de;
   --primary-container-dark: #93001b;
   --on-primary-container-dark: #ffdad8;
+  --tertiary-dark: #e3c28c;
   --tertiary-container-dark: #5a4319;
   --on-tertiary-container-dark: #ffdeaa;
   --scrollbar-dark: #534342;
@@ -33,6 +34,7 @@ body {
   --on-background-light: #201a1a;
   --primary-container-light: #ffdad8;
   --on-primary-container-light: #410006;
+  --tertiary-light: #745a2e;
   --tertiary-container-light: #ffdeaa;
   --on-tertiary-container-light: #271900;
   --on-background-dark: #ede0de;
@@ -56,9 +58,11 @@ body.theme-dark {
   --on-background-light: var(--on-background-dark);
   --primary-container-light: var(--primary-container-dark);
   --on-primary-container-light: var(--on-primary-container-dark);
+  --tertiary-light: var(--tertiary-dark);
   --tertiary-container-light: var(--tertiary-container-dark);
   --on-tertiary-container-light: var(--on-tertiary-container-dark);
   --scrollbar-light: var(--scrollbar-dark);
+
 
   --on-background-filter-light: var(--on-background-filter-dark);
 }
@@ -70,6 +74,7 @@ body.theme-dark {
     --on-background-light: var(--on-background-dark);
     --primary-container-light: var(--primary-container-dark);
     --on-primary-container-light: var(--on-primary-container-dark);
+    --tertiary-light: var(--tertiary-dark);
     --tertiary-container-light: var(--tertiary-container-dark);
     --on-tertiary-container-light: var(--on-tertiary-container-dark);
     --scrollbar-light: var(--scrollbar-dark);
@@ -114,7 +119,7 @@ body.theme-dark {
   font-weight: 400;
   font-size: 1.8vw;
   line-height: 2.8vw;
-  background-color: var(--on-tertiary-container-light);
+  background-color: var(--tertiary-light);
   color: var(--tertiary-container-light);
   border: none;
   border-radius: 10%;

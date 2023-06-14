@@ -130,3 +130,10 @@ Quellcode, Screenshots, Diagramme, Dokumente, Bildquellen, Textquellen
 - Vibrations Feedback bei den Übungen
 - Krankheiten am Atemmuster erkennen
 - Tippen um Übung zu Pausieren
+
+
+Heute:
+Schritt 18 Fertig Machen: Quellcode, Screenshots, Diagramme, Dokumente, Bildquellen, Textquellen
+
+Donnerstag:
+Bericht auf richtige Länge bringen
