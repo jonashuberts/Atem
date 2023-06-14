@@ -3,6 +3,7 @@ const circularProgress = document.querySelector("#circular-progress");
 let isEndSoundPlayed = false;
 let repetitionCount = 0;
 
+// dia Parameter der Atemzeiten aus der Url lesen und in dei Inputfelder eintragen
 const urlParams = new URLSearchParams(window.location.search);
 document.querySelector("#inhaleDurationInput").value = urlParams.get("inhale");
 document.querySelector("#inhaleHoldDurationInput").value = urlParams.get("inhaleHold");
