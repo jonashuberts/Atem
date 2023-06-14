@@ -255,7 +255,7 @@ body.theme-dark {
   color: var(--on-background-light);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   /* CSS für die Infobox */
   #info-box {
     width: 95vw;
