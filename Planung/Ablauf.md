@@ -119,12 +119,8 @@ Quellcode, Screenshots, Diagramme, Dokumente, Bildquellen, Textquellen
 ### Corpuls:
 
 Heute:
-
-- Schritt 18 Fertig Machen: Textquellen, verwendete Resoucen
-
-Donnerstag:
-
 - Bericht auf richtige Länge bringen
+- Bericht kontrollieren
 
 Später:
 
@@ -159,3 +155,18 @@ https://www.glideapps.com/pricing
 https://www.stackerhq.com/pricing
 
 https://www.blup.in/pricing
+
+## Entfernter text
+
+2.2
+Die Kombination von HTML, CSS und JavaScript ermöglichte die Erstellung einer ansprechenden Benutzeroberfläche, interaktiver Funktionen und einer reibungslosen Benutzerführung. 
+
+2.4.1
+Dabei erhält die Funktion als Argument progressValue eine Zahl zwischen 0 und 100, die den Fortschritt in Prozent angibt. Sie prüft dann das aktuelle Farbschema der Seite (hell oder dunkel) und bestimmt die Start- und Endfarbe des Fortschrittsbalkens fest. Anschließend wird der Hintergrund des Fortschrittsbalkens auf einen konischen Farbverlauf gesetzt, der mit der Startfarbe beginnt und mit der Endfarbe endet, wobei der Fortschrittswert den Winkel des Farbverlaufs bestimmt.
+
+, indem der Fortschrittswert über einen bestimmten Zeitraum aktualisiert wird. Diese Funktion akzeptiert ein Argument für die Dauer, die die Animation dauern soll. Sie berechnet dann die Anzahl der Schritte, die erforderlich sind, um die Animation zu beenden, basierend auf einer Intervallzeit von 10 Millisekunden. Sie initialisiert den Fortschrittswert und den aktuellen Schritt auf 0, legt dann ein Intervall fest, das den Fortschrittswert aktualisiert, und ruft die Funktion updateCircularProgress mit dem neuen Wert auf. Anschließend wird der aktuelle Schritt inkrementiert und überprüft, ob die Animation abgeschlossen ist. Ist dies der Fall, wird das Intervall gelöscht.
+
+Eine solche URL sieht dann zum Beispiel so aus: „https://atemuebungen.vercel.app/exercise.html?practice=4-7-8_Atemtechnik“. 
+
+3
+Eine weitere sinnvolle Verbesserung könnte die Verwendung eines Backends sein: Während sich mein Projekt bisher nur auf das Frontend, also den für den Betrachter sichtbaren Teil, konzentriert hat, könnte ein Backend das Anlegen und Speichern von Benutzerkonten ermöglichen. So könnten z.B. Benutzerdaten wie benutzerdefinierte Übungen oder favorisierte Atemübungen geräteübergreifend gespeichert werden können.
