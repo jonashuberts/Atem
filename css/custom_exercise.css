@@ -149,7 +149,7 @@ body.theme-dark {
 /* CSS für die Beschreibungen */
 .description {
   position: absolute;
-  width: 80vw;
+  width: 40vw;
   left: 16%;
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -364,6 +364,7 @@ body.theme-dark {
 .description {
   padding-top: 0.5vw;
   left: 18%;
+  width: 70vw;
   font-size: 3.2vw;
   line-height: 4.8vw;
 }
@@ -409,6 +410,7 @@ body.theme-dark {
   
   .description {
     padding-top: 0.5vw;
+    width: 70vw;
     left: 18%;
     font-size: 2.4vw;
     line-height: 4.8vw;

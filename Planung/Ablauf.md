@@ -119,7 +119,10 @@ Quellcode, Screenshots, Diagramme, Dokumente, Bildquellen, Textquellen
 ### Corpuls:
 
 Heute:
-- Bericht auf richtige Länge bringen
+- Instruction timer mit animation syncronisieren
+
+- Nowa testen
+
 - Bericht kontrollieren
 
 Später:
@@ -167,6 +170,9 @@ Dabei erhält die Funktion als Argument progressValue eine Zahl zwischen 0 und 1
 , indem der Fortschrittswert über einen bestimmten Zeitraum aktualisiert wird. Diese Funktion akzeptiert ein Argument für die Dauer, die die Animation dauern soll. Sie berechnet dann die Anzahl der Schritte, die erforderlich sind, um die Animation zu beenden, basierend auf einer Intervallzeit von 10 Millisekunden. Sie initialisiert den Fortschrittswert und den aktuellen Schritt auf 0, legt dann ein Intervall fest, das den Fortschrittswert aktualisiert, und ruft die Funktion updateCircularProgress mit dem neuen Wert auf. Anschließend wird der aktuelle Schritt inkrementiert und überprüft, ob die Animation abgeschlossen ist. Ist dies der Fall, wird das Intervall gelöscht.
 
 Eine solche URL sieht dann zum Beispiel so aus: „https://atemuebungen.vercel.app/exercise.html?practice=4-7-8_Atemtechnik“. 
+
+2.4.3
+So erhält das jeweilige Element für die Eingaben über die Klasse „description“ bzw. „inputField“ eine Breite, den Abstand von links, die Schriftfamilie, den Schriftstil, die Schriftstärke, die Schriftgröße, die Zeilenhöhe und die Farbe. Zusätzlich erhält jedes Element individuell einen prozentualen Abstand vom oberen Rand, der durch die Adressierung über die festgelegte Id bestimmt wird.
 
 3
 Eine weitere sinnvolle Verbesserung könnte die Verwendung eines Backends sein: Während sich mein Projekt bisher nur auf das Frontend, also den für den Betrachter sichtbaren Teil, konzentriert hat, könnte ein Backend das Anlegen und Speichern von Benutzerkonten ermöglichen. So könnten z.B. Benutzerdaten wie benutzerdefinierte Übungen oder favorisierte Atemübungen geräteübergreifend gespeichert werden können.

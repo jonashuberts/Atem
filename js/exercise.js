@@ -174,35 +174,57 @@ function animateProgressBar(duration) {
 
 // Funktion für den Timer
 function startTimer(duration) {
-  let timer = duration;
+  let startTime = null;
 
-  let interval = setInterval(() => {
-    const minutes = Math.floor(timer / 60).toString().padStart(2, "0");
-    const seconds = (timer % 60).toString().padStart(2, "0");
-
-    document.querySelector("#timer").textContent = `${minutes}:${seconds}`;
-
-    if (--timer < 0) {
-      clearInterval(interval);
-      timer = 0;
+  function timer(timestamp) {
+    if (!startTime) {
+      startTime = timestamp;
     }
-  }, 1000);
+    const elapsed = timestamp - startTime;
+    const seconds = Math.ceil((duration * 1000 - elapsed) / 1000);
+
+    const minutes = Math.floor(seconds / 60)
+      .toString()
+      .padStart(2, "0");
+    const remainingSeconds = (seconds % 60).toString().padStart(2, "0");
+
+    document.querySelector(
+      "#timer"
+    ).textContent = `${minutes}:${remainingSeconds}`;
+
+    if (elapsed < duration * 1000) {
+      requestAnimationFrame(timer);
+    } else {
+      document.querySelector("#timer").textContent = "00:00";
+    }
+  }
+
+  requestAnimationFrame(timer);
 }
 
 // Funktion für den Insrruction Timer
 function startInstructionTimer(duration, instruction) {
-  let timer = duration;
+  let startTime = null;
 
-  let interval = setInterval(() => {
-    const seconds = parseInt(timer, 10);
+  function timer(timestamp) {
+    if (!startTime) {
+      startTime = timestamp;
+    }
+    const elapsed = timestamp - startTime;
+    const seconds = Math.ceil(duration - elapsed / 1000);
+
     const instructionText =
       instruction === "Fertig" ? "Fertig" : `${instruction} ${seconds}`;
     document.querySelector("#instruction").textContent = instructionText;
-    if (--timer < 0) {
-      clearInterval(interval);
-      timer = 0; // Timer bleibt bei 0 Sekunden stehen
+
+    if (elapsed < duration * 1000) {
+      requestAnimationFrame(timer);
+    } else {
+      document.querySelector("#instruction").textContent = "Fertig";
     }
-  }, 1000);
+  }
+
+  requestAnimationFrame(timer);
 }
 
 // Funktion, um die Atem Animation zu starten
@@ -294,17 +316,17 @@ document.addEventListener("DOMContentLoaded", function () {
   closeBtn.addEventListener("click", function () {
     infoBox.style.display = "none";
 
+    // Timer beim Laden der Seite starten
+    startTimer(totalDuration / 1000);
+
     // Animationen beim Laden der Seite starten
     playAnimations();
-
-    // Sound beim Start der Übung abspielen
-    playSound("assets/sound/start.mp3");
 
     // Animierte Progressbar beim Laden der Seite starten
     animateProgressBar(totalDuration);
 
-    // Timer beim Laden der Seite starten
-    startTimer(totalDuration / 1000);
+    // Sound beim Start der Übung abspielen
+    playSound("assets/sound/start.mp3");
 
     // Ambient Sound beim Start der Übung abspielen
     const randomAmbientSound = getRandomAmbientSound();
