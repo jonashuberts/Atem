@@ -1,3 +1,4 @@
+/* Variablen für das dunkle Design */
 :root {
   --primary-dark: #ffb3b0;
   --background-dark: #201a1a;
@@ -12,6 +13,7 @@
     hue-rotate(317deg) brightness(106%) contrast(86%);
 }
 
+/* Definition der Schrift */
 @font-face {
   font-family: "Inter";
   src: url(assets/font/Inter-Medium.ttf);
@@ -27,7 +29,7 @@
 
 /* CSS für die Seite */
 body {
-  /* Light Theme */
+  /* Variablen für das helle Design */
   --primary-light: #bf0026;
   --background-light: #fffbff;
   --on-background-light: #201a1a;
@@ -50,6 +52,7 @@ body {
   background-color: var(--background-light);
 }
 
+/* Änderung der Variablen für das dunkle Design */
 body.theme-dark {
   --primary-light: var(--primary-dark);
   --background-light: var(--background-dark);
@@ -78,7 +81,7 @@ body.theme-dark {
   }
 }
 
-/* CSS für die Infobox */
+/* Das Infofeld */
 #info-box {
   position: absolute;
   width: 60vw;
@@ -89,7 +92,7 @@ body.theme-dark {
   z-index: 2;
 }
 
-/* CSS für die Beschreibung in der Infobox */
+/* Text aus dem Infofeld */
 #info-text {
   position: absolute;
   width: 50vw;
@@ -104,7 +107,7 @@ body.theme-dark {
   color: var(--on-tertiary-container-light);
 }
 
-/* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
+/* Schaltfläche zum Schließen der Infobox und Starten der Übung */
 #start-btn {
   position: absolute;
   top: 80%;
@@ -121,7 +124,8 @@ body.theme-dark {
 #start-btn:hover {
   font-size: 4.9vw;
 }
-/* CSS für den Animierten atem Kreis */
+
+/* Kreis der Atemanimation */
 #circle {
   width: 30vh;
   height: 30vh;
@@ -129,6 +133,7 @@ body.theme-dark {
   background-color: var(--primary-container-light);
 }
 
+/* Keyframes der Atemanimation */
 @keyframes inhaleAnimation {
   0% {
     transform: scale(1);
@@ -165,7 +170,7 @@ body.theme-dark {
   }
 }
 
-/* CSS für den inneren Marker */
+/* Innerer Marker */
 #inner-marker {
   width: 30vh;
   height: 30vh;
@@ -176,7 +181,7 @@ body.theme-dark {
   position: absolute;
 }
 
-/* CSS für den äußeren Marker */
+/* Äußerer Marker */
 #outer-marker {
   width: 40vh;
   height: 40vh;
@@ -188,7 +193,7 @@ body.theme-dark {
   /*   transition: width 0.2s ease-in-out, height 0.1s ease-in-out; */
 }
 
-/* CSS für die runde Progress bar */
+/* runder Fortschrittsbalken */
 #circular-progress {
   position: absolute;
   height: 41vh;
@@ -202,7 +207,7 @@ body.theme-dark {
   z-index: -2;
 }
 
-/* CSS für den Zurück zum Home Pfeil */
+/* Zurück-Button */
 #back {
   height: 3vh;
   position: absolute;
@@ -216,7 +221,7 @@ body.theme-dark {
   transform: scale(1.1);
 }
 
-/* CSS für den Page Übergang */
+/* Seiten Übergang */
 .transition-fade {
   opacity: 1;
   transition: opacity 0.5s ease-out;
@@ -225,7 +230,7 @@ body.theme-dark {
   opacity: 0;
 }
 
-/* CSS für den Timer */
+/* Timer */
 #timer {
   position: absolute;
   height: 3vh;
@@ -240,7 +245,7 @@ body.theme-dark {
   color: var(--on-background-light);
 }
 
-/* CSS für die Instructions und den Timer unten */
+/* Anweisungen und Timer unten */
 #instruction {
   position: absolute;
   height: 3vh;
@@ -255,14 +260,15 @@ body.theme-dark {
   color: var(--on-background-light);
 }
 
+/* Aussehen für mobile Geräte */
 @media screen and (max-width: 600px) {
-  /* CSS für die Infobox */
+  /* Das Infofeld */
   #info-box {
     width: 95vw;
     height: 60vh;
   }
 
-  /* CSS für die Beschreibung in der Infobox */
+  /* Text aus dem Infofeld */
   #info-text {
     width: 80vw;
     top: 38%;
@@ -270,7 +276,7 @@ body.theme-dark {
     line-height: 8.4vw;
   }
 
-  /* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
+  /* Schaltfläche zum Schließen der Infobox und Starten der Übung */
   #start-btn {
     top: 85%;
     font-size: 14.2vw;
@@ -280,21 +286,22 @@ body.theme-dark {
     font-size: 14.2vw;
   }
 
-    /* CSS für die runde Progress bar */
-    #circular-progress {
-      height: 41.2vh;
-      width: 41.2vh;
-    }
+  /* runder Fortschrittsbalken */
+  #circular-progress {
+    height: 41.2vh;
+    width: 41.2vh;
+  }
 }
 
+/* Aussehen für größere mobile Geräte */
 @media screen and (max-width: 900px) and (min-width: 600px) {
-  /* CSS für die Infobox */
+  /* Das Infofeld */
   #info-box {
     width: 95vw;
     height: 50vh;
   }
 
-  /* CSS für die Beschreibung in der Infobox */
+  /* Text aus dem Infofeld */
   #info-text {
     width: 80vw;
     top: 38%;
@@ -302,7 +309,7 @@ body.theme-dark {
     line-height: 6.4vw;
   }
 
-  /* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
+  /* Schaltfläche zum Schließen der Infobox und Starten der Übung */
   #start-btn {
     top: 80%;
     font-size: 7.2vw;
@@ -312,21 +319,22 @@ body.theme-dark {
     font-size: 7.2vw;
   }
 
-      /* CSS für die runde Progress bar */
-      #circular-progress {
-        height: 41vh;
-        width: 41vh;
-      }
+  /* runder Fortschrittsbalken */
+  #circular-progress {
+    height: 41vh;
+    width: 41vh;
+  }
 }
 
+/* Aussehen für mobile Geräte in der wagerechten ausrichtung */
 @media screen and (max-height: 600px) {
-  /* CSS für die Infobox */
+  /* Das Infofeld */
   #info-box {
     width: 80vw;
     height: 70vh;
   }
 
-  /* CSS für die Beschreibung in der Infobox */
+  /* Text aus dem Infofeld */
   #info-text {
     width: 70vw;
     top: 30%;
@@ -334,7 +342,7 @@ body.theme-dark {
     line-height: 2.8vw;
   }
 
-  /* CSS für den Button um die Infobox zu schließen und die Übung zu starten */
+  /* Schaltfläche zum Schließen der Infobox und Starten der Übung. */
   #start-btn {
     top: 75%;
     font-size: 4.8vw;
@@ -344,42 +352,42 @@ body.theme-dark {
     font-size: 4.8vw;
   }
 
-  /* CSS für den Animierten atem Kreis */
+  /* Kreis der Atemanimation */
   #circle {
     width: 45vh;
     height: 45vh;
   }
 
-  /* CSS für den inneren Marker */
+  /* Innerer Marker */
   #inner-marker {
     width: 45vh;
     height: 45vh;
   }
 
-  /* CSS für den äußeren Marker */
+  /* Äußerer Marker */
   #outer-marker {
     width: 60vh;
     height: 60vh;
   }
 
-  /* CSS für die runde Progress bar */
+  /* runder Fortschrittsbalken */
   #circular-progress {
     height: 62vh;
     width: 62vh;
   }
 
-  /* CSS für den Zurück zum Home Pfeil */
+  /* Zurück-Button */
   #back {
     height: 6vh;
   }
 
-  /* CSS für den Timer */
+  /* Timer */
   #timer {
     height: 6vh;
     font-size: 6vh;
   }
 
-  /* CSS für die Instruktion */
+  /* Anweisungen und Timer unten */
   #instruction {
     height: 6vh;
     font-size: 6vh;

@@ -41,7 +41,7 @@
     <!-- Timer -->
     <div id="timer">00:00</div>
 
-    <!-- Exercise Instruction -->
+    <!-- Übungsanweisung -->
     <div id="instruction"></div>
 
     <!-- Infobox -->
@@ -50,16 +50,57 @@
         Bestimme die Werte der Atemübung nach deinen eigenen Bedürfnissen.
       </p>
 
-      <input type="text" id="inhaleDurationInput" class="inputField" placeholder="" onblur="getInputs()">
-      <p id="inhaleDurationDescription" class="description" >Dauer der Einatmung</p>
-      <input type="text" id="inhaleHoldDurationInput" class="inputField" placeholder="" onblur="getInputs()">
-      <p id="inhaleHoldDurationDescription" class="description" >Dauer des Atemanhaltens nach der Einatmung</p>
-      <input type="text" id="exhaleDurationInput" class="inputField" placeholder="" onblur="getInputs()">
-      <p id="exhaleDurationDescription" class="description" >Dauer der Ausatmung</p>
-      <input type="text" id="exhaleHoldDurationInput" class="inputField" placeholder="" onblur="getInputs()">
-      <p id="exhaleHoldDurationDescription" class="description" >Dauer des Atemanhaltens nach der Ausatmung</p>
-      <input type="text" id="repetitionInput" class="inputField" placeholder="" onblur="getInputs()">
-      <p id="repitionsDescription" class="description" >Anzahl der Wiederholungen</p>
+      <!-- Eingabefelder und Beschreibungen -->
+      <input
+        type="text"
+        id="inhaleDurationInput"
+        class="inputField"
+        placeholder=""
+        onblur="getInputs()"
+      />
+      <p id="inhaleDurationDescription" class="description">
+        Dauer der Einatmung
+      </p>
+      <input
+        type="text"
+        id="inhaleHoldDurationInput"
+        class="inputField"
+        placeholder=""
+        onblur="getInputs()"
+      />
+      <p id="inhaleHoldDurationDescription" class="description">
+        Dauer des Atemanhaltens nach der Einatmung
+      </p>
+      <input
+        type="text"
+        id="exhaleDurationInput"
+        class="inputField"
+        placeholder=""
+        onblur="getInputs()"
+      />
+      <p id="exhaleDurationDescription" class="description">
+        Dauer der Ausatmung
+      </p>
+      <input
+        type="text"
+        id="exhaleHoldDurationInput"
+        class="inputField"
+        placeholder=""
+        onblur="getInputs()"
+      />
+      <p id="exhaleHoldDurationDescription" class="description">
+        Dauer des Atemanhaltens nach der Ausatmung
+      </p>
+      <input
+        type="text"
+        id="repetitionInput"
+        class="inputField"
+        placeholder=""
+        onblur="getInputs()"
+      />
+      <p id="repitionsDescription" class="description">
+        Anzahl der Wiederholungen
+      </p>
 
       <h2 id="start-btn">Start</h2>
     </div>
@@ -71,7 +112,7 @@
     <div id="inner-marker"></div>
     <div id="outer-marker"></div>
 
-    <!-- Runde Progressbar -->
+    <!-- Runde Fortschrittsanzeige -->
     <div id="circular-progress"></div>
   </body>
 </html>

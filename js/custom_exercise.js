@@ -1,9 +1,12 @@
 const circle = document.getElementById("circle");
 const circularProgress = document.querySelector("#circular-progress");
+var infoBox = document.getElementById("info-box");
+var closeBtn = document.getElementById("start-btn");
 let isEndSoundPlayed = false;
 let repetitionCount = 0;
+let ambientSound = null;
 
-// dia Parameter der Atemzeiten aus der Url lesen und in dei Inputfelder eintragen
+// Parameter der Atemzeiten aus der URL lesen und in die Eingabefelder eintragen
 const params = new URLSearchParams(window.location.search);
 document.querySelector("#inhaleDurationInput").value = params.get("inhale");
 document.querySelector("#inhaleHoldDurationInput").value =
@@ -13,22 +16,21 @@ document.querySelector("#exhaleHoldDurationInput").value =
   params.get("exhaleHold");
 document.querySelector("#repetitionInput").value = params.get("repetitions");
 
+// Funktion zum Abspielen eines Tons
 function playSound(url) {
   var audio = new Audio(url);
   audio.load();
   audio.play();
 }
 
-let ambientSound = null;
-
-// Funktion zum Abspielen des Ambient Sounds
+// Funktion zum Abspielen von Hintergrundgeräuschen
 function playAmbientSound(url) {
   ambientSound = new Audio(url);
   ambientSound.loop = true;
   ambientSound.play();
 }
 
-// Funktion zum Stoppen des Ambient Sounds
+// Funktion zum Ausschalten der Hintergrundmusik
 function stopAmbientSound() {
   if (ambientSound) {
     ambientSound.pause();
@@ -37,7 +39,7 @@ function stopAmbientSound() {
   }
 }
 
-// Array mit den Dateinamen der Ambient Sounds im Ambient-Ordner
+// Array mit den Dateinamen der Ambient-Sounds
 const ambientSounds = [
   "assets/sound/ambient/ES_369 Seconds Of Bliss - 369.mp3",
   "assets/sound/ambient/ES_A Spirit Level - Joseph Beg.mp3",
@@ -58,14 +60,14 @@ const ambientSounds = [
   "assets/sound/ambient/ES_Until You Don't Even Notice Anymore - Hanna Lindgren.mp3",
 ];
 
-// Funktion zum Zufälligen Auswählen eines Ambient Sounds// Funktion zum Zufälligen Auswählen eines Ambient Sounds
+// Funktion zur zufälligen Auswahl eines Ambient-Sounds
 function getRandomAmbientSound() {
   const randomIndex = Math.floor(Math.random() * ambientSounds.length);
   const soundFile = ambientSounds[randomIndex];
   return soundFile;
 }
 
-// Funktion, um die progressbar zu aktualisieren
+// Funktion zur Aktualisierung der Fortschrittsanzeige
 function updateCircularProgress(progressValue) {
   const lightMode = document.body.classList.contains("theme-light");
   const startColor = lightMode
@@ -79,7 +81,7 @@ function updateCircularProgress(progressValue) {
   }deg, ${endColor} 0deg)`;
 }
 
-// Funktion, um die runde Progressbar zu animieren
+// Funktion zur Animation des runden Fortschrittsbalkens
 function animateProgressBar(duration) {
   const intervalTime = 10; // Aktualisierung alle 10 Millisekunden
   const totalSteps = duration / intervalTime;
@@ -128,7 +130,7 @@ function startTimer(duration) {
   requestAnimationFrame(timer);
 }
 
-// Funktion für den Insrruction Timer
+// Funktion für den Timer eines Atemzyklus
 function startInstructionTimer(duration, instruction) {
   let startTime = null;
 
@@ -153,35 +155,31 @@ function startInstructionTimer(duration, instruction) {
   requestAnimationFrame(timer);
 }
 
-// Funktion, um die Atem Animation zu starten
+// Funktion zum Starten der Atmungsanimation
 function playAnimations() {
   if (repetitionCount >= repetitions) {
-    return; // Stoppe die Animation nach der zehnten Wiederholung
+    return;
   }
-  /* document.querySelector("#instruction").textContent = "Einatmen"; // Text aktualisieren */
   startInstructionTimer(inhaleDuration, "Einatmen"); //
 
   if (inhaleHoldDuration > 0) {
     setTimeout(() => {
-      /* document.querySelector("#instruction").textContent = "Halten"; // Text aktualisieren */
       startInstructionTimer(inhaleHoldDuration, "Halten"); //
     }, inhaleDuration * 1000);
   }
 
   setTimeout(() => {
-    /* document.querySelector("#instruction").textContent = "Ausatmen"; // Text aktualisieren */
     startInstructionTimer(exhaleDuration, "Ausatmen"); //
   }, (inhaleDuration + inhaleHoldDuration) * 1000);
 
   if (exhaleHoldDuration > 0) {
     setTimeout(() => {
-      /* document.querySelector("#instruction").textContent = "Halten"; // Text aktualisieren */
       startInstructionTimer(exhaleHoldDuration, "Halten"); //
     }, (inhaleDuration + inhaleHoldDuration + exhaleDuration) * 1000);
   }
 
-  circle.style.animation = "none"; // Animationen zurücksetzen
-  void circle.offsetWidth; // Repaint erzwingen
+  circle.style.animation = "none";
+  void circle.offsetWidth;
   circle.style.animation =
     "inhaleAnimation " +
     inhaleDuration +
@@ -203,7 +201,7 @@ function playAnimations() {
   setTimeout(playAnimations, animationDuration);
 }
 
-// Funkktion für die Page Transition
+// Funkktion für den Seitenwechsel
 const transitionLink = document.getElementById("transition-link");
 transitionLink.addEventListener("click", function (event) {
   event.preventDefault(); // Verhindert das Standardverhalten des Links
@@ -223,6 +221,7 @@ function applyTheme(theme) {
   document.body.classList.add(`theme-${theme}`);
 }
 
+// Funktion zum Auslesen und Speichern der Werte aus der Infobox
 function getInputs() {
   inhaleDuration = parseInt(
     document.querySelector("#inhaleDurationInput").value
@@ -255,7 +254,7 @@ function getInputs() {
 
   console.log("lokal total duration " + totalDuration);
 
-  // Timer initialisieren
+  // Aktualisierung des Timers auf die Eingabewerte
   minutes = parseInt(totalDuration / 1000 / 60, 10);
   seconds = parseInt((totalDuration / 1000) % 60, 10);
   minutes = minutes < 10 ? "0" + minutes : minutes;
@@ -266,15 +265,12 @@ function getInputs() {
   }
 }
 
-// window.onload = function () { // Starten, wenn ales inklusive css und bilder geladen sind
+// Warte, bis das DOM geladen ist
 document.addEventListener("DOMContentLoaded", function () {
-  // Starten, wenn html geladen ist
-  var infoBox = document.getElementById("info-box");
-  var closeBtn = document.getElementById("start-btn");
-
+  // Infobox anzeigen
   infoBox.style.display = "block";
 
-  // Zeit beim laden der Seite aktualisiren
+  // Aktualisierung des Timers beim Laden der Seite
   getInputs();
 
   // Starten, wenn die Infobox geschlossen wird
@@ -287,27 +283,28 @@ document.addEventListener("DOMContentLoaded", function () {
     // Animationen beim Laden der Seite starten
     playAnimations();
 
-    // Animierte Progressbar beim Laden der Seite starten
+    // Animierte Fortschrittsanzeige beim Laden der Seite starten
     animateProgressBar(totalDuration);
 
-    // Sound beim Start der Übung abspielen
+    // Ton beim Start der Übung abspielen
     playSound("assets/sound/start.mp3");
 
-    // Ambient Sound beim Start der Übung abspielen
+    // Umgebungsgeräusch zu Beginn der Übung abspielen
     const randomAmbientSound = getRandomAmbientSound();
     playAmbientSound(randomAmbientSound);
 
-    // Ton am Ende der Atemübung abspielen und Instruction auf fertig setzen
+    // Ton am Ende der Atemübung abspielen und die Anweisung mit "Fertig" beenden
     setTimeout(() => {
-      startInstructionTimer(0, "Fertig"); // Instruction auf fertig setzen
       if (!isEndSoundPlayed) {
+        startInstructionTimer(0, "Fertig");
         playSound("assets/sound/ende1.mp3");
         isEndSoundPlayed = true;
       }
-      stopAmbientSound(); // Ambient Sound stoppen
+      stopAmbientSound(); // Umgebungslärm abschalten
     }, totalDuration);
 
-    /*   // Outer marker beim Laden der Seite annimieren
+    /*   
+    // Äußere Markierung beim Laden der Seite animieren
   window.addEventListener("load", function () {
     var outerMarker = document.getElementById("outer-marker");
     outerMarker.style.width = "400px";

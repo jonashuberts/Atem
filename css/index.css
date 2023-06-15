@@ -1,3 +1,4 @@
+/* Variablen für das dunkle Design */
 :root {
   --primary-dark: #ffb3b0;
   --background-dark: #201a1a;
@@ -10,11 +11,13 @@
 
   --exercise-icon-filter-dark: invert(83%) sepia(16%) saturate(345%)
     hue-rotate(314deg) brightness(103%) contrast(101%);
-  --background-icon-filter-dark: invert(19%) sepia(5%) saturate(4716%) hue-rotate(314deg) brightness(93%) contrast(71%);
+  --background-icon-filter-dark: invert(19%) sepia(5%) saturate(4716%)
+    hue-rotate(314deg) brightness(93%) contrast(71%);
   --custom-exercise-icon-filter-dark: invert(93%) sepia(14%) saturate(1223%)
     hue-rotate(322deg) brightness(101%) contrast(102%);
 }
 
+/* Definition der Schrift */
 @font-face {
   font-family: "Inter";
   src: url(assets/font/Inter-Medium.ttf);
@@ -37,7 +40,7 @@
 
 /* CSS für die Seite */
 body {
-  /* Light Theme */
+  /* Variablen für das helle Design */
   --primary-light: #bf0026;
   --background-light: #fffbff;
   --on-background-light: #201a1a;
@@ -51,7 +54,8 @@ body {
 
   --exercise-icon-filter-light: invert(4%) sepia(51%) saturate(7483%)
     hue-rotate(347deg) brightness(96%) contrast(104%);
-  --background-icon-filter-light: invert(79%) sepia(15%) saturate(353%) hue-rotate(314deg) brightness(108%) contrast(103%);
+  --background-icon-filter-light: invert(79%) sepia(15%) saturate(353%)
+    hue-rotate(314deg) brightness(108%) contrast(103%);
   --custom-exercise-icon-filter-light: invert(11%) sepia(16%) saturate(4643%)
     hue-rotate(20deg) brightness(97%) contrast(104%);
 
@@ -63,6 +67,7 @@ body {
   background-color: var(--background-light);
 }
 
+/* Änderung der Variablen für das dunkle Design */
 body.theme-dark {
   --primary-light: var(--primary-dark);
   --background-light: var(--background-dark);
@@ -97,6 +102,7 @@ body.theme-dark {
   }
 }
 
+/* Auswahlfeld für den Farbmodus */
 .select {
   position: absolute;
   top: 3vh;
@@ -128,7 +134,7 @@ body.theme-dark {
   color: #201a1a;
 }
 
-/* CSS für den Page Übergang */
+/* CSS für den Seiten Übergang */
 /* 
 .transition-fade {
   opacity: 1;
@@ -139,7 +145,7 @@ body.theme-dark {
 } 
 */
 
-/* Navbar */
+/* Navigationsbereich */
 .nav-item {
   position: absolute;
   top: 3vh;
@@ -170,7 +176,7 @@ body.theme-dark {
   left: 20vw;
 }
 
-/* Die Atem Überschrift */
+/*  Überschrift der Seite */
 #title {
   position: absolute;
   top: 3vh;
@@ -182,6 +188,7 @@ body.theme-dark {
   color: var(--on-background-light);
 }
 
+/* Hintergrundbild der Seite */
 #backgroundImage {
   position: absolute;
   z-index: -2;
@@ -191,21 +198,22 @@ body.theme-dark {
   left: 50%;
   transform: translateX(-50%);
   filter: var(--background-icon-filter-light);
-
 }
 
+/* Feld mit Atemtechniken */
 .grid-container {
   position: absolute;
   width: 62vw;
   height: 57vh;
   top: 20vh;
-  overflow: auto; /* Hinzugefügtes CSS-Overflow-Attribut */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow: auto;
+  overflow-x: hidden;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Anzahl der Spalten auf 2 ändern */
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1vw;
 }
 
+/* Einzelelement für Atemübung */
 .grid-item {
   position: relative;
   border-radius: 20px;
@@ -215,39 +223,36 @@ body.theme-dark {
   border-radius: 20px;
 }
 
+/* Definiert eines Schattens für den Hover-Zustand */
 .grid-item:hover {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Definiert den Schatten für den Hover-Zustand */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Scrollbalken der Atemübungen */
 .grid-container:hover {
-  overflow: auto; /* Scroll-Leiste anzeigen, wenn der Container gehovert wird */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 .grid-container::-webkit-scrollbar {
-  width: 8px; /* Breite der Scroll-Leiste */
+  width: 8px;
 }
 
 .grid-container::-webkit-scrollbar-thumb {
-  background-color: var(
-    --primary-container-light
-  ); /* Hintergrundfarbe des Scroll-Leisten-Griffs */
-  border-radius: 4px; /* Radius des Scroll-Leisten-Griffs */
+  background-color: var(--primary-container-light);
+  border-radius: 4px;
 }
 
 .grid-container::-webkit-scrollbar-track {
-  background-color: var(
-    --scrollbar-light
-  ); /* Hintergrundfarbe der Scroll-Leiste */
-  border-radius: 4px; /* Radius der Scroll-Leiste */
+  background-color: var(--scrollbar-light);
+  border-radius: 4px;
 }
 
 .grid-container::-webkit-scrollbar-thumb:hover {
-  background-color: var(
-    --primary-light
-  ); /* Hintergrundfarbe des Scroll-Leisten-Griffs beim Hover */
+  background-color: var(--primary-light);
 }
 
+/* Icon eines Atemübungselements */
 .exercise-icon {
   position: absolute;
   height: 4vw;
@@ -257,6 +262,7 @@ body.theme-dark {
   filter: var(--exercise-icon-filter-light);
 }
 
+/* Titel eines Atemübungselements */
 .exercise-title {
   position: relative;
   left: 6vw;
@@ -270,6 +276,7 @@ body.theme-dark {
   color: var(--on-primary-container-light);
 }
 
+/* Beschreibung eines Atemübungselements */
 .exercise-description {
   position: relative;
   left: 6vw;
@@ -285,6 +292,7 @@ body.theme-dark {
   color: var(--on-primary-container-light);
 }
 
+/* Feld für benutzerdefinierte Atemübung */
 #custom-exercise {
   position: absolute;
   width: 62vw;
@@ -297,9 +305,10 @@ body.theme-dark {
 }
 
 #custom-exercise:hover {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Definiert den Schatten für den Hover-Zustand */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Icon der benutzerdefinierte Atemübung */
 #custom-exercise-icon {
   position: absolute;
   height: 4vw;
@@ -309,6 +318,7 @@ body.theme-dark {
   filter: var(--custom-exercise-icon-filter-light);
 }
 
+/* Titel der benutzerdefinierte Atemübung */
 #custom-exercise-title {
   position: relative;
   left: 6vw;
@@ -322,6 +332,7 @@ body.theme-dark {
   color: var(--on-tertiary-container-light);
 }
 
+/* Beschreibung der benutzerdefinierte Atemübung */
 #custom-exercise-description {
   position: relative;
   left: 6vw;
@@ -337,7 +348,9 @@ body.theme-dark {
   color: var(--on-tertiary-container-light);
 }
 
+/* Aussehen für mobile Geräte */
 @media screen and (max-width: 600px) {
+  /* Auswahlfeld für den Farbmodus */
   .select {
     top: 1vh;
     right: 2vw;
@@ -351,24 +364,27 @@ body.theme-dark {
     font-size: 4.08vw;
   }
 
-  /* Navbar */
+  /* Navigationsbereich */
   .nav-item {
     display: none;
   }
 
+  /*  Überschrift der Seite */
   #title {
     top: 3vh;
     font-size: 12vw;
   }
 
+  /* Feld mit Atemtechniken */
   .grid-container {
     width: 90vw;
     height: 73vh;
     top: 12vh;
-    grid-template-columns: repeat(1, 1fr); /* Anzahl der Spalten auf 2 ändern */
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 3vw;
   }
 
+  /* Einzelelement für Atemübung */
   .grid-item {
     width: 90vw;
     height: 10vh;
@@ -379,11 +395,13 @@ body.theme-dark {
     width: 0px;
   }
 
+  /* Icon eines Atemübungselements */
   .exercise-icon {
     height: 6vh;
     left: 1vh;
   }
 
+  /* Titel eines Atemübungselements */
   .exercise-title {
     left: 18vw;
     top: 25%;
@@ -391,6 +409,7 @@ body.theme-dark {
     line-height: 2.4vw;
   }
 
+  /* Beschreibung eines Atemübungselements */
   .exercise-description {
     left: 18vw;
     top: 35%;
@@ -399,17 +418,20 @@ body.theme-dark {
     line-height: 3.2vw;
   }
 
+  /* Feld für benutzerdefinierte Atemübung */
   #custom-exercise {
     width: 90vw;
     height: 10vh;
     top: 87vh;
   }
 
+  /* Icon der benutzerdefinierte Atemübung */
   #custom-exercise-icon {
     height: 6vh;
     left: 1vh;
   }
 
+  /* Titel der benutzerdefinierte Atemübung */
   #custom-exercise-title {
     left: 18vw;
     top: 25%;
@@ -417,6 +439,7 @@ body.theme-dark {
     line-height: 2.4vw;
   }
 
+  /* Beschreibung der benutzerdefinierte Atemübung */
   #custom-exercise-description {
     left: 18vw;
     top: 35%;
@@ -427,7 +450,9 @@ body.theme-dark {
   }
 }
 
+/* Aussehen für größere mobile Geräte */
 @media screen and (max-width: 900px) and (min-width: 600px) {
+  /* Auswahlfeld für den Farbmodus */
   .select {
     top: 1vh;
     right: 4vw;
@@ -441,24 +466,27 @@ body.theme-dark {
     font-size: 3.06vw;
   }
 
-  /* Navbar */
+  /* Navigationsbereich */
   .nav-item {
     display: none;
   }
 
+  /*  Überschrift der Seite */
   #title {
     top: 2vh;
     font-size: 12vw;
   }
 
+  /* Feld mit Atemtechniken */
   .grid-container {
     width: 90vw;
     height: 72.5vh;
     top: 12vh;
-    grid-template-columns: repeat(1, 1fr); /* Anzahl der Spalten auf 2 ändern */
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 2vw;
   }
 
+  /* Einzelelement für Atemübung */
   .grid-item {
     width: 90vw;
     height: 10vh;
@@ -469,11 +497,13 @@ body.theme-dark {
     width: 0px;
   }
 
+  /* Icon eines Atemübungselements */
   .exercise-icon {
     height: 6vh;
     left: 2.5vh;
   }
 
+  /* Titel eines Atemübungselements */
   .exercise-title {
     left: 16vw;
     top: 25%;
@@ -481,6 +511,7 @@ body.theme-dark {
     line-height: 2.4vw;
   }
 
+  /* Beschreibung eines Atemübungselements */
   .exercise-description {
     left: 16vw;
     top: 35%;
@@ -489,17 +520,20 @@ body.theme-dark {
     line-height: 3.2vw;
   }
 
+  /* Feld für benutzerdefinierte Atemübung */
   #custom-exercise {
     width: 90vw;
     height: 10vh;
     top: 86vh;
   }
 
+  /* Icon der benutzerdefinierte Atemübung */
   #custom-exercise-icon {
     height: 6vh;
     left: 2.5vh;
   }
 
+  /* Titel der benutzerdefinierte Atemübung */
   #custom-exercise-title {
     left: 16vw;
     top: 25%;
@@ -507,6 +541,7 @@ body.theme-dark {
     line-height: 2.4vw;
   }
 
+  /* Beschreibung der benutzerdefinierte Atemübung */
   #custom-exercise-description {
     left: 16vw;
     top: 35%;
@@ -517,7 +552,9 @@ body.theme-dark {
   }
 }
 
+/* Aussehen für mobile Geräte in der wagerechten ausrichtung */
 @media screen and (max-height: 600px) {
+  /* Auswahlfeld für den Farbmodus */
   .select {
     top: 1vh;
     right: 1vw;
@@ -531,16 +568,18 @@ body.theme-dark {
     font-size: 2.04vw;
   }
 
-  /* Navbar */
+  /* Navigationsbereich */
   .nav-item {
     display: none;
   }
 
+  /*  Überschrift der Seite */
   #title {
     top: 3vh;
     font-size: 6vw;
   }
 
+  /* Feld mit Atemtechniken */
   .grid-container {
     width: 90vw;
     height: 60vh;
@@ -549,6 +588,7 @@ body.theme-dark {
     grid-gap: 2vw;
   }
 
+  /* Einzelelement für Atemübung */
   .grid-item {
     width: 90vw;
     height: 40vh;
@@ -559,11 +599,13 @@ body.theme-dark {
     width: 0px;
   }
 
+  /* Icon eines Atemübungselements */
   .exercise-icon {
     height: 20vh;
     left: 9vh;
   }
 
+  /* Titel eines Atemübungselements */
   .exercise-title {
     left: 18vw;
     top: 25%;
@@ -571,6 +613,7 @@ body.theme-dark {
     line-height: 2.4vw;
   }
 
+  /* Beschreibung eines Atemübungselements */
   .exercise-description {
     left: 18vw;
     top: 35%;
@@ -579,17 +622,20 @@ body.theme-dark {
     line-height: 3.2vw;
   }
 
+  /* Feld für benutzerdefinierte Atemübung */
   #custom-exercise {
     width: 90vw;
     height: 40vh;
     top: 85vh;
   }
 
+  /* Icon der benutzerdefinierte Atemübung */
   #custom-exercise-icon {
     height: 20vh;
     left: 9vh;
   }
 
+  /* Titel der benutzerdefinierte Atemübung */
   #custom-exercise-title {
     left: 18vw;
     top: 25%;
@@ -597,6 +643,7 @@ body.theme-dark {
     line-height: 2.4vw;
   }
 
+  /* Beschreibung der benutzerdefinierte Atemübung */
   #custom-exercise-description {
     left: 18vw;
     top: 35%;

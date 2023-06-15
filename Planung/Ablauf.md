@@ -84,10 +84,13 @@ https://pixabay.com/sound-effects/search/end/?duration=0-30
 ### 12. Produkt testen und Fehler beheben
 
 Responsive design und Start button bug auf mobile behoben
+Timer und InstructioTimer verbessert
+Scrowlbar aus Benutzerdefinierte Übung entfernt
 
 ### 13. Benutzerfreundlichkeit überprüfen und gegebenenfalls verbessern
 
 instruction anzeigen wann atmen, halten, ausatmen
+neues app icon
 
 ### 14. Performance-Optimierung durchführen, um die Leistung des Produkts zu verbessern (Code verbessern)
 
@@ -119,15 +122,12 @@ Quellcode, Screenshots, Diagramme, Dokumente, Bildquellen, Textquellen
 ### Corpuls:
 
 Heute:
-- Instruction timer mit animation syncronisieren
-
-- Nowa testen
-
+- code Kommentare hinzufüge, code aufräumen / strukturieren
 - Bericht kontrollieren
+- Planungs Ordner aus Githubprojekt entfernen
+- Github repositorys privatisieren
 
 Später:
-
-- code commentare hinzufügen / verbessern, code aufräumen / strukturieren
 - serviceworcer und manifest überarbeiten + github readme erstellen
 
 ## Zukunft:
@@ -141,23 +141,6 @@ Später:
 - Krankheiten am Atemmuster erkennen
 - Tippen um Übung zu Pausieren
 
-## App builder
-
-### Nova
-
-https://appsumo.com/products/nowa/?clickId=xtN3MlQjpxyNW41Taiy8ZRyaUkFx00UbB14myA0&irgwc=1&utm_medium=4352386&utm_campaign=Online%20Tracking%20Link&utm_source=IR#pricePlans
-https://www.nowa.dev/pricing
-https://www.nowa.dev/road-map
-
-### Andere
-
-https://www.fluxbuilder.com/pricing
-https://www.adalo.com/pricing
-https://flutterflow.io/pricing
-https://www.glideapps.com/pricing
-https://www.stackerhq.com/pricing
-
-https://www.blup.in/pricing
 
 ## Entfernter text
 

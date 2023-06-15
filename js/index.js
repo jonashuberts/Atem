@@ -6,7 +6,7 @@ function applyTheme(theme) {
   document.body.classList.add(`theme-${theme}`);
 }
 
-/* Page Transition */
+/* Seitenwechsel */
 /* const transitionLinks = document.getElementsByClassName("transition-link");
 Array.from(transitionLinks).forEach(function (transitionLink) {
   transitionLink.addEventListener("click", function (event) {
