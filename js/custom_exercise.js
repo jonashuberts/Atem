@@ -195,7 +195,7 @@ transitionLink.addEventListener("click", function (event) {
 // Funktion zum Anwenden des Themas
 function applyTheme(theme) {
   // Entferne vorhandene Themenklassen vom body-Element
-  document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
+  document.body.classList.remove("theme-system", "theme-light", "theme-dark");
   // Füge die entsprechende Klasse für das ausgewählte Thema hinzu
   document.body.classList.add(`theme-${theme}`);
 }
@@ -294,8 +294,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }); */
   });
 
-  // Das gespeicherte Thema aus dem lokalen Speicher abrufen oder "auto" als Standard verwenden
-  const savedTheme = localStorage.getItem("theme") || "auto";
+  // Das gespeicherte Thema aus dem lokalen Speicher abrufen oder "system" als Standard verwenden
+  const savedTheme = localStorage.getItem("theme") || "system";
 
   // Das gespeicherte Thema anwenden
   applyTheme(savedTheme);

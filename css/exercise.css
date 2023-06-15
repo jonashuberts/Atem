@@ -64,7 +64,7 @@ body.theme-dark {
 }
 
 @media (prefers-color-scheme: dark) {
-  body.theme-auto {
+  body.theme-system {
     --primary-light: var(--primary-dark);
     --background-light: var(--background-dark);
     --on-background-light: var(--on-background-dark);

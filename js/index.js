@@ -1,7 +1,7 @@
 // Funktion zum Anwenden des Themas
 function applyTheme(theme) {
   // Entferne vorhandene Themenklassen vom body-Element
-  document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
+  document.body.classList.remove("theme-system", "theme-light", "theme-dark");
   // Füge die entsprechende Klasse für das ausgewählte Thema hinzu
   document.body.classList.add(`theme-${theme}`);
 }
@@ -22,8 +22,8 @@ Array.from(transitionLinks).forEach(function (transitionLink) {
 
 // Warte, bis das DOM geladen ist
 document.addEventListener("DOMContentLoaded", () => {
-  // Das gespeicherte Thema aus dem lokalen Speicher abrufen oder "auto" als Standard verwenden
-  const savedTheme = localStorage.getItem("theme") || "auto";
+  // Das gespeicherte Thema aus dem lokalen Speicher abrufen oder "system" als Standard verwenden
+  const savedTheme = localStorage.getItem("theme") || "system";
 
   // Das gespeicherte Thema anwenden
   applyTheme(savedTheme);
