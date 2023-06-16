@@ -26,7 +26,7 @@ Die Idee zu diesem Projekt entstand aus dem Bedürfnis heraus, Menschen bei der 
 
 Das Hauptziel der App ist es, den Nutzern eine interaktive und ansprechende Plattform zu bieten, auf der sie verschiedene Atemübungen durchführen können. Der Fokus liegt dabei auf der visuellen Darstellung und einer Großzahl an Übungen, um die Nutzer zu motivieren und eine angenehme Erfahrung zu bieten. Durch die Kombination von visuellen Animationen und Soundeffekten wird eine immersive Umgebung geschaffen, die es dem Benutzer ermöglicht, sich auf seine Atmung zu konzentrieren und vollständig in die Übungen einzutauchen.
 
-Das Projekt ist eine sogenannte PWA (Progressive Web App), mit welcher die Website auch offline und als mobile und Desktop-Anwendung genutzt werden kann. Dadurch kann die Website unabhängig von Standort und Internetzugang genutzt werden. [4]
+Das Projekt ist eine sogenannte PWA (Progressive Web App), mit welcher die Website auch offline und als mobile und Desktop-Anwendung genutzt werden kann. Dadurch kann die Website unabhängig von Standort und Internetzugang genutzt werden.
 
 
 ## Gebaut mit
