@@ -116,7 +116,7 @@ Verteilt unter der [MIT-Lizenz](https://choosealicense.com/licenses/mit/).
 * [Icons](https://fonts.google.com/icons)
 * [Farben finden](https://m3.material.io/theme-builder#/custom)
 
-  ## Screenshots
+## Screenshots
 
 ![Screenshot Start Desktop Dark](https://raw.githubusercontent.com/jonashuberts/Atem/main/assets/screenshots/screenshot_start_desktop_dark.png)
 ![Screenshot Info Desktop Dark](https://raw.githubusercontent.com/jonashuberts/Atem/main/assets/screenshots/screenshot_info_desktop_dark.png)
