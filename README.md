@@ -81,7 +81,7 @@ Die Beiträge machen die Open-Source-Gemeinschaft zu einem wunderbaren Ort des L
 
 ## Lizenz
 
-Distributed under the MIT License. See [LICENSE](https://github.com/ShaanCoding/ReadME-Generator/blob/main/LICENSE.md) for more information.
+Verteilt unter der MIT-Lizenz.
 
 ## Autoren
 
