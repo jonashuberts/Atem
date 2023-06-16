@@ -20,20 +20,20 @@
 
 ![Contributors](https://img.shields.io/github/contributors/ShaanCoding/ReadME-Generator?color=dark-green) ![Forks](https://img.shields.io/github/forks/ShaanCoding/ReadME-Generator?style=social) ![Stargazers](https://img.shields.io/github/stars/ShaanCoding/ReadME-Generator?style=social) ![Issues](https://img.shields.io/github/issues/ShaanCoding/ReadME-Generator) 
 
-## Table Of Contents
+## Inhaltsverzeichnis
 
-* [About the Project](#about-the-project)
-* [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
+* [Über das Projekt](#about-the-project)
+* [Gebaut mit](#built-with)
+* [Erste Schritte](#getting-started)
+  * [Voraussetzungen](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [License](#license)
-* [Authors](#authors)
-* [Acknowledgements](#acknowledgements)
+* [Verwendung](#usage)
+* [Mitwirken](#contributing)
+* [Lizenz](#license)
+* [Autoren](#authors)
+* [Danksagung](#acknowledgements)
 
-## About The Project
+## Über das Projekt
 
 ![Screen Shot](https://raw.githubusercontent.com/jonashuberts/Atem/main/assets/screenshots/Screenshot%202023-06-14%20135443.png)
 
@@ -44,17 +44,17 @@ Das Hauptziel der App ist es, den Nutzern eine interaktive und ansprechende Plat
 Das Projekt ist eine sogenannte PWA (Progressive Web App), mit welcher die Website auch offline und als mobile und Desktop-Anwendung genutzt werden kann. Dadurch kann die Website unabhängig von Standort und Internetzugang genutzt werden. [4]
 
 
-## Built With
+## Gebaut mit
 
 JavaScript
 HTML
 CSS
 
-## Getting Started
+## Erste Schritte
 
 Um eine lokale Kopie zum Laufen zu bringen, folgen Sie diesen einfachen Schritten.
 
-### Prerequisites
+### Voraussetzungen
 
 * npm
 
@@ -76,15 +76,15 @@ git clone https://github.com/jonashuberts/Atem.git
 npm install
 ```
 
-## Usage
+## Verwendung
 
 npm run
 
-## Contributing
+## Mitwirken
 
 Die Beiträge machen die Open-Source-Gemeinschaft zu einem wunderbaren Ort des Lernens, der Inspiration und der Kreativität. Jeder Beitrag, den Sie leisten, wird sehr geschätzt.
 
-### Creating A Pull Request
+### Eine Pull-Anfrage erstellen
 
 1. Fork das Projekt
 2. Erstelle deinen Feature-Zweig (`git checkout -b feature/AmazingFeature`)
@@ -92,15 +92,15 @@ Die Beiträge machen die Open-Source-Gemeinschaft zu einem wunderbaren Ort des L
 4. Push in den Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
+## Lizenz
 
 Distributed under the MIT License. See [LICENSE](https://github.com/ShaanCoding/ReadME-Generator/blob/main/LICENSE.md) for more information.
 
-## Authors
+## Autoren
 
 * **Jonas Huberts** - *Schüler* - [Jonas Huberts](https://github.com/jonashuberts) - *Projekt gebaut*
 
-## Acknowledgements
+## Danksagung
 
 * [CSS Filter Generator](https://codepen.io/sosuke/pen/Pjoqqp)
 * [Projekt Ausgangspunkt](https://github.com/promermedia/promer-default)
