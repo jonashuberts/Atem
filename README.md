@@ -63,7 +63,9 @@ npm install
 
 ## Verwendung
 
+```sh
 npm run
+```
 
 ## Mitwirken
 
