@@ -8,7 +8,7 @@
   "dir": "auto",
   "theme_color": "#201a1a",
   "background_color": "#201a1a",
-  "orientation": "any",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "assets/ico/icon_512.png",
@@ -25,24 +25,58 @@
   ],
   "screenshots": [
     {
-      "src": "assets/screenshots/Desktop Home.png",
+      "src": "assets/screenshots/screenshot_start_desktop_light.png",
       "sizes": "1920x1080",
       "type": "image/png",
-      "description": "A screenshot of the home page"
-    }
-  ],
-  "related_applications": [
+      "description": "A screenshot of the start page"
+    },
     {
-      "platform": "windows",
-      "url": " The URL to your app in that app store"
-    }
-  ],
-  "prefer_related_applications": false,
-  "shortcuts": [
+      "src": "assets/screenshots/screenshot_atem_desktop_dark.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "description": "A screenshot of the atem page"
+    },
     {
-      "name": "The name you would like to be displayed for your shortcut",
-      "url": "The url you would like to open when the user chooses this shortcut. This must be a URL local to your PWA. For example: If my start_url is /, this URL must be something like /shortcut",
-      "description": "A description of the functionality of this shortcut"
+      "src": "assets/screenshots/screenshot_atem_desktop_light.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "description": "A screenshot of the atem page"
+    },
+    {
+      "src": "assets/screenshots/screenshot_atem_mobile_dark.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "description": "A screenshot of the atem page"
+    },
+    {
+      "src": "assets/screenshots/screenshot_custom_desktop_dark.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "description": "A screenshot of the custom atem page"
+    },
+    {
+      "src": "assets/screenshots/screenshot_custom_desktop_light.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "description": "A screenshot of the custom atem page"
+    },
+    {
+      "src": "assets/screenshots/screenshot_info_desktop_dark.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "description": "A screenshot of the info atem page"
+    },
+    {
+      "src": "assets/screenshots/screenshot_info_desktop_light.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "description": "A screenshot of the info atem page"
+    },
+    {
+      "src": "assets/screenshots/screenshot_start_desktop_dark.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "description": "A screenshot of the start page"
     }
   ]
 }
