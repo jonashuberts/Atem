@@ -18,19 +18,6 @@
   </p>
 </p>
 
-## Inhaltsverzeichnis
-
-* [Über das Projekt](#about-the-project)
-* [Gebaut mit](#built-with)
-* [Erste Schritte](#getting-started)
-  * [Voraussetzungen](#prerequisites)
-  * [Installation](#installation)
-* [Verwendung](#usage)
-* [Mitwirken](#contributing)
-* [Lizenz](#license)
-* [Autoren](#authors)
-* [Danksagung](#acknowledgements)
-
 ## Über das Projekt
 
 ![Screen Shot](https://raw.githubusercontent.com/jonashuberts/Atem/main/assets/screenshots/Screenshot%202023-06-14%20135443.png)
