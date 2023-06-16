@@ -10,11 +10,11 @@
     Eine App zur Verbesserung der Atmung.
     <br/>
     <br/>
-    <a href="https://github.com/ShaanCoding/ReadME-Generator">View Demo</a>
+    <a href="[https://atemuebungen.vercel.app/]">Demo</a>
     .
-    <a href="https://github.com/ShaanCoding/ReadME-Generator/issues">Report Bug</a>
+    <a href="https://github.com/jonashuberts/Atem/issues]">Fehler melden</a>
     .
-    <a href="https://github.com/ShaanCoding/ReadME-Generator/issues">Request Feature</a>
+    <a href="[https://github.com/jonashuberts/Atem/issues]">Funktion anfordern</a>
   </p>
 </p>
 
