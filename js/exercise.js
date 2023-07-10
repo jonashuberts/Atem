@@ -24,7 +24,7 @@ function setExerciseParameters(inhale, inhaleHold, exhale, exhaleHold, rep) {
 if (exercise === "4-7-8_Atemtechnik") {
   document.querySelector("#info-text").textContent =
     "Atme durch die Nase ein und zähle dabei bis vier. Halte den Atem für sieben Sekunden an und atme dann langsam durch den Mund aus, bis du bis acht gezählt hast. Wiederhole dies mehrere Male.";
-  setExerciseParameters(4, 7, 8, 0, 5);
+  setExerciseParameters(4, 7, 8, 0, 16);
 } else if (exercise === "Wechselatmung") {
   document.querySelector("#info-text").textContent =
     "Schließe das rechte Nasenloch mit dem Daumen und atme durch das linke Nasenloch ein. Halte den Atem kurz an und schließe dann das linke Nasenloch mit dem Ringfinger. Öffne das rechte Nasenloch und atme durch dieses aus. Atme dann durch das rechte Nasenloch ein, halte den Atem an, schließe das rechte Nasenloch und atme durch das linke Nasenloch aus. Wiederhole dies abwechselnd für mehrere Zyklen.";
